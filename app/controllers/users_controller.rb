@@ -3,5 +3,11 @@ class UsersController < ApplicationController
     @title = "Sign up"
   end
 
+  def show
+
+    @user = User.find(1)
+
+  end
+
 end
 
