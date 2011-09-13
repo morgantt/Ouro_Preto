@@ -1,0 +1,65 @@
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `encrypted_password`) VALUES ('Example User', 'user@example.com', '2011-09-12 18:58:49', '2011-09-12 18:58:49', 'foobar')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (73.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('')) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  ROLLBACK
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@foo.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('THE_USER@foo.bar.org')) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('first.last@foo.jp')) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@foo,com')) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('THE_USER.foo.org')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('first.last@foo.')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `encrypted_password`) VALUES ('Example User', 'user@example.com', '2011-09-12 18:58:49', '2011-09-12 18:58:49', 'foobar')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1[0m
+  [1m[35mSQL (57.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('USER@EXAMPLE.COM')) LIMIT 1[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `encrypted_password`) VALUES ('Example User', 'USER@EXAMPLE.COM', '2011-09-12 18:58:49', '2011-09-12 18:58:49', 'foobar')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1
+  [1m[36mSQL (42.7ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.0ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('user@example.com')) LIMIT 1
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `encrypted_password`) VALUES ('Example User', 'user@example.com', '2011-09-12 18:58:49', '2011-09-12 18:58:49', 'foobar')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mSQL (63.0ms)[0m  [1mROLLBACK[0m
