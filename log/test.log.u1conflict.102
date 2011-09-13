@@ -1,14 +1,15 @@
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
   Processing by UsersController#new as HTML
-Rendered layouts/_stylesheets.html.erb (3.6ms)
-Rendered layouts/_header.html.erb (3.5ms)
-Rendered layouts/_footer.html.erb (2.4ms)
-Rendered users/new.html.erb within layouts/application (47.5ms)
-Completed 200 OK in 73ms (Views: 73.0ms | ActiveRecord: 0.1ms)
+Rendered layouts/_stylesheets.html.erb (0.8ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.2ms)
   [1m[35mSQL (0.1ms)[0m  ROLLBACK
   [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
   Processing by UsersController#new as HTML
-Rendered layouts/_stylesheets.html.erb (0.4ms)
+Rendered layouts/_stylesheets.html.erb (0.5ms)
 Rendered layouts/_header.html.erb (0.6ms)
 Rendered layouts/_footer.html.erb (0.3ms)
 Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms)

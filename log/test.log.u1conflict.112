@@ -1,0 +1,43 @@
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('taithson@example.com')) LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.8ms)[0m  [1mdescribe `users`[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `encrypted_password`, `salt`) VALUES ('Taithson', 'taithson@example.com', '2011-09-13 14:32:09', '2011-09-13 14:32:09', '710f9e334a7f0c948c512a458d5331d648fd3fe9fd456d5469bc855bd74cd11d', '0297d482beeabdf1ef4cff404f67ba3902703d0dcb217c02be746663fdda75dc')
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>#<User id: 208, name: "Taithson", email: "taithson@example.com", created_at: "2011-09-13 14:32:09", updated_at: "2011-09-13 14:32:09", encrypted_password: "710f9e334a7f0c948c512a458d5331d648fd3fe9fd456d5469b...", salt: "0297d482beeabdf1ef4cff404f67ba3902703d0dcb217c02be7...">}
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 208 LIMIT 1
+Rendered layouts/_stylesheets.html.erb (0.8ms)
+Rendered layouts/_header.html.erb (0.9ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Rendered users/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 3.0ms)
+  [1m[36mSQL (65.4ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  SELECT 1 FROM `users` WHERE (LOWER(`users`.`email`) = LOWER('taithson@example.com')) LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `users` (`name`, `email`, `created_at`, `updated_at`, `encrypted_password`, `salt`) VALUES ('Taithson', 'taithson@example.com', '2011-09-13 14:32:10', '2011-09-13 14:32:10', '89881387dbe2417905412f3b6095db0ba6bb5a62e919600eea679715f299b1f2', '56279cd40dcae104fb5210c22cd7b7ca5f8be1f1e1fcecbe41b0bb58c13f87c6')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>#<User id: 209, name: "Taithson", email: "taithson@example.com", created_at: "2011-09-13 14:32:10", updated_at: "2011-09-13 14:32:10", encrypted_password: "89881387dbe2417905412f3b6095db0ba6bb5a62e919600eea6...", salt: "56279cd40dcae104fb5210c22cd7b7ca5f8be1f1e1fcecbe41b...">}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 209 LIMIT 1[0m
+Rendered layouts/_stylesheets.html.erb (0.5ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 66.8ms)
+  [1m[35mSQL (55.7ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by UsersController#new as HTML
+Rendered layouts/_stylesheets.html.erb (0.5ms)
+Rendered layouts/_header.html.erb (0.6ms)
+Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 55.8ms)
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by UsersController#new as HTML
+Rendered layouts/_stylesheets.html.erb (0.6ms)
+Rendered layouts/_header.html.erb (0.7ms)
+Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.1ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK

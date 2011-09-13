@@ -17,5 +17,6 @@ group :test do
    gem 'autotest-rails'
    gem 'redgreen'
    gem 'test-unit'
+   gem 'factory_girl_rails'
 end
 
