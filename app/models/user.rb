@@ -1,8 +1,19 @@
-# identifica quais atributos deste modelo sao modificaveis atraves
-# do web interface
+# == Schema Information
+#
+# Table name: users
+#
+#  id                 :integer(4)      not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#
 
 
 class User < ActiveRecord::Base
+# identifica quais atributos deste modelo sao modificaveis atraves
+# do web interface
 
   attr_accessor   :password
   attr_accessible :name, :email, :password, :password_confirmation, :encrypted_password
@@ -10,13 +21,18 @@ class User < ActiveRecord::Base
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
  validates :name,  :presence => true,
-                   :length   => { :maximum => 50}
+                   :length   => { :maximum => 50,
+                   :message    => "nome muito longo" }
+
  validates :email, :presence   => true,
-                   :format     => { :with => email_regex },
-                   :uniqueness => { :case_sensitive => false}
+                   :format     => { :with => email_regex ,
+                                    :message => "invalido" },
+                   :uniqueness => { :case_sensitive => false,
+                                    :message    => "Email ja foi usado" }
  validates :password, :presence     => true,
                       :confirmation => true,
                       :length       => { :within => 6..40 }
+
 
 before_save  :encrypt_password
 
@@ -54,17 +70,4 @@ end
   end
 
 end
-
-
-# == Schema Information
-#
-# Table name: users
-#
-#  id                 :integer(4)      not null, primary key
-#  name               :string(255)
-#  email              :string(255)
-#  created_at         :datetime
-#  updated_at         :datetime
-#  encrypted_password :string(255)
-#
 
