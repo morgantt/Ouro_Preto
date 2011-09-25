@@ -25,6 +25,11 @@ it "should have a help page at '/help'" do
     response.should have_selector('title', :content => "Sign up")
   end
 
+  it "should have a Signin page at '/signin'" do
+    get '/signin'
+    response.should have_selector('title', :content => "Sign in")
+  end
+
   it "should have the right links on the layout" do
     visit root_path
     response.should have_selector('title', :content => "Home")
