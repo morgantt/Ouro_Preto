@@ -101,6 +101,10 @@ describe UsersController do
     post :create, :user => @attr
     flash[:success].should =~ /benvindo ao controle de propostas!/i
     end
+    it 'should sign user in' do
+      post :create, :user => @attr
+      controller.should be_signed_in
+    end
 
     end
 
