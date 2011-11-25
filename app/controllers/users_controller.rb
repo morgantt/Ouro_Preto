@@ -21,5 +21,20 @@ def create
      render "new"
     end
   end
-end
+    
+  def edit
+  	@user = User.find(params[:id])
+  	@title = "Edit user"
+  end	
+  
+  def update
+  	@user = User.find(params[:id])
+  	if @user.update_attributes(params[:user])
+  		redirect_to @user, :flash => { :success => "Perfil atualizado" }
+  	else
+  	@title = "Edit user"
+  	render 'edit'
+  end		
+ end
+ end
 
