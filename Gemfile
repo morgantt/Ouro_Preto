@@ -3,11 +3,13 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.9'
 gem 'mysql2', '<0.3'
 gem 'gravatar_image_tag'
+gem 'will_paginate'
 
 group :development, :test do
   gem "rspec-rails"
   gem "autotest"
   gem "annotate"
+  gem 'faker'
 end
 
 
