@@ -2,13 +2,13 @@
   <tr>
     <td class="main">
       <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
+        <%= @operadora.banco %>
+        <%= @operadora.nome %>
       </h1>
     </td>
     <td class="sidebar round">
    
-    <strong>Editar</strong>  <%= link_to (@user.name), edit_user_path(@user)%>
+    <strong>Editar</strong>  <%= link_to (@operadora.nome), edit_operadora_path(@operadora)%>
     </td>
   </tr>
 </table>

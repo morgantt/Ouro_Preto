@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120109142758) do
+ActiveRecord::Schema.define(:version => 20120201004720) do
+
+  create_table "operadoras", :force => true do |t|
+    t.string   "nome",       :null => false
+    t.string   "logo_url"
+    t.string   "corretora"
+    t.string   "banco"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "operadoras", ["nome"], :name => "index_operadoras_on_nome", :unique => true
+
+  create_table "tipopropostas", :force => true do |t|
+    t.integer  "operadora_id"
+    t.string   "tipo"
+    t.integer  "lmi"
+    t.integer  "lms"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

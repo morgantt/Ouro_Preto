@@ -1,7 +1,11 @@
 OuroPreto::Application.routes.draw do
 
-  get "sessions/new"
+   get "operadoras/new"
 
+  # get "proposta/new"
+
+  get "sessions/new"
+	resources :operadoras
   resources :users
   resources :sessions, :only => [ :new, :create, :destroy ]
 

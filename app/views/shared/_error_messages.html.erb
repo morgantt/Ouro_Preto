@@ -1,16 +1,15 @@
-<% if @user.errors.any?  %>
+<% if object.errors.any?  %>
   <div id="error_explanation">
   <h2>
-  <%= pluralize(@user.errors.count, "erro")  %>
+  <%= pluralize(object.errors.count, "erro")  %>
   Usuario não pode ser salvo:
   </h2>
   <p> Houve problemas com os seguintes campos:</p>
   <ul>
-  <% @user.errors.full_messages.each do  |message| %>
+  <% object.errors.full_messages.each do  |message| %>
    <li><%= message %></li>
    <% end %>
    </ul>
   </div>
 
 <% end %>
-

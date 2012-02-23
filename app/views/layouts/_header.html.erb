@@ -1,19 +1,71 @@
 <header>
 <%= link_to logo, root_path %>
 <nav class="round">
+
+<ul id="sddm">
+	<li><a href="#" onmouseover="mopen('m1')" onmouseout="mclosetime()">Home</a>
+		<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href=<%= root_path %>>Home</a>
+		</div>
+		
+		<% if signed_in? %>
+	</li>
+	<li><a href="#" onmouseover="mopen('m2')" onmouseout="mclosetime()">Usuarios</a>
+		<div id="m2" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href=<%= user_path(current_user) %>>Meu Perfil</a>
+		<a href=<%= users_path %>>Todos Usuarios</a>
+		<a href=<%= edit_user_path(current_user) %>>Altera Perfil</a>
+		<a href=<%= signup_path %>>Novo Usuario</a>
+			</div>
+			
+	</li>
+	<li><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime()">Operadoras</a>
+		<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href=<%= new_operadora_path %>>Nova Operadora</a>
+		<a href=<%= operadoras_path %>>Todas as Operadoras</a>
+		<a href="#">Paypal</a>
+		</div>
+		
+		<% else %>
+		
+		</li>
+	<li><a href="#" onmouseover="mopen('m3')" onmouseout="mclosetime()">Cadastre-se</a>
+		<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href=<%= signup_path %>>Cadastre-se</a>
+		<a href="#">Paypal</a>
+		</div>
+			<% end %>
+			
+			
+		
+	</li>
+	<li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">Help</a>
+		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href=<%= help_path %>>Help</a>
+		
+		</div>
+	</li>
+	<li><a href="#" onmouseover="mopen('m5')" onmouseout="mclosetime()">Contact</a>
+		<div id="m5" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href="#">E-mail</a>
+		<a href="#">Submit Request Form</a>
+		<a href="#">Call Center</a>
+		</div>
+	</li>
+</ul>
+
+
   <ul>
-    <li><%= link_to "Home", root_path %></li>
-      <% if signed_in? %>
-    <li><%= link_to "Perfil", current_user %></li>
-    <li><%= link_to "Usuarios", users_path %></li>
-    <li><%= link_to "Settings", edit_user_path(current_user) %></li>
-        <% end %>
-    <li><%= link_to "Help", help_path %></li>
+         
       <% if signed_in? %>
     <li><%= link_to "Sign out", signout_path %></li>
       <% else %>
     <li><%= link_to "Sign in", signin_path %></li>
       <% end %>
+      <li><%= link_to "Operador1", operadoras_path %></li>
+      <li><%= link_to "Operador2", help_path %></li>
+      <li><%= link_to "Operador3", help_path %></li>
+      <li><%= link_to "Operador4", help_path %></li>
   </ul>
 </nav>
 </header>

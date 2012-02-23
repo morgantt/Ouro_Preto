@@ -1,0 +1,17 @@
+<li>
+	<%= operadora.nome %>
+	<%= operadora.banco %>
+	<% if current_user.admin? %>
+	|
+	<%= link_to "delete", operadora, :method => :delete, 
+																	 :confirm => "voce esta certo?",
+														       :title => "Delete => #{operadora.nome}" %>
+														       
+										       
+														       
+														       
+	<% end %>	
+													  
+	<%= link_to "edit", operadora	%>			  										  
+														  
+</li>
