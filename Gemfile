@@ -8,7 +8,7 @@ gem 'will_paginate'
 group :development, :test do
   gem "rspec-rails"
   gem "autotest"
-  gem "annotate"
+  gem "annotate", " ~> 2.4.1.beta1"
   gem 'faker'
 end
 

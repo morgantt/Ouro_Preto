@@ -46,4 +46,15 @@ OuroPreto::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  ActiveSupport::Inflector.inflections do |inflect| 
+  inflect.irregular "tipoproposta", "tipopropostas"
+  inflect.irregular "proposta", "propostas"
+   end 
+  
+  
+  
+  
+  
+  
 end

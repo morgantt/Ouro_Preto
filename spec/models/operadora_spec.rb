@@ -3,7 +3,7 @@
 # Table name: operadoras
 #
 #  id         :integer(4)      not null, primary key
-#  nome       :string(255)
+#  nome       :string(255)     not null
 #  logo_url   :string(255)
 #  corretora  :string(255)
 #  banco      :string(255)

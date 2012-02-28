@@ -46,7 +46,7 @@ class OperadorasController < ApplicationController
   def update
     @operadora = Operadora.find(params[:id])
     	if @operadora.update_attributes(params[:operadora])
-  		redirect_to @operadora, :flash => { :success => "Perfil atualizado" }
+  		redirect_to @operadora, :flash => { :success => "Operadora Atualizada" }
   	else
   	@title = "Edita Operadora"
   	render 'edit'

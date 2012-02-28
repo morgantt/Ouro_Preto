@@ -3,7 +3,7 @@
 # Table name: operadoras
 #
 #  id         :integer(4)      not null, primary key
-#  nome       :string(255)
+#  nome       :string(255)     not null
 #  logo_url   :string(255)
 #  corretora  :string(255)
 #  banco      :string(255)
@@ -12,9 +12,15 @@
 #
 
 class Operadora < ActiveRecord::Base
+
 # identifica quais atributos deste modelo sao modificaveis atraves
 # do web interface
+
+	 has_many :tipoproposta
+	 
 	attr_accessible :nome, :logo_url, :corretora, :banco
+	
+ 
 	
 	validates_presence_of :nome, :logo_url, :corretora, :banco,
 	 											:message => "Nao pode ser em Branco"

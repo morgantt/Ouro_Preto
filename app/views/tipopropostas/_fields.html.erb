@@ -1,0 +1,22 @@
+<%= render 'shared/error_messages', :object => f.object %>
+
+<div class='field'>
+  <%= f.label :Operadoraid %><br />
+  <%= f.collection_select("operadora_id", Operadora.all, :id, :nome,
+  										 {:prompt => 'Por Favor selecione a operadora'}) %>
+</div>
+
+
+<div class='field'>
+  <%= f.label :Tipo %><br />
+  <%= f.text_field :tipo %>
+</div>
+<div class='field'>
+  <%= f.label :LMI %><br />
+  <%= f.text_field :lmi %>
+</div>
+<div class='field'>
+  <%= f.label :LMS %><br />
+  <%= f.text_field :lms %>
+</div>
+

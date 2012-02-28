@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120201004720) do
+ActiveRecord::Schema.define(:version => 20120223232006) do
 
   create_table "operadoras", :force => true do |t|
     t.string   "nome",       :null => false
@@ -22,6 +22,20 @@ ActiveRecord::Schema.define(:version => 20120201004720) do
   end
 
   add_index "operadoras", ["nome"], :name => "index_operadoras_on_nome", :unique => true
+
+  create_table "propostas", :force => true do |t|
+    t.integer  "operadora_id"
+    t.string   "tipo"
+    t.string   "numero"
+    t.date     "data_entrada"
+    t.integer  "status"
+    t.string   "nome_status"
+    t.date     "data_status"
+    t.integer  "corretor_id"
+    t.text     "observacao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "tipopropostas", :force => true do |t|
     t.integer  "operadora_id"

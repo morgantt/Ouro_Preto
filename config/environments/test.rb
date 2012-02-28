@@ -32,4 +32,9 @@ OuroPreto::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+  
+  ActiveSupport::Inflector.inflections do |inflect| 
+  inflect.irregular "tipoproposta", "tipopropostas"
+  inflect.irregular "proposta", "propostas"
+   end 
 end

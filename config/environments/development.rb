@@ -22,5 +22,14 @@ OuroPreto::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  ActiveSupport::Inflector.inflections do |inflect| 
+  inflect.irregular "tipoproposta", "tipopropostas"
+  inflect.irregular "proposta", "propostas"
+   end 
+
+
+  
+  
 end
 

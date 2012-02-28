@@ -1,0 +1,20 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= @tipoproposta.operadora.nome %>
+      </h1>
+      <h2>
+        <%= @tipoproposta.tipo %>
+        <%= @tipoproposta.lmi %>
+        <%= @tipoproposta.lms %>
+       
+      </h2>
+    </td>
+    <td class="sidebar round">
+   
+    <strong>Editar</strong>  <%= link_to (@tipoproposta.tipo), edit_tipoproposta_path(@tipoproposta)%>
+    </td>
+  </tr>
+</table>
+
