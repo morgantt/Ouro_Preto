@@ -1,0 +1,18 @@
+<h1>Edit C Parametros</h1>
+	
+ <% if @novo == "SIM" %>
+
+		<%= form_for(@cparametro) do |f|  %>
+		<%= render 'fields', :f => f %> 
+		<div class='actions'>
+	  <%= f.submit "Update" %>
+		</div>
+		<% end %>
+	<% end %>	
+<%= form_for(@cparametro) do |f|  %>
+		<%= render 'fields2', :f => f %> 
+		<div class='actions'>
+	  <%= f.submit "Update" %>
+		</div>
+		<% end %>
+	

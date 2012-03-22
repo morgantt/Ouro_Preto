@@ -1,0 +1,43 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+      <%= @corretor.nome %>
+      </h1>
+      <h5>
+      <%= @corretor.banco %>
+      </h5>
+    </td>
+    <td class="sidebar round">
+   
+    <strong>Editar</strong>  <%= link_to (@corretor.nome), edit_corretor_path(@corretor)%><br />		   			<strong>Adicionar Limites</strong>  <%= link_to (@corretor.nome), new_cparametro_path(@corretor)%>
+    </td>
+  </tr>
+</table>
+	
+	<table>
+		<tr>
+			<th>Operadora </th>
+			<th> Tipo </th>
+			<th>Maximo</th>
+			<th>Minimo</th>
+			<th> </th>
+			<th> </th>
+			<th> </th>
+		</tr>
+	<% @cparametro.each do |tp| %>
+
+		<tr>
+			<td><%= tp.operadora.nome %></td>
+			<td><%= tp.tipoproposta.tipo %></td>
+			<td><%= tp.maximo %></td>
+			<td><%= tp.minimo %></td>
+			<td> <%= link_to 'Edita', edit_cparametro_path( tp ) %> </td>
+			<td> <%= link_to 'Deleta', tp, :method => :delete, 
+			 																:confirm => "voce esta certo?",
+														      		 :title => "Delete => #{tp.tipoproposta.tipo}" %></td>
+		</tr>
+		
+	<% end %>
+</table>
+

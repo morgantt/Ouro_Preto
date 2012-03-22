@@ -1,0 +1,9 @@
+<h1>Nova Situação</h1>
+
+<%= form_for(@situacao) do |f|  %>
+<%= render 'fields', :f => f %> 
+<div class='actions'>
+  <%= f.submit "Criar" %>
+</div>
+
+<% end %>

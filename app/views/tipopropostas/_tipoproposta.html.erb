@@ -1,8 +1,10 @@
 <li>
-	<%= tipoproposta.operadora.nome %>
+
+	<%= tipoproposta.operadora.nome %><br />
+	
 	<%= tipoproposta.tipo %>
 	<% if current_user.admin? %>
-	|----------
+
 	<%= link_to "delete", tipoproposta, :method => :delete, 
 																	 :confirm => "voce esta certo?",
 														       :title => "Delete => #{tipoproposta.tipo}" %>

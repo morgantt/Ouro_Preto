@@ -1,0 +1,13 @@
+<li>
+	<%= corretor.nome %>,&nbsp &nbsp &nbsp &nbsp 
+	
+	<% if current_user.admin? %>
+	
+	<%= link_to "delete", corretor, :method => :delete, 
+																	 :confirm => "voce esta certo?",
+														       :title => "Delete => #{corretor.nome}" %>
+	<% end %>	
+													  
+	<%= link_to "Mostrar", corretor	%>			  										  
+														  
+</li>

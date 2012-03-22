@@ -16,7 +16,8 @@ class Operadora < ActiveRecord::Base
 # identifica quais atributos deste modelo sao modificaveis atraves
 # do web interface
 
-	 has_many :tipoproposta
+	 has_many :tipopropostas, :dependent => :destroy
+	 has_many :cparametros
 	 
 	attr_accessible :nome, :logo_url, :corretora, :banco
 	

@@ -17,10 +17,7 @@ class TipopropostasController < ApplicationController
     
   end
   def new
-  
-  puts "HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"
-    puts params 
-   	
+     	
   	@title = "Novo Tipo de Proposta"
    	@tipoproposta = Tipoproposta.new
    	@operadora = Operadora.find(:all, :order => "nome")
@@ -42,7 +39,7 @@ class TipopropostasController < ApplicationController
   end
   
    def edit
-    p params
+   
   		@tipoproposta = Tipoproposta.find(params[:id])
   		@operadora = Operadora.find(:all, :order => "nome")
   		

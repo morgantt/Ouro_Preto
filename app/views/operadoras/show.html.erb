@@ -2,14 +2,43 @@
   <tr>
     <td class="main">
       <h1>
-        <%= @operadora.banco %>
-        <%= @operadora.nome %>
+      <%= @operadora.nome %>
       </h1>
+      <h5>
+      <%= @operadora.banco %>
+      </h5>
     </td>
     <td class="sidebar round">
    
     <strong>Editar</strong>  <%= link_to (@operadora.nome), edit_operadora_path(@operadora)%>
     </td>
+    <td>
+    
+    </td>
   </tr>
 </table>
+
+	<table>
+		<tr>
+			<th>Tipo</th>
+			<th>LMI</th>
+			<th>LMS</th>
+			<th> </th>
+			<th> </th>
+			<th> </th>
+		</tr>
+	<% @tipo.each do |tp| %>
+
+		<tr>
+			<td><%= tp.tipo %></td>
+			<td><%= tp.lmi %></td>
+			<td><%= tp.lms %></td>
+			
+		</tr>
+		
+	<% end %>
+	
+	</table>
+
+
 

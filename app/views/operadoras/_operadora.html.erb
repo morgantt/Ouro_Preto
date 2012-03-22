@@ -1,8 +1,8 @@
 <li>
-	<%= operadora.nome %>
+	<%= operadora.nome %>,&nbsp &nbsp &nbsp &nbsp 
 	
 	<% if current_user.admin? %>
-	|----------
+	
 	<%= link_to "delete", operadora, :method => :delete, 
 																	 :confirm => "voce esta certo?",
 														       :title => "Delete => #{operadora.nome}" %>

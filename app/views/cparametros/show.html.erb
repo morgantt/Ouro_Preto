@@ -1,0 +1,32 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+     
+    </td>
+    <td class="sidebar round">
+   
+    <strong>Editar</strong>  <%= link_to (@cparametro.tipoproposta.tipo), edit_cparametro_path(@cparametro)%>
+    </td>
+  </tr>
+</table>
+
+	<table>
+		<tr>
+			<th>Operadora </th>
+			<th> Tipo </th>
+			<th>Maximo</th>
+			<th>Minimo</th>
+			<th> </th>
+			<th> </th>
+			<th> </th>
+		</tr>
+
+		<tr>
+			<td> <%= @cparametro.operadora.nome %> </td>
+			<td> <%= @cparametro.tipoproposta.tipo %> </td>
+			<td><%= @cparametro.maximo %></td>
+			<td><%= @cparametro.minimo %></td>
+		</tr>
+		
+	
+</table>

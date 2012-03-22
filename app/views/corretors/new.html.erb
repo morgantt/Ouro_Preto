@@ -1,0 +1,8 @@
+<h1>Nova Operadora</h1>
+<%= form_for(@corretor) do |f|  %>
+<%= render 'fields', :f => f %> 
+<div class='actions'>
+  <%= f.submit "Criar" %>
+</div>
+
+<% end %>

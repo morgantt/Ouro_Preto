@@ -1,17 +1,21 @@
 <table class="profile" summary="Profile information">
   <tr>
     <td class="main">
-      <h1>
+      <h3>
         <%= @tipoproposta.operadora.nome %>
-      </h1>
-      <h2>
-        <%= @tipoproposta.tipo %>
-        <%= @tipoproposta.lmi %>
-        <%= @tipoproposta.lms %>
-       
-      </h2>
-    </td>
-    <td class="sidebar round">
+      </h3>
+      <tr>
+			<th>Tipo</th>
+			<th>LMI</th>
+			<th>LMS</th>
+			<th> </th>
+			
+		</tr>
+    	<tr>
+			<td><%= @tipoproposta.tipo %></td>
+			<td><%= @tipoproposta.lmi %></td>
+			<td><%= @tipoproposta.lms %></td>
+			<td class="sidebar round">
    
     <strong>Editar</strong>  <%= link_to (@tipoproposta.tipo), edit_tipoproposta_path(@tipoproposta)%>
     </td>

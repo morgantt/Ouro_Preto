@@ -12,10 +12,14 @@ class OperadorasController < ApplicationController
 	end
  
   def show
-
-    @operadora = Operadora.find(params[:id])
-    @title = @operadora.nome
     
+    @operadora = Operadora.find(params[:id])
+    @tipo  = @operadora.tipopropostas
+ #   @tip = @operadora.tipopropostas.paginate( :page => params[:page])
+    @title = @operadora.nome
+    @tipopid = @operadora.id
+    @tipoproposta = Tipoproposta.find( :all, :conditions => { :operadora_id => [@tipopid] } )
+   
   end
  
   def new

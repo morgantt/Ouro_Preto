@@ -1,0 +1,23 @@
+<h1> Situação</h1>
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+      <%= @situacao.status %>
+      </h1>
+      <h5>
+      <%= @situacao.nomestat %>
+      </h5>
+    </td>
+    <td class="sidebar round">
+   
+    <strong>Editar</strong>  <%= link_to (@situacao.nomestat), edit_situacao_path(@situacao)%>
+    </td>
+  </tr>
+</table>
+
+
+
+
+

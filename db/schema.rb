@@ -10,7 +10,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120223232006) do
+ActiveRecord::Schema.define(:version => 20120312144102) do
+
+  create_table "corretors", :force => true do |t|
+    t.string   "nome"
+    t.string   "endereco"
+    t.string   "cep"
+    t.string   "cpf"
+    t.string   "telefone1"
+    t.string   "telefone2"
+    t.string   "banco"
+    t.string   "agencia"
+    t.string   "conta"
+    t.text     "comentario"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "corretors", ["nome"], :name => "index_corretors_on_nome"
+
+  create_table "cparametros", :force => true do |t|
+    t.integer  "operadora_id"
+    t.integer  "tipoproposta_id"
+    t.integer  "corretor_id"
+    t.integer  "maximo"
+    t.integer  "minimo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "cparametros", ["corretor_id"], :name => "index_cparametros_on_corretor_id"
+  add_index "cparametros", ["operadora_id"], :name => "index_cparametros_on_operadora_id"
 
   create_table "operadoras", :force => true do |t|
     t.string   "nome",       :null => false
@@ -37,6 +67,13 @@ ActiveRecord::Schema.define(:version => 20120223232006) do
     t.datetime "updated_at"
   end
 
+  create_table "situacaos", :force => true do |t|
+    t.integer  "status"
+    t.string   "nomestat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "tipopropostas", :force => true do |t|
     t.integer  "operadora_id"
     t.string   "tipo"
@@ -45,6 +82,8 @@ ActiveRecord::Schema.define(:version => 20120223232006) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "tipopropostas", ["operadora_id"], :name => "index_tipopropostas_on_operadora_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

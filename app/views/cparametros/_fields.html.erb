@@ -1,0 +1,28 @@
+<%= render 'shared/error_messages', :object => f.object %>
+
+<div class='field'>
+  <%= f.label :Corretor %><br />
+  <%= f.collection_select("corretor_id", Corretor.find(:all, :conditions => ["id = ?", @corretor]), :id, :nome) %>
+</div>
+<div class='field'>
+  <%= f.label :Operadoraid %><br />
+  <%= f.collection_select("operadora_id", Operadora.all, :id, :nome,
+  										 {:prompt => 'Por Favor selecione a operadora'}) %>
+</div>
+
+<div class='field'>
+  <%= f.label :tipoproposta %><br />
+  <%= f.collection_select("tipoproposta_id", Tipoproposta.all, :id, :tipo,
+  										 {:prompt => 'Por Favor selecione O tp'}) %>
+</div>
+
+<div class='field'>
+  <%= f.label :Maximo %><br />
+  <%= f.text_field :maximo %>
+</div>
+<div class='field'>
+  <%= f.label :Minimo %><br />
+  <%= f.text_field :minimo %>
+</div>
+
+ 

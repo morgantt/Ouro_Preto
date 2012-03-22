@@ -1,0 +1,15 @@
+<li>
+
+	<%= cparametro.corretor.nome %><br />
+	
+	<%= cparametro.maximo %>
+	<% if current_user.admin? %>
+
+	<%= link_to "delete", cparametro, :method => :delete, 
+																	 :confirm => "voce esta certo?",
+														       :title => "Delete => #{cparametro.maximo}" %>
+	<% end %>	
+													  
+	<%= link_to "Mostrar", cparametro	%>			  										  
+														  
+</li>

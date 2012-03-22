@@ -1,0 +1,14 @@
+<li>
+	<%= situacao.status %>,&nbsp &nbsp
+	<%= situacao.nomestat %>,&nbsp &nbsp &nbsp &nbsp 
+	
+	<% if current_user.admin? %>
+	
+	<%= link_to "delete", situacao, :method => :delete, 
+																	 :confirm => "voce esta certo?",
+														       :title => "Delete => #{situacao.nomestat}" %>
+	<% end %>	
+													  
+	<%= link_to "Mostrar", situacao	%>			  										  
+														  
+</li>

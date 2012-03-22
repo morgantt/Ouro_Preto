@@ -1,12 +1,17 @@
 OuroPreto::Application.routes.draw do
 
   get "tipopropostas/new"
+  
+  get "cparametros/new"
 
    get "operadoras/new"
 
   # get "proposta/new"
 
   get "sessions/new"
+  resources :corretors
+  resources :cparametros
+  resources :situacaos
   resources :tipopropostas
 	resources :operadoras
   resources :users
@@ -81,10 +86,24 @@ OuroPreto::Application.routes.draw do
 end
 
 #== Route Map
-# Generated on 25 Feb 2012 19:03
+# Generated on 12 Mar 2012 11:55
 #
 #    operadoras_new GET    /operadoras/new(.:format)         {:controller=>"operadoras", :action=>"new"}
 #      sessions_new GET    /sessions/new(.:format)           {:controller=>"sessions", :action=>"new"}
+#         corretors GET    /corretors(.:format)              {:action=>"index", :controller=>"corretors"}
+#                   POST   /corretors(.:format)              {:action=>"create", :controller=>"corretors"}
+#      new_corretor GET    /corretors/new(.:format)          {:action=>"new", :controller=>"corretors"}
+#     edit_corretor GET    /corretors/:id/edit(.:format)     {:action=>"edit", :controller=>"corretors"}
+#          corretor GET    /corretors/:id(.:format)          {:action=>"show", :controller=>"corretors"}
+#                   PUT    /corretors/:id(.:format)          {:action=>"update", :controller=>"corretors"}
+#                   DELETE /corretors/:id(.:format)          {:action=>"destroy", :controller=>"corretors"}
+#         situacaos GET    /situacaos(.:format)              {:action=>"index", :controller=>"situacaos"}
+#                   POST   /situacaos(.:format)              {:action=>"create", :controller=>"situacaos"}
+#      new_situacao GET    /situacaos/new(.:format)          {:action=>"new", :controller=>"situacaos"}
+#     edit_situacao GET    /situacaos/:id/edit(.:format)     {:action=>"edit", :controller=>"situacaos"}
+#          situacao GET    /situacaos/:id(.:format)          {:action=>"show", :controller=>"situacaos"}
+#                   PUT    /situacaos/:id(.:format)          {:action=>"update", :controller=>"situacaos"}
+#                   DELETE /situacaos/:id(.:format)          {:action=>"destroy", :controller=>"situacaos"}
 #     tipopropostas GET    /tipopropostas(.:format)          {:action=>"index", :controller=>"tipopropostas"}
 #                   POST   /tipopropostas(.:format)          {:action=>"create", :controller=>"tipopropostas"}
 #  new_tipoproposta GET    /tipopropostas/new(.:format)      {:action=>"new", :controller=>"tipopropostas"}

@@ -25,9 +25,9 @@
 		<a href=<%= operadoras_path %>>Todas as Operadoras</a>
 		<a href=<%= new_tipoproposta_path %>>Novo Tipo de Proposta</a>
 		<a href=<%= tipopropostas_path %>>Todos os tipos de Proposta</a>
-		<a href="#">Paypal</a>
-		</div>
-		
+		<a href=<%= new_situacao_path %>>Novo Tipo de Situação</a>
+		<a href=<%= situacaos_path %>>Todos os tipos de Situações</a>
+				
 		<% else %>
 		
 		</li>
@@ -41,9 +41,12 @@
 			
 		
 	</li>
-	<li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">Help</a>
+	<li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">Corretores</a>
 		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
-		<a href=<%= help_path %>>Help</a>
+		<a href=<%= new_corretor_path %>>Novo Corretor</a>
+		<a href=<%= corretors_path %>>Todos os Corretores</a>
+		<a href=<%= new_cparametro_path %>>Novo Parametro</a>
+		<a href=<%= cparametros_path %>>Todos os Parametros</a>
 		
 		</div>
 	</li>
@@ -66,8 +69,7 @@
       <% end %>
       <li><%= link_to "Operador1", operadoras_path %></li>
       <li><%= link_to "Operador2", help_path %></li>
-      <li><%= link_to "Operador3", help_path %></li>
-      <li><%= link_to "Operador4", help_path %></li>
+     
   </ul>
 </nav>
 </header>
