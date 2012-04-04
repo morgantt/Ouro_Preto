@@ -29,13 +29,14 @@
 
 		<tr>
 			<td><%= tp.operadora.nome %></td>
-			<td><%= tp.tipoproposta.tipo %></td>
+			<td><%= link_to tp.tipoproposta.tipo, edit_cparametro_path( tp ) %></td>
 			<td><%= tp.maximo %></td>
 			<td><%= tp.minimo %></td>
-			<td> <%= link_to 'Edita', edit_cparametro_path( tp ) %> </td>
+			<% if current_user.admin? %>
 			<td> <%= link_to 'Deleta', tp, :method => :delete, 
 			 																:confirm => "voce esta certo?",
 														      		 :title => "Delete => #{tp.tipoproposta.tipo}" %></td>
+			<% end %>												      		 
 		</tr>
 		
 	<% end %>

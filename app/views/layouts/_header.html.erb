@@ -27,7 +27,7 @@
 		<a href=<%= tipopropostas_path %>>Todos os tipos de Proposta</a>
 		<a href=<%= new_situacao_path %>>Novo Tipo de Situação</a>
 		<a href=<%= situacaos_path %>>Todos os tipos de Situações</a>
-				
+			</div>	
 		<% else %>
 		
 		</li>
@@ -37,10 +37,8 @@
 		<a href="#">Paypal</a>
 		</div>
 			<% end %>
-			
-			
+		</li>
 		
-	</li>
 	<li><a href="#" onmouseover="mopen('m4')" onmouseout="mclosetime()">Corretores</a>
 		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 		<a href=<%= new_corretor_path %>>Novo Corretor</a>

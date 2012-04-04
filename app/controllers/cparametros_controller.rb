@@ -10,20 +10,32 @@ class CparametrosController < ApplicationController
 	 def show
   
     @cparametro = Cparametro.find(params[:id])
+    
+#    @corretor  = Corretor.find(@cparametro.corretor_id)
+    
     @title = @cparametro.maximo
  
   end
   def new
-    p '***************** NEW NEW NEW  ******************************************************'		
+  
     @corretor = session[:corr]
     @novo = "SIM"
-       
- # raise params.inspect
-     	
+        
+    @cparametro = Cparametro.new
+    @operadora = Operadora.all   
+  
+    @tipoproposta = []
+   # raise params.inspect
+     
   	@title = "Novo Parametro"
-   	@cparametro = Cparametro.new
-   
+     
   end
+    
+  def update_tipo_div
+  	
+ 		 @tipoproposta = Tipoproposta.find(:all, :conditions => ["operadora_id = ?", params[:id]])
+
+	end
   
     def create
 
@@ -39,29 +51,35 @@ class CparametrosController < ApplicationController
   end
   
    def edit
-   p '***************** EDIT EDIT EDIT ******************************************************'
-   
+     
    @novo = "NAO"
-   
-   
+      
   		@cparametro = Cparametro.find(params[:id])
+  		p @cparametro
   		@corretor = Corretor.find(:all, :order => "nome")
  
   		@title = "Edita Parametro"
+  		
   end	
 
   
   def update
+   
     @corretor = Corretor.find(:all, :order => "nome")
     @cparametro = Cparametro.find(params[:id])
- #   @cparametro.operadora_id = params[:operadora][operadora_id]
-    	if @cparametro.update_attributes(params[:Cparametro])
-  		redirect_to @cparametro, :flash => { :success => "Parametro" }
+    
+  
+  #  @cparametro.operadora_id = params[:operadora][operadora_id]
+  	
+    	if @cparametro.update_attributes(params[:cparametro])
+  		redirect_to @cparametro, :flash => { :success => "Parametro C atualizado" }
   	else
   	@title = "Edita Parametro"
   	render 'edit'
  	 end	
   end
+  
+  
  def destroy
  	 Cparametro.find(params[:id]).destroy
  	 redirect_to corretors_path, :flash => { :success => "Parametro deletado" }

@@ -11,9 +11,9 @@
     <td class="sidebar round">
    
     <strong>Editar</strong>  <%= link_to (@operadora.nome), edit_operadora_path(@operadora)%>
-    </td>
+    <strong>Adicionar Novo Tipo</strong>  <%= link_to (@operadora.nome), new_tipoproposta_path(@operadora)%> 
     <td>
-    
+   
     </td>
   </tr>
 </table>
@@ -27,13 +27,16 @@
 			<th> </th>
 			<th> </th>
 		</tr>
-	<% @tipo.each do |tp| %>
+	<% @tipoproposta.each do |tp| %>
 
 		<tr>
-			<td><%= tp.tipo %></td>
+			<td><%= link_to tp.tipo, edit_tipoproposta_path( tp ) %></td>
 			<td><%= tp.lmi %></td>
 			<td><%= tp.lms %></td>
-			
+			<% if current_user.admin? %>
+			<td> <%= link_to 'Deleta', tp, :method => :delete, 
+			 																:confirm => "voce esta certo?" %></td>
+			<% end %>
 		</tr>
 		
 	<% end %>

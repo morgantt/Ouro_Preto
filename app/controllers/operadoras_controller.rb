@@ -17,6 +17,7 @@ class OperadorasController < ApplicationController
     @tipo  = @operadora.tipopropostas
  #   @tip = @operadora.tipopropostas.paginate( :page => params[:page])
     @title = @operadora.nome
+    session[:oper] = @operadora.id
     @tipopid = @operadora.id
     @tipoproposta = Tipoproposta.find( :all, :conditions => { :operadora_id => [@tipopid] } )
    
@@ -58,6 +59,7 @@ class OperadorasController < ApplicationController
  end
  
  def destroy
+ p params
  	 Operadora.find(params[:id]).destroy
  	 redirect_to operadoras_path, :flash => { :success => "Operadora deletada" }
  end

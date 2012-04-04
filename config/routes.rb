@@ -19,6 +19,7 @@ OuroPreto::Application.routes.draw do
 
   root :to => "pages#home"
 
+	match '/cparametros/update_tipo_div/:id' => 'cparametros#update_tipo_div', :as => :update_tipo_div
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'
   match '/help', :to => 'pages#help'
@@ -86,8 +87,9 @@ OuroPreto::Application.routes.draw do
 end
 
 #== Route Map
-# Generated on 12 Mar 2012 11:55
+# Generated on 24 Mar 2012 22:25
 #
+#   cparametros_new GET    /cparametros/new(.:format)        {:controller=>"cparametros", :action=>"new"}
 #    operadoras_new GET    /operadoras/new(.:format)         {:controller=>"operadoras", :action=>"new"}
 #      sessions_new GET    /sessions/new(.:format)           {:controller=>"sessions", :action=>"new"}
 #         corretors GET    /corretors(.:format)              {:action=>"index", :controller=>"corretors"}
@@ -97,6 +99,13 @@ end
 #          corretor GET    /corretors/:id(.:format)          {:action=>"show", :controller=>"corretors"}
 #                   PUT    /corretors/:id(.:format)          {:action=>"update", :controller=>"corretors"}
 #                   DELETE /corretors/:id(.:format)          {:action=>"destroy", :controller=>"corretors"}
+#       cparametros GET    /cparametros(.:format)            {:action=>"index", :controller=>"cparametros"}
+#                   POST   /cparametros(.:format)            {:action=>"create", :controller=>"cparametros"}
+#    new_cparametro GET    /cparametros/new(.:format)        {:action=>"new", :controller=>"cparametros"}
+#   edit_cparametro GET    /cparametros/:id/edit(.:format)   {:action=>"edit", :controller=>"cparametros"}
+#        cparametro GET    /cparametros/:id(.:format)        {:action=>"show", :controller=>"cparametros"}
+#                   PUT    /cparametros/:id(.:format)        {:action=>"update", :controller=>"cparametros"}
+#                   DELETE /cparametros/:id(.:format)        {:action=>"destroy", :controller=>"cparametros"}
 #         situacaos GET    /situacaos(.:format)              {:action=>"index", :controller=>"situacaos"}
 #                   POST   /situacaos(.:format)              {:action=>"create", :controller=>"situacaos"}
 #      new_situacao GET    /situacaos/new(.:format)          {:action=>"new", :controller=>"situacaos"}
@@ -129,6 +138,7 @@ end
 #       new_session GET    /sessions/new(.:format)           {:action=>"new", :controller=>"sessions"}
 #           session DELETE /sessions/:id(.:format)           {:action=>"destroy", :controller=>"sessions"}
 #              root        /(.:format)                       {:controller=>"pages", :action=>"home"}
+#   update_tipo_dev        /update_tipo_dev(.:format)        {:controller=>"cparametros", :action=>"update_tipo_dev "}
 #           contact        /contact(.:format)                {:controller=>"pages", :action=>"contact"}
 #             about        /about(.:format)                  {:controller=>"pages", :action=>"about"}
 #              help        /help(.:format)                   {:controller=>"pages", :action=>"help"}

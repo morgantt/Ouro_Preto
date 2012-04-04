@@ -2,9 +2,20 @@
 <html>
   <head>
     <title><%= title %></title>
-		<%= csrf_meta_tag %>
+    
+    <%= javascript_include_tag "prototype.js", "effects.js" %> 
+    <%= javascript_include_tag :all %>
+    <%= csrf_meta_tag %>
+    <script>
+  // this allows jquery to be called along with scriptaculous and YUI without any conflicts
+  // the only difference is all jquery functions should be called with $j instead of $
+  // e.g. $j('#div_id').stuff instead of $('#div_id').stuff
+   var $j = jQuery.noConflict();
+</script>
+    
+		
 		<%= render 'layouts/stylesheets' %>
-		<%= javascript_include_tag :all %>
+				
   </head>
   <body>
     <div class="container">

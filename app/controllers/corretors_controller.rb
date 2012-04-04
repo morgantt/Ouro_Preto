@@ -19,8 +19,7 @@ class CorretorsController < ApplicationController
     session[:corr] = @corretor.id
  		@cparametro = Cparametro.find( :all, :conditions => { :corretor_id => [@corretor] },
  																	 :order => "operadora_id" )
- 	#	@caca = @cparametro.operadora_id 
- 		p @caca
+ 																 
  	#	@operadora = Operadora.find(:all, :conditions => { :operadora_id => [@cparametro] } )
  		
   end

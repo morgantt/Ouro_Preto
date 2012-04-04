@@ -3,21 +3,30 @@
     <td class="main">
       <h3>
         <%= @tipoproposta.operadora.nome %>
-      </h3>
+      </h3>  
+      
+      <td class="sidebar round">
+      <strong>Mostrar</strong> <%= link_to (@tipoproposta.operadora.nome), operadora_path(@tipoproposta.operadora_id)%>
+      </td>  
+     </tr> 
       <tr>
 			<th>Tipo</th>
 			<th>LMI</th>
 			<th>LMS</th>
-			<th> </th>
+			<th>    </th>
+			<th>    </th>
 			
 		</tr>
     	<tr>
 			<td><%= @tipoproposta.tipo %></td>
 			<td><%= @tipoproposta.lmi %></td>
 			<td><%= @tipoproposta.lms %></td>
+			<td>     </td>
+			<td>     </td>
+			
 			<td class="sidebar round">
    
-    <strong>Editar</strong>  <%= link_to (@tipoproposta.tipo), edit_tipoproposta_path(@tipoproposta)%>
+  
     </td>
   </tr>
 </table>

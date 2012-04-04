@@ -23,7 +23,7 @@
 		validates_numericality_of  :maximo, :minimo,
 	 														 :message => "So pode conter caracteres numericos "
 	 														
-		validates_presence_of :maximo, :minimo,
+		validates_presence_of :maximo, :minimo, :operadora_id, :tipoproposta_id, :corretor_id,
 	 									  		:message => "Nao pode ser em Branco"
 
 

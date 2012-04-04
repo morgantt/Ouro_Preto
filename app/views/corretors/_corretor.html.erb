@@ -1,13 +1,19 @@
-<li>
-	<%= corretor.nome %>,&nbsp &nbsp &nbsp &nbsp 
+
+<table class="profile" summary="Profile information">
+	<tr>
+	</tr>
+	<tr>
+		<td WIDTH="80%"> <%= link_to corretor.nome, corretor %></td>
+		
+			<td WIDTH="10%"> <% if current_user.admin? %>	
+			<%= link_to "Deleta", corretor, :method => :delete, 
+																		 :confirm => "voce esta certo?",
+														  	     :title => "Delete => #{corretor.nome}" %>
+			<% end %>	
+		</td>
 	
-	<% if current_user.admin? %>
-	
-	<%= link_to "delete", corretor, :method => :delete, 
-																	 :confirm => "voce esta certo?",
-														       :title => "Delete => #{corretor.nome}" %>
-	<% end %>	
-													  
-	<%= link_to "Mostrar", corretor	%>			  										  
-														  
-</li>
+	<td>  </td>
+	<td>  </td>
+	</tr>	
+	</table>												  
+

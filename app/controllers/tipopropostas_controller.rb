@@ -1,6 +1,5 @@
 class TipopropostasController < ApplicationController
 
-
  
 	def index
 	
@@ -17,10 +16,14 @@ class TipopropostasController < ApplicationController
     
   end
   def new
+  
+  	@operadora = session[:oper]
+    @novo = "SIM"
+  
      	
   	@title = "Novo Tipo de Proposta"
    	@tipoproposta = Tipoproposta.new
-   	@operadora = Operadora.find(:all, :order => "nome")
+ #  	@operadora = Operadora.find(:all, :order => "nome")
   
   end
   
@@ -39,6 +42,8 @@ class TipopropostasController < ApplicationController
   end
   
    def edit
+   
+   @novo = "NAO"
    
   		@tipoproposta = Tipoproposta.find(params[:id])
   		@operadora = Operadora.find(:all, :order => "nome")
@@ -60,7 +65,7 @@ class TipopropostasController < ApplicationController
   end
  def destroy
  	 Tipoproposta.find(params[:id]).destroy
- 	 redirect_to tipopropostas_path, :flash => { :success => "Tipo de Proposta deletado" }
+ 	 redirect_to operadoras_path, :flash => { :success => "Tipo de Proposta deletado" }
  end
  		   
  

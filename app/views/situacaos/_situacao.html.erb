@@ -1,14 +1,24 @@
-<li>
-	<%= situacao.status %>,&nbsp &nbsp
-	<%= situacao.nomestat %>,&nbsp &nbsp &nbsp &nbsp 
+
+
+<table class="profile" summary="Profile information">
+	<tr>
 	
-	<% if current_user.admin? %>
+	</tr>
 	
-	<%= link_to "delete", situacao, :method => :delete, 
-																	 :confirm => "voce esta certo?",
-														       :title => "Delete => #{situacao.nomestat}" %>
-	<% end %>	
-													  
-	<%= link_to "Mostrar", situacao	%>			  										  
-														  
-</li>
+	<tr>
+	
+		<td WIDTH="10%"> <%= situacao.status %></td>
+		
+		<td WIDTH="50%"> <%= link_to situacao.nomestat, situacao %></td>
+		
+			<td WIDTH="10%"> <% if current_user.admin? %>	
+			<%= link_to "Deleta", situacao, :method => :delete, 
+																		 :confirm => "voce esta certo?",
+														  	     :title => "Delete => #{situacao.nomestat}" %>
+			<% end %>	
+		</td>
+	
+	<td>  </td>
+	<td>  </td>
+	</tr>	
+	</table>						

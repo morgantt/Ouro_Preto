@@ -5,7 +5,8 @@
     </td>
     <td class="sidebar round">
    
-    <strong>Editar</strong>  <%= link_to (@cparametro.tipoproposta.tipo), edit_cparametro_path(@cparametro)%>
+    <strong>Mostrar</strong>  <%= link_to (@cparametro.corretor.nome), corretor_path(@cparametro.corretor_id)%>
+    
     </td>
   </tr>
 </table>
@@ -26,6 +27,8 @@
 			<td> <%= @cparametro.tipoproposta.tipo %> </td>
 			<td><%= @cparametro.maximo %></td>
 			<td><%= @cparametro.minimo %></td>
+			
+			
 		</tr>
 		
 	

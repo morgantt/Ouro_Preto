@@ -1,13 +1,17 @@
-<li>
-	<%= operadora.nome %>,&nbsp &nbsp &nbsp &nbsp 
+<table class="profile" summary="Profile information">
+	<tr>
+	</tr>
+	<tr>
+		<td WIDTH="60%"> <%= link_to operadora.nome, operadora %> </td>
 	
-	<% if current_user.admin? %>
+		<td WIDTH="10%"> <% if current_user.admin? %>
 	
-	<%= link_to "delete", operadora, :method => :delete, 
-																	 :confirm => "voce esta certo?",
-														       :title => "Delete => #{operadora.nome}" %>
-	<% end %>	
-													  
-	<%= link_to "Mostrar", operadora	%>			  										  
-														  
-</li>
+					<%= link_to "Deleta", operadora, :method => :delete, 
+																					 :confirm => "voce esta certo?",
+																		       :title => "Delete => #{operadora.nome}" %>
+					<% end %>	
+		</td>											  
+			  										  
+	</tr>	
+</table>														  
+

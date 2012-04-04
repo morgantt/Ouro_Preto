@@ -56,14 +56,14 @@ nav ul li {
 
 nav ul li a {
     padding: 0 5px;
-    font-weight: bold:
+    font-weight: bold;
 }
 
 nav ul li a:visited {
-    color: #09c:
+    color: #09c;
 }
 nav ul li a:hover {
-    text-decoration:
+    text-decoration: none
 }
 
 /* sign up button */
@@ -124,6 +124,10 @@ td.sidebar {
 }
 
 div.field, div.actions{
+    margin-bottom: 10px;
+}
+
+div#tipo{
     margin-bottom: 10px;
 }
 

@@ -1,4 +1,4 @@
-<h1>Edit C Parametros</h1>
+<h2>Edita Parametros do Corretor</h2>
 	
  <% if @novo == "SIM" %>
 
@@ -8,11 +8,14 @@
 	  <%= f.submit "Update" %>
 		</div>
 		<% end %>
-	<% end %>	
+		
+			<% else %>
+		
 <%= form_for(@cparametro) do |f|  %>
+ 
 		<%= render 'fields2', :f => f %> 
 		<div class='actions'>
 	  <%= f.submit "Update" %>
 		</div>
 		<% end %>
-	
+	<% end %>

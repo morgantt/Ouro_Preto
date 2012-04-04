@@ -1,10 +1,20 @@
 <h1>Edit Tipo de Proposta</h1>
+	
+ <% if @novo == "SIM" %>
+
+		<%= form_for(@tipoproposta) do |f|  %>
+		<%= render 'fields', :f => f %> 
+		<div class='actions'>
+ 		 <%= f.submit "Update" %>
+		
+	<% end %>
+			
+			<% else %>
+		
 <%= form_for(@tipoproposta) do |f|  %>
-<%= render 'fields', :f => f %> 
-<div class='actions'>
-  <%= f.submit "Update" %>
-</div>
-
-<% end %>
-
-
+		<%= render 'fields2', :f => f %> 
+		<div class='actions'>
+	  <%= f.submit "Update" %>
+		
+		<% end %>	
+	<% end %>

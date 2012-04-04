@@ -1,9 +1,10 @@
 <%= render 'shared/error_messages', :object => f.object %>
 
 <div class='field'>
-  <%= f.label :Operadoraid %><br />
-  <%= f.collection_select("operadora_id", Operadora.all, :id, :nome,
-  										 {:prompt => 'Por Favor selecione a operadora'}) %>
+  <%= f.label :Operadora %><br />
+ 
+  <%= f.collection_select("operadora_id", Operadora.find(:all, :conditions => ["id = ?", @operadora]), :id, :nome) %>										 
+  										 
 </div>
 
 
