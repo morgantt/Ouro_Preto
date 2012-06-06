@@ -8,7 +8,7 @@ $j(document).ready(function(){
     var operadora = $j('select#@operadora_id :selected').val();
      if(operadora == "") alert("Selecione Uma Operadora");
      else
-			alert(operadora)
+	//		alert(operadora)
     jQuery.get('/propostas/update_tipo_div/' + operadora, function(data){
        
     })
@@ -23,7 +23,7 @@ jQuery(function($j) {
   //  alert(tipoproposta)
      if(tipoproposta == "") alert("Selecione um Tipo");
      else
-	 		alert(tipoproposta)
+	// 		alert(tipoproposta)
     jQuery.get('/propostas/update_number_div/' + tipoproposta, function(data){
        
     })
@@ -39,7 +39,7 @@ jQuery(function($j) {
   //  alert(tipoproposta)
      if(proposta == "") alert("Selecione um Numero");
      
-			alert(proposta)
+//			alert(proposta)
     jQuery.get('/propostas/associa_update_button_div/' + proposta, function(data){
        
     })
@@ -102,8 +102,6 @@ jQuery(function($j) {
 <div class='field'>
 
 
-
-<!--	 <%= f.select("corretor_id", @car.map {|p| [ p.nome, p.id] } ) %>-->
 </div>	 
 <div id='associaupd'>
 	 button

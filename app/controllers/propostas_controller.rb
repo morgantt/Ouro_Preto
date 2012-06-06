@@ -7,23 +7,14 @@ class PropostasController < ApplicationController
 	end
 	
 	def show
-	p '********* show ***********************************************************************'
-	p params
+
     @proposta = Proposta.find(params[:id])
     @operadora = Operadora.find(:all)
   #  @corretor = Corretor.find( :all, :conditions => { :id => [@proposta.corretor_id] } )
-    
-    p '********* aqui ***********************************************************************'
-    p @proposta
-    p @corretor
-   #   @nome = @corretor.first
-#    p @nome.nome
+
+
     @title = @proposta.numero
-#    session[:corr] = @corretor.id
-# 		@cparametro = Cparametro.find( :all, :conditions => { :corretor_id => [@corretor] },
-# 																	 :order => "operadora_id" )
-# 																 
-# 	#	@operadora = Operadora.find(:all, :conditions => { :operadora_id => [@cparametro] } )
+
  		
   end
   
@@ -111,16 +102,11 @@ class PropostasController < ApplicationController
 	  end
  
   	def associa_2
-   	p '********* associa_2 ***********************************************************************'
- p params
-
-p '********* associa_3 ***********************************************************************'
-
+ 
   	@proposta = Proposta.find(params[:proposta_id][:id])
 
  
    @proposta.corretor_id = params[:id] 
- #  @proposta.inspect
    	
     	if @proposta.update_attributes(params[:proposta])
   		redirect_to @proposta, :flash => { :success => "Proposta atualizada" }
@@ -141,8 +127,7 @@ p '********* associa_3 *********************************************************
   	@proposta = Proposta.find(params[:id])
   	@tipoproposta = Tipoproposta.find(:all, :conditions => { :id => [@proposta.tipoproposta_id] })
     @operadora = Operadora.find(:all, :conditions => { :id => [@proposta.operadora_id] })	
-  	#	@corretor = Corretor.find(:all, :order => "nome")
-   		@title = "Edita Parametro"
+  	@title = "Edita Parametro"
   		
   end	 
   
