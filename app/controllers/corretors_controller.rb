@@ -12,7 +12,8 @@ class CorretorsController < ApplicationController
 	end
  
   def show
-
+  
+  	
     @corretor = Corretor.find(params[:id])
     @operadora = Operadora.find(:all)
     @title = @corretor.nome

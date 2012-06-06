@@ -3,6 +3,7 @@
     <td class="main">
       <h1>
       <%= @operadora.nome %>
+      <%= @operadora.marca %>
       </h1>
       <h5>
       <%= @operadora.banco %>
@@ -10,8 +11,8 @@
     </td>
     <td class="sidebar round">
    
-    <strong>Editar</strong>  <%= link_to (@operadora.nome), edit_operadora_path(@operadora)%>
-    <strong>Adicionar Novo Tipo</strong>  <%= link_to (@operadora.nome), new_tipoproposta_path(@operadora)%> 
+    <%= link_to "Edita", edit_operadora_path(@operadora)%><br />
+    <%= link_to "Adicionar Novo Tipo", new_tipoproposta_path(@operadora)%> 
     <td>
    
     </td>
@@ -35,7 +36,7 @@
 			<td><%= tp.lms %></td>
 			<% if current_user.admin? %>
 			<td> <%= link_to 'Deleta', tp, :method => :delete, 
-			 																:confirm => "voce esta certo?" %></td>
+			 																:confirm => "voce esta certo que quer deletar?" %></td>
 			<% end %>
 		</tr>
 		

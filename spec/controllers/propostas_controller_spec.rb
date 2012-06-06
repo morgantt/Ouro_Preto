@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PropostaController do
+describe PropostasController do
 
   describe "GET 'new'" do
     it "should be successful" do

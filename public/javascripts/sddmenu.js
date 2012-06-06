@@ -1,6 +1,8 @@
 // Copyright 2006-2007 javascript-array.com
 
-var timeout	= 500;
+
+// timeout estava 500 mudei para 100 
+var timeout	= 100;
 var closetimer	= 0;
 var ddmenuitem	= 0;
 

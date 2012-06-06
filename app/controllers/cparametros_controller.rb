@@ -50,12 +50,13 @@ class CparametrosController < ApplicationController
     end
   end
   
-   def edit
-     
+	def edit
+   
+ # Com o @novo=nao vai chamar na view edit a partial field2    
    @novo = "NAO"
       
   		@cparametro = Cparametro.find(params[:id])
-  		p @cparametro
+  		
   		@corretor = Corretor.find(:all, :order => "nome")
  
   		@title = "Edita Parametro"

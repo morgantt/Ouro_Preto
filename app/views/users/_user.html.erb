@@ -1,10 +1,20 @@
-<li>
-	<%= gravatar_for user, :size => 30 %>
-	<%= link_to user.name, user %>
-	<% if current_user.admin? %>
-	|
-	<%= link_to "delete", user, :method => :delete, :confirm => "voce esta certo?",
-														  :title => "Delete => #{user.name}" %>
-	<% end %>													  
-														  
-</li>
+
+<table class="profile" summary="Profile information">
+	<tr>
+	</tr>
+	<tr>
+		<td WIDTH="10%"> <%= gravatar_for user, :size => 30 %></td>
+		<td WIDTH="60%"> <%= link_to user.name, user %></td>
+		
+			<td WIDTH="10%"> <% if current_user.admin? %>	
+			<%= link_to "Deleta", user, :method => :delete, 
+																		 :confirm => "voce esta certo?",
+														  	     :title => "Delete => #{user.name}" %>
+			<% end %>	
+		</td>
+	
+	<td>  </td>
+	<td>  </td>
+	</tr>	
+	</table>												  
+

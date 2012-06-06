@@ -16,10 +16,20 @@ class TipopropostasController < ApplicationController
     
   end
   def new
-  
-  	@operadora = session[:oper]
+    
+     @novo = "SIM"
+  	@operadora_id = session[:oper]
+       if @operadora_id.nil?
+      @novo = "NAO"
+  else
     @novo = "SIM"
+   end
   
+    
+    
+    
+   @operadora = Operadora.find(:all, :conditions => { :id => [@operadora_id] } )
+    p @operadora
      	
   	@title = "Novo Tipo de Proposta"
    	@tipoproposta = Tipoproposta.new
@@ -32,17 +42,19 @@ class TipopropostasController < ApplicationController
   	
    @tipoproposta = Tipoproposta.new(params[:tipoproposta])
   # @tipoproposta.operadora_id = params[tipoproposta][:operadora_id]
+  @operadora = Operadora.find(:all, :conditions => { :id => [@tipoproposta] } )
     if @tipoproposta.save
       
       redirect_to @tipoproposta, :flash => { :success => "Novo Tipo de Proposta criado com sucesso!" }
     else
      @title = "Novo Tipo de Proposta"
+    
      render "new"
     end
   end
   
    def edit
-   
+   p '#### edit ########################################################'
    @novo = "NAO"
    
   		@tipoproposta = Tipoproposta.find(params[:id])
@@ -53,6 +65,7 @@ class TipopropostasController < ApplicationController
 
   
   def update
+  p '#### update ########################################################'
     @operadora = Operadora.find(:all, :order => "nome")
     @tipoproposta = Tipoproposta.find(params[:id])
  #   @tipoproposta.operadora_id = params[:operadora][operadora_id]

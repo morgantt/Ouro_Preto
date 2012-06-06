@@ -1,14 +1,16 @@
 OuroPreto::Application.routes.draw do
 
+  get "propostas/new"
+
   get "tipopropostas/new"
   
   get "cparametros/new"
 
-   get "operadoras/new"
-
-  # get "proposta/new"
+  get "operadoras/new"
 
   get "sessions/new"
+  
+  resources :propostas
   resources :corretors
   resources :cparametros
   resources :situacaos
@@ -18,7 +20,13 @@ OuroPreto::Application.routes.draw do
   resources :sessions, :only => [ :new, :create, :destroy ]
 
   root :to => "pages#home"
-
+	
+	match '/propostas/associa/:id', :to => 'propostas#associa', :as => :associa
+	match '/propostas/associa_2/:id', :to => 'propostas#associa_2', :as => :associa_2
+	match '/propostas/associa_update_button_div/:idw' => 'propostas#associa_update_button_div',
+																					 :as  => :associa_update_button_div
+	match '/propostas/update_number_div/:id' => 'propostas#update_number_div', :as => :update_number_div
+	match '/propostas/update_tipo_div/:id' => 'propostas#update_tipo_div', :as => :update_tipo_div
 	match '/cparametros/update_tipo_div/:id' => 'cparametros#update_tipo_div', :as => :update_tipo_div
   match '/contact', :to => 'pages#contact'
   match '/about', :to => 'pages#about'

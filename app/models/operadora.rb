@@ -9,6 +9,7 @@
 #  banco      :string(255)
 #  created_at :datetime
 #  updated_at :datetime
+#  marca      :string(255)
 #
 
 class Operadora < ActiveRecord::Base
@@ -19,11 +20,11 @@ class Operadora < ActiveRecord::Base
 	 has_many :tipopropostas, :dependent => :destroy
 	 has_many :cparametros
 	 
-	attr_accessible :nome, :logo_url, :corretora, :banco
+	attr_accessible :nome, :logo_url, :corretora, :banco, :marca
 	
  
 	
-	validates_presence_of :nome, :logo_url, :corretora, :banco,
+	validates_presence_of :nome, :logo_url, :corretora, :banco, :marca,
 	 											:message => "Nao pode ser em Branco"
 												
 	validates_uniqueness_of :nome, :message => "Nome corretora repetido "
@@ -41,6 +42,6 @@ class Operadora < ActiveRecord::Base
 	
 		def converte_uppercase
 			self.nome.upcase!
-			
+			self.marca.upcase!		
 		end
 end

@@ -3,7 +3,7 @@
   <head>
     <title><%= title %></title>
     
-    <%= javascript_include_tag "prototype.js", "effects.js" %> 
+    <%= javascript_include_tag  "prototype.js", "effects.js" %> 
     <%= javascript_include_tag :all %>
     <%= csrf_meta_tag %>
     <script>
@@ -11,6 +11,7 @@
   // the only difference is all jquery functions should be called with $j instead of $
   // e.g. $j('#div_id').stuff instead of $('#div_id').stuff
    var $j = jQuery.noConflict();
+   
 </script>
     
 		

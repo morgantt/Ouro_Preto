@@ -19,7 +19,7 @@ class Tipoproposta < ActiveRecord::Base
 	has_many 		:cparametros
 	belongs_to  :corretor
 		
-	validates_presence_of :tipo, :lmi, :lms,
+	validates_presence_of :tipo, :lmi, :lms, :operadora_id,
 	 											:message => "Nao pode ser em Branco"
 	 											
 	 before_validation :converte_uppercase

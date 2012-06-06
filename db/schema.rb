@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120312144102) do
+ActiveRecord::Schema.define(:version => 20120410003636) do
 
   create_table "corretors", :force => true do |t|
     t.string   "nome"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20120312144102) do
     t.string   "banco"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "marca"
   end
 
   add_index "operadoras", ["nome"], :name => "index_operadoras_on_nome", :unique => true
@@ -65,6 +66,8 @@ ActiveRecord::Schema.define(:version => 20120312144102) do
     t.text     "observacao"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "tipoproposta_id"
+    t.string   "operadora"
   end
 
   create_table "situacaos", :force => true do |t|

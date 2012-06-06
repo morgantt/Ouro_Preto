@@ -10,7 +10,9 @@
     </td>
     <td class="sidebar round">
    
-    <strong>Editar</strong>  <%= link_to (@corretor.nome), edit_corretor_path(@corretor)%><br />		   			<strong>Adicionar Limites</strong>  <%= link_to (@corretor.nome), new_cparametro_path(@corretor)%>
+     <%= link_to "Editar", edit_corretor_path(@corretor)%><br />		   			
+     <%= link_to "Adicionar Limites",  new_cparametro_path(@corretor)%><br />
+     <%= link_to "Associar Propostas", associa_path(@corretor)%><br />
     </td>
   </tr>
 </table>

@@ -7,7 +7,7 @@ class OperadorasController < ApplicationController
  
 	def index
 	
-		@operadora = Operadora.paginate(:page => params[:page])
+		@operadora = Operadora.paginate(:page => params[:page], :order => 'nome')
 		@title = "Todas as Operadoras"
 	end
  
@@ -18,9 +18,10 @@ class OperadorasController < ApplicationController
  #   @tip = @operadora.tipopropostas.paginate( :page => params[:page])
     @title = @operadora.nome
     session[:oper] = @operadora.id
+  
     @tipopid = @operadora.id
     @tipoproposta = Tipoproposta.find( :all, :conditions => { :operadora_id => [@tipopid] } )
-   
+  
   end
  
   def new

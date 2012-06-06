@@ -1,0 +1,8 @@
+<h1>Nova Proposta</h1>
+<%= form_for(@proposta) do |f|  %>
+<%= render 'fields', :f => f %> 
+<div class='actions'>
+  <%= f.submit "Criar" %>
+</div>
+
+<% end %>

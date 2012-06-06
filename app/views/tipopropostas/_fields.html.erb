@@ -2,8 +2,8 @@
 
 <div class='field'>
   <%= f.label :Operadora %><br />
- 
-  <%= f.collection_select("operadora_id", Operadora.find(:all, :conditions => ["id = ?", @operadora]), :id, :nome) %>										 
+  
+  <%= f.collection_select("operadora_id", Operadora.find(:all, :conditions => ["id = ?",  @operadora]), :id, :nome) %>										 
   										 
 </div>
 

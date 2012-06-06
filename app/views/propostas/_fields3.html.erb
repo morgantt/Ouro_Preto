@@ -1,0 +1,114 @@
+<script type="text/javascript">
+$j(document).ready(function(){
+
+
+  // when the #operadora field changes
+  $j("#operadora").change(function() {
+    // make a POST call and replace the content
+    var operadora = $j('select#@operadora_id :selected').val();
+     if(operadora == "") alert("Selecione Uma Operadora");
+     else
+			alert(operadora)
+    jQuery.get('/propostas/update_tipo_div/' + operadora, function(data){
+       
+    })
+    return false;
+  }) 
+ });
+jQuery(function($j) {
+  // when the #tipoproposta field changes
+  $j("#tipo").change(function() {
+    // make a POST call and replace the content
+    var tipoproposta = $j('select#proposta_tipoproposta_id :selected').val();
+  //  alert(tipoproposta)
+     if(tipoproposta == "") alert("Selecione um Tipo");
+     else
+	 		alert(tipoproposta)
+    jQuery.get('/propostas/update_number_div/' + tipoproposta, function(data){
+       
+    })
+   
+    return false;
+ })
+  }); 
+ jQuery(function($j) {
+  // when the #tipoproposta field changes
+  $j("#number").change(function() {
+    // make a POST call and replace the content
+    var proposta = $j('select#@proposta_id :selected').val();
+  //  alert(tipoproposta)
+     if(proposta == "") alert("Selecione um Numero");
+     
+			alert(proposta)
+    jQuery.get('/propostas/associa_update_button_div/' + proposta, function(data){
+       
+    })
+    return false;
+ })
+  });  
+  
+ jQuery(function($j) { 
+ // $j("#datepicker").datepicker({dateFormat: 'dd-mm-yyyy'});
+  });  
+</script>
+
+
+
+<%= render 'shared/error_messages', :object => f.object %>
+
+<div class='coco'>
+
+  <%= f.label :Corretor %><br />
+  <%= @corretor.nome %>
+  
+</div>
+ 
+<div id='operadora'>
+  <%= f.label :Operadora %><br />
+  <%= collection_select( :operadora_id, :id, @operadora, :id, :nome,
+  										 {:include_blank => 'Escolha Operadora'}) %>
+</div>
+									 
+<div id='tipo'>
+<%= f.label :Tipo %><br />
+
+</div>  										  										 
+
+<div id='number'>
+<%= f.label :Numero %><br />
+
+</div>  
+
+<div class='datepicker'>
+<table class="datepicker" >
+	<tr>
+	</tr>
+	<tr>
+		
+		<td WIDTH="40%"> <%= f.label :Data_Status %><br /> </td>
+			<td WIDTH="50%"> <%= f.datepicker :data_status , :readonly=>'true', :value => Date.today.to_s  %></td>
+	</tr>	
+</table>	
+</div>
+
+<div class='field'>
+	<%= f.label :Nomestat %><br />
+ 	<%= f.select("status", @situacao.collect {|p| [ p.nomestat, p.status] }) %>
+  <%= f.select("nome_status", @situacao.collect {|p| [ p.status, p.nomestat] }) %>
+ <%= f.label :Corretor %>
+		<%= f.collection_select("corretor_id", @car, :id, :nome) %>
+</div>
+
+<div class='field'>
+
+
+
+<!--	 <%= f.select("corretor_id", @car.map {|p| [ p.nome, p.id] } ) %>-->
+</div>	 
+<div id='associaupd'>
+	 button
+	 		</div>
+<div class='field'>
+  <%= f.label :Observacao %><br />
+  <%= f.text_area :observacao %>
+</div>

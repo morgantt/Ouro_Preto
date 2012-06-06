@@ -1,0 +1,17 @@
+<table class="profile" summary="Profile information">
+	<tr>
+	</tr>
+	<tr>
+		<td WIDTH="80%"> <%= link_to proposta.numero, proposta %></td>
+		
+			<td WIDTH="10%"> <% if current_user.admin? %>	
+			<%= link_to "Deleta", proposta, :method => :delete, 
+																		 :confirm => "voce esta certo?",
+														  	     :title => "Delete => #{proposta.numero}" %>
+			<% end %>	
+		</td>
+	
+	<td>  </td>
+	<td>  </td>
+	</tr>	
+	</table>		
