@@ -10,7 +10,7 @@
     </td>
     <td class="sidebar round">
    
-     <%= link_to "Editar", edit_corretor_path(@corretor)%><br />		   			
+     <%= link_to "Editar Dados Corretor", edit_corretor_path(@corretor)%><br />		   			
      <%= link_to "Adicionar Limites",  new_cparametro_path(@corretor)%><br />
      <%= link_to "Associar Propostas", associa_path(@corretor)%><br />
     </td>
@@ -23,7 +23,7 @@
 			<th> Tipo </th>
 			<th>Maximo</th>
 			<th>Minimo</th>
-			<th> </th>
+			<th>Count</th>
 			<th> </th>
 			<th> </th>
 		</tr>
@@ -34,6 +34,7 @@
 			<td><%= link_to tp.tipoproposta.tipo, edit_cparametro_path( tp ) %></td>
 			<td><%= tp.maximo %></td>
 			<td><%= tp.minimo %></td>
+			<td><%= @propostacount %></td>
 			<% if current_user.admin? %>
 			<td> <%= link_to 'Deleta', tp, :method => :delete, 
 			 																:confirm => "voce esta certo?",

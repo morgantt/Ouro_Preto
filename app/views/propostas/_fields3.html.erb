@@ -6,30 +6,36 @@ $j(document).ready(function(){
   $j("#operadora").change(function() {
     // make a POST call and replace the content
     var operadora = $j('select#@operadora_id :selected').val();
-     if(operadora == "") alert("Selecione Uma Operadora");
+      alert(operadora)
+         if(operadora == "") alert("Selecione Uma Operadora");
      else
 	//		alert(operadora)
     jQuery.get('/propostas/update_tipo_div/' + operadora, function(data){
        
     })
+
     return false;
   }) 
  });
 jQuery(function($j) {
   // when the #tipoproposta field changes
+
+
   $j("#tipo").change(function() {
     // make a POST call and replace the content
     var tipoproposta = $j('select#proposta_tipoproposta_id :selected').val();
   //  alert(tipoproposta)
+  $j("#operadora").hide()
      if(tipoproposta == "") alert("Selecione um Tipo");
      else
 	// 		alert(tipoproposta)
     jQuery.get('/propostas/update_number_div/' + tipoproposta, function(data){
        
     })
-   
-    return false;
+      return false;
+
  })
+
   }); 
  jQuery(function($j) {
   // when the #tipoproposta field changes
@@ -66,7 +72,8 @@ jQuery(function($j) {
 <div id='operadora'>
   <%= f.label :Operadora %><br />
   <%= collection_select( :operadora_id, :id, @operadora, :id, :nome,
-  										 {:include_blank => 'Escolha Operadora'}) %>
+  										 {:include_blank => 'Escolha Operadora'},
+                       :readonly => true) %>
 </div>
 									 
 <div id='tipo'>

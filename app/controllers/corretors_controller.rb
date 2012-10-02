@@ -20,6 +20,8 @@ class CorretorsController < ApplicationController
     session[:corr] = @corretor.id
  		@cparametro = Cparametro.find( :all, :conditions => { :corretor_id => [@corretor] },
  																	 :order => "operadora_id" )
+ 		@propostacount = Proposta.find(:all, :conditions => 
+ 																	{:corretor_id => [@corretor] }).count															 
  																 
  	#	@operadora = Operadora.find(:all, :conditions => { :operadora_id => [@cparametro] } )
  		

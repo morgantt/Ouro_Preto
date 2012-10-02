@@ -78,15 +78,19 @@ class PropostasController < ApplicationController
   end	 
   
     def update_tipo_div
-  
+     p params
  		 @tipoproposta = Tipoproposta.find(:all, :conditions => ["operadora_id = ?", params[:id]])
- 	 		
-	end 
+    
+ 	 	#	raise params.inspect
+    p '*************************************************'
+     @operador = Operadora.find(params[:id])
+
+  end
    
  	 def update_number_div
 
  		 @proposta = Proposta.find(:all, :conditions => ["tipoproposta_id = ? and status = ?", params[:id], 8] )
- 
+       
 	end 
 	
 		def associa_update_button_div
