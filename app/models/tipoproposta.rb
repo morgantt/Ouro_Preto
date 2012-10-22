@@ -17,8 +17,10 @@ class Tipoproposta < ActiveRecord::Base
 		
 	belongs_to  :operadora
 	has_many 		:cparametros
-	belongs_to  :corretor
-		
+#	belongs_to  :corretor
+#	has_many :corretor, :through => cparametros
+
+
 	validates_presence_of :tipo, :lmi, :lms, :operadora_id,
 	 											:message => "Nao pode ser em Branco"
 	 											

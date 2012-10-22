@@ -2,6 +2,8 @@ class PropostasController < ApplicationController
  
  	def index
 		@title = "Todas as Propostas"
+    @some = Proposta.all
+    @corretor = Corretor.all
 		@proposta = Proposta.paginate(:page => params[:page], :order => "numero")
 	
 	end
@@ -10,7 +12,8 @@ class PropostasController < ApplicationController
 
     @proposta = Proposta.find(params[:id])
     @operadora = Operadora.find(:all)
-  #  @corretor = Corretor.find( :all, :conditions => { :id => [@proposta.corretor_id] } )
+   # @corretor1 = Corretor.find(:all)
+    @corretor = Corretor.find( @proposta.corretor_id )
 
 
     @title = @proposta.numero

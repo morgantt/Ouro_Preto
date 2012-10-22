@@ -2,7 +2,11 @@
 	<tr>
 	</tr>
 	<tr>
-		<td WIDTH="80%"> <%= link_to proposta.numero, proposta %></td>
+		<td WIDTH="40%"> <%= link_to proposta.numero, proposta %></td>
+		<td WIDTH="15%"> <%= proposta.corretor_id %></td>
+		<td WIDTH="10%"> <%= proposta.tipo %></td>
+		<td WIDTH="15%"> <%= proposta.operadora %></td>
+		<td WIDTH="15%"> <%= proposta.nome_status %></td>
 		
 			<td WIDTH="10%"> <% if current_user.admin? %>	
 			<%= link_to "Deleta", proposta, :method => :delete, 

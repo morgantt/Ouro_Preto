@@ -19,7 +19,7 @@ class Operadora < ActiveRecord::Base
 
 	 has_many :tipopropostas, :dependent => :destroy
 	 has_many :cparametros
-	 
+	# has_many :
 	attr_accessible :nome, :logo_url, :corretora, :banco, :marca
 	
  

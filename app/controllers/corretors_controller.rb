@@ -12,16 +12,23 @@ class CorretorsController < ApplicationController
 	end
  
   def show
-  
+   
   	
     @corretor = Corretor.find(params[:id])
     @operadora = Operadora.find(:all)
     @title = @corretor.nome
     session[:corr] = @corretor.id
+    # cor_id vai ser usado na scope um_corretor
+    cor_id = @corretor.id
  		@cparametro = Cparametro.find( :all, :conditions => { :corretor_id => [@corretor] },
  																	 :order => "operadora_id" )
- 		@propostacount = Proposta.find(:all, :conditions => 
- 																	{:corretor_id => [@corretor] }).count															 
+
+  #  @propostacount = Proposta.where(:corretor_id=>[@corretor]).count
+ 	  @propostacount = Proposta.um_corretor(@corretor).status7.count
+    @propostas_status7_do_corretor = Proposta.um_corretor(@corretor).status7
+
+  	# @propostacount = Proposta.find(:all, :conditions => 
+ 		# 															{:corretor_id => [@corretor] }).count															 
  																 
  	#	@operadora = Operadora.find(:all, :conditions => { :operadora_id => [@cparametro] } )
  		

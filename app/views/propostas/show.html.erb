@@ -3,6 +3,7 @@
     <td class="main">
       <h1>
       <%= @proposta.numero %><br />
+
     
       </h1>
      
@@ -13,7 +14,7 @@
     </td>
     <td class="sidebar round">
    
-    			
+   <%= @corretor.nome %><br />  			
  
     </td>
   </tr>
@@ -27,7 +28,7 @@
 			<th>status</th>
 			<th>Data Status</th>
 			<th>Data Entrada</th>
-			<th>Corretor id</th>
+			<th>Corretor nome</th>
 		</tr>
 			<td><%= @proposta.numero %></td>
 			<td><%= @proposta.operadora %></td>
@@ -35,7 +36,7 @@
 			<td><%= @proposta.nome_status %></td>
 			<td><%= @proposta.data_status %></td>
 			<td><%= @proposta.data_entrada %></td>
-			<td><%= @proposta.corretor_id %></td>
+			<td><%= @corretor.nome  %></td>
 		</tr>
 		
 	

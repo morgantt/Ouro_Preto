@@ -23,23 +23,27 @@
 			<th> Tipo </th>
 			<th>Maximo</th>
 			<th>Minimo</th>
-			<th>Count</th>
+			<th>Propostas</th>
+			<th>Total</th>
 			<th> </th>
 			<th> </th>
 		</tr>
 	<% @cparametro.each do |tp| %>
+			
 
 		<tr>
 			<td><%= tp.operadora.nome %></td>
 			<td><%= link_to tp.tipoproposta.tipo, edit_cparametro_path( tp ) %></td>
 			<td><%= tp.maximo %></td>
 			<td><%= tp.minimo %></td>
+			<td><%= @propostas_status7_do_corretor.where( :tipoproposta_id => tp.tipoproposta_id).count %></td>
 			<td><%= @propostacount %></td>
 			<% if current_user.admin? %>
 			<td> <%= link_to 'Deleta', tp, :method => :delete, 
 			 																:confirm => "voce esta certo?",
 														      		 :title => "Delete => #{tp.tipoproposta.tipo}" %></td>
-			<% end %>												      		 
+			<% end %>	
+														      		 
 		</tr>
 		
 	<% end %>

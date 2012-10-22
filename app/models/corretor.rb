@@ -22,10 +22,11 @@ class Corretor < ActiveRecord::Base
 # identifica quais atributos deste modelo sao modificaveis atraves
 # do web interface
 
-#	 has_many :cparametros, :dependent => :destroy
-#	 has_many :tipopropostas, :through => cparametros  
-#	 has_many :operadoras, :through => cparametros 
-#	 
+	has_many :cparametros, :dependent => :destroy
+	has_many :tipopropostas, :through => :cparametros  
+	has_many :operadoras,    :through => :cparametros 
+	has_many :propostas
+ 	 
 	attr_accessible :nome, :endereco, :cep, :cpf, :telefone1, :telefone2, 
 									:banco, :agencia, :conta, :comentario 
 	
