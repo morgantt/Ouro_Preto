@@ -1,15 +1,17 @@
 <script type="text/javascript">
-$j(document).ready(function(){
+
+$(document).ready(function(){
+
 
 
   // when the #operadora field changes
-  $j("#operadora").change(function() {
+  $("#operadora").change(function() {
     // make a POST call and replace the content
-    var operadora = $j('select#@operadora_id :selected').val();
+    var operadora = $('#operadora :selected').val();
       alert(operadora)
          if(operadora == "") alert("Selecione Uma Operadora");
      else
-	//		alert(operadora)
+		//	alert(operadora)
     jQuery.get('/propostas/update_tipo_div/' + operadora, function(data){
        
     })
@@ -17,15 +19,15 @@ $j(document).ready(function(){
     return false;
   }) 
  });
-jQuery(function($j) {
+jQuery(function($) {
   // when the #tipoproposta field changes
 
 
-  $j("#tipo").change(function() {
+  $("#tipo").change(function() {
     // make a POST call and replace the content
-    var tipoproposta = $j('select#proposta_tipoproposta_id :selected').val();
+    var tipoproposta = $('select#proposta_tipoproposta_id :selected').val();
   //  alert(tipoproposta)
-  $j("#operadora").hide()
+  $("#operadora").hide()
      if(tipoproposta == "") alert("Selecione um Tipo");
      else
 	// 		alert(tipoproposta)
@@ -37,11 +39,11 @@ jQuery(function($j) {
  })
 
   }); 
- jQuery(function($j) {
+ jQuery(function($) {
   // when the #tipoproposta field changes
-  $j("#number").change(function() {
+  $("#number").change(function() {
     // make a POST call and replace the content
-    var proposta = $j('select#@proposta_id :selected').val();
+    var proposta = $('select#proposta_id :selected').val();
   //  alert(tipoproposta)
      if(proposta == "") alert("Selecione um Numero");
      
@@ -52,10 +54,8 @@ jQuery(function($j) {
     return false;
  })
   });  
-  
- jQuery(function($j) { 
- // $j("#datepicker").datepicker({dateFormat: 'dd-mm-yyyy'});
-  });  
+ 
+
 </script>
 
 
@@ -86,24 +86,24 @@ jQuery(function($j) {
 
 </div>  
 
-<div class='datepicker'>
-<table class="datepicker" >
+<div >
+<table id="datepicker"> 
 	<tr>
 	</tr>
 	<tr>
 		
-		<td WIDTH="40%"> <%= f.label :Data_Status %><br /> </td>
-			<td WIDTH="50%"> <%= f.datepicker :data_status , :readonly=>'true', :value => Date.today.to_s  %></td>
+		<td WIDTH="50%"> <%= f.label :data_status %><br /> </td> 
+		<td WIDTH="30%"> <%= f.text_field :data_status , :class => "datepicker", :value => Date.today.to_s %></td>
 	</tr>	
 </table>	
 </div>
 
 <div class='field'>
-	<%= f.label :Nomestat %><br />
+	<%= f.label :Status %><br />
  	<%= f.select("status", @situacao.collect {|p| [ p.nomestat, p.status] }) %>
   <%= f.select("nome_status", @situacao.collect {|p| [ p.status, p.nomestat] }) %>
  <%= f.label :Corretor %>
-		<%= f.collection_select("corretor_id", @car, :id, :nome) %>
+		<%= f.collection_select("corretor_id", @cor, :id, :nome) %>
 </div>
 
 <div class='field'>
@@ -117,3 +117,4 @@ jQuery(function($j) {
   <%= f.label :Observacao %><br />
   <%= f.text_area :observacao %>
 </div>
+

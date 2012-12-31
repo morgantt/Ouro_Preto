@@ -26,6 +26,7 @@ OuroPreto::Application.configure do
   ActiveSupport::Inflector.inflections do |inflect| 
   inflect.irregular "tipoproposta", "tipopropostas"
   inflect.irregular "proposta", "propostas"
+  inflect.irregular "histproposta", "histpropostas"
    end 
 
 

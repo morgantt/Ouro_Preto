@@ -23,7 +23,7 @@
 			<th> Tipo </th>
 			<th>Maximo</th>
 			<th>Minimo</th>
-			<th>Propostas</th>
+			<th>Propostas stat 7</th>
 			<th>Total</th>
 			<th> </th>
 			<th> </th>
@@ -43,9 +43,23 @@
 			 																:confirm => "voce esta certo?",
 														      		 :title => "Delete => #{tp.tipoproposta.tipo}" %></td>
 			<% end %>	
-														      		 
+
 		</tr>
 		
 	<% end %>
 </table>
+<table class="profile" summary="Profile information">
+<tr>
+		<th WIDTH="30%">Numero </th>
+		
+		<th WIDTH="10%"> Tipo </th>
+		<th WIDTH="20"> Operadora </th>
+		<th WIDTH="40%"> Status </th>
 
+
+	</tr>
+	</table>
+
+	
+<%= render @propostashow %>
+<%= will_paginate @propostashow %>

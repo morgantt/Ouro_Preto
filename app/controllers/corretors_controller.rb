@@ -26,6 +26,10 @@ class CorretorsController < ApplicationController
   #  @propostacount = Proposta.where(:corretor_id=>[@corretor]).count
  	  @propostacount = Proposta.um_corretor(@corretor).status7.count
     @propostas_status7_do_corretor = Proposta.um_corretor(@corretor).status7
+# lista propostas do corretor 
+    @proposta = Proposta.um_corretor(@corretor).status7
+
+    @propostashow = @proposta.paginate(:page => params[:page], :per_page =>20, :order => "numero")
 
   	# @propostacount = Proposta.find(:all, :conditions => 
  		# 															{:corretor_id => [@corretor] }).count															 

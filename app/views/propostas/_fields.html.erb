@@ -1,9 +1,9 @@
 <script type="text/javascript">
 jQuery(function($j) {
   // when the #operadora field changes
-  $j("#proposta_operadora_id").change(function() {
+  $("#proposta_operadora_id").change(function() {
     // make a POST call and replace the content
-    var operadora = $j('select#proposta_operadora_id :selected').val();
+    var operadora = $('select#proposta_operadora_id :selected').val();
      if(operadora == "") operadora="0";
 	//		alert(operadora)
     jQuery.get('/propostas/update_tipo_div/' + operadora, function(data){
@@ -44,7 +44,8 @@ jQuery(function($j) {
 	<tr>
 
 		<td WIDTH="40%"> <%= f.label :Data_Entrada %><br /> </td>
-			<td WIDTH="50%"> <%= f.datepicker :data_entrada %></td>
+			<td WIDTH="50%"> <%= f.datepicker :data_entrada, :value => Date.today.to_s %></td>
+      
 	</tr>	
 </table>	
 </div>

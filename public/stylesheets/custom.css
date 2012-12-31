@@ -24,12 +24,12 @@ section h1 {
 /* links */
 
 a {
-    color: #09c;
+    color: #0ac;
     text-decoration: none;
 }
 a:hover {
-    color: #069;
-    text-decoration: underline;
+    color: #f69;
+    text-decoration: bold;
 }
 a:visited {
     color: #069;
@@ -240,7 +240,7 @@ list-style: none;
 
 /* For the popup  DATEPICKER INICIO */
 
-/* NOTE - you will probably want to style a.dp-choose-date - see how I did it in demo.css */
+/* NOTE - you will probably want to style a.dp-choose-date - see how I did it in demo.css 
 
 /*div.dp-popup {*/
 /*	position: relative;*/

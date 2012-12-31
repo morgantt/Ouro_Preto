@@ -2,15 +2,22 @@
 <html>
   <head>
     <title><%= title %></title>
+
     
-    <%= javascript_include_tag  "prototype.js", "effects.js" %> 
     <%= javascript_include_tag :all %>
+   
+    <%=  javascript_include_tag  "application" %> 
+   
+    <%= javascript_include_tag "sddmenu.js" %>
+   
     <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag :all %>
     <script>
+    //  javascript_include_tag  "prototype.js", "effects.js"  // javascript_include_tag :all 
   // this allows jquery to be called along with scriptaculous and YUI without any conflicts
   // the only difference is all jquery functions should be called with $j instead of $
   // e.g. $j('#div_id').stuff instead of $('#div_id').stuff
-   var $j = jQuery.noConflict();
+   // var $j = jQuery.noConflict();  xxx   <%= javascript_include_tag "bootstrap-datepicker.js" %>
    
 </script>
     

@@ -12,90 +12,58 @@
 	"buffers":
 	[
 		{
+			"file": "app/views/layouts/application.html.erb",
+			"settings":
+			{
+				"buffer_size": 1162,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/propostas/_fields.html.erb",
+			"settings":
+			{
+				"buffer_size": 1364,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/propostas/_fields3.html.erb",
+			"settings":
+			{
+				"buffer_size": 2682,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 507,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/javascripts/application.js",
+			"settings":
+			{
+				"buffer_size": 227,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/controllers/propostas_controller.rb",
 			"settings":
 			{
-				"buffer_size": 4234,
+				"buffer_size": 5334,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/corretors/show.html.erb",
+			"file": "app/views/propostas/_show_change_status.html.erb",
 			"settings":
 			{
-				"buffer_size": 1308,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/corretors_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2333,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/corretor.rb",
-			"settings":
-			{
-				"buffer_size": 1374,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/cparametro.rb",
-			"settings":
-			{
-				"buffer_size": 819,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/operadora.rb",
-			"settings":
-			{
-				"buffer_size": 1078,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/tipoproposta.rb",
-			"settings":
-			{
-				"buffer_size": 1003,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/corretors/_corretor.html.erb",
-			"settings":
-			{
-				"buffer_size": 444,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/proposta.rb",
-			"settings":
-			{
-				"buffer_size": 1402,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/propostas/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 89,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/propostas/_proposta.html.erb",
-			"settings":
-			{
-				"buffer_size": 581,
+				"buffer_size": 468,
 				"line_ending": "Unix"
 			}
 		}
@@ -103,11 +71,15 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 54.0,
 		"selected_items":
 		[
+			[
+				"z",
+				"Set Syntax: Graphviz (DOT)"
+			]
 		],
-		"width": 392.0
+		"width": 467.0
 	},
 	"console":
 	{
@@ -124,17 +96,50 @@
 	},
 	"file_history":
 	[
+		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/datePicker.css",
+		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/custom.css",
+		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/datepicker.css",
+		"/home/taithson/projects/mg/ouro_preto/config/initializers/jquery.rb",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/jquery.ui.datepicker-pt-BR.js",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/update_tipo_div.js.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/update_number_div.js.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/associa_update_button_div.js.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/associa_update_no_button_div.js.erb",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/bootstrap-datepicker.js",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/datepicker.js",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/jquery-ui.js",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/index_old.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/propostas_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/operadoras_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_proposta.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/corretors_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_show_change_status.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields3.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/tipopropostas_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/controls.js",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/dragdrop.js",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/application.js",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/xxjquery-ui.js",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields.html.erb",
+		"/home/taithson/projects/django/p1/mysite/manage.py",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/rails.js",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/index.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/index.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/Gemfile",
+		"/home/taithson/projects/mg/ouro_preto/app/models/corretor.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/cparametro.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/proposta.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/_corretor.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/tipoproposta.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/operadora.rb",
 		"/home/taithson/hf/hf/www_new_bhsaude/clientes/class.ticket.php",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_associa_update_no_button.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/associa.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields3.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/update_tipo_div.js.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_tipoproposta_select_list.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_number_select_list.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/update_number_div.js.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/show.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_associa_update_button.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/corretors_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/application_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/Rakefile",
 		"/home/taithson/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
@@ -155,6 +160,35 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"hoover",
+			"datePicker",
+			"submit",
+			"data_status",
+			"$j",
+			"j",
+			"$j",
+			"$",
+			"$j",
+			"$",
+			"el",
+			"else",
+			"script",
+			"$*",
+			"$",
+			"\\$(\\",
+			"$(.",
+			"$(",
+			"$",
+			"remote",
+			"data_status",
+			"document",
+			"tipo",
+			"data",
+			"data_status",
+			"status",
+			"  \n",
+			"$j",
+			"/*",
 			"count       ",
 			"@proposta",
 			"       ",
@@ -171,38 +205,42 @@
 		"regex": false,
 		"replace_history":
 		[
+			"datepicker",
+			"$",
+			"$j",
+			"$"
 		],
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": true,
-		"wrap": true
+		"whole_word": false,
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/propostas_controller.rb",
+					"file": "app/views/layouts/application.html.erb",
 					"settings":
 					{
-						"buffer_size": 4234,
+						"buffer_size": 1162,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								436,
-								436
+								112,
+								112
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -214,44 +252,74 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/corretors/show.html.erb",
+					"file": "app/views/propostas/_fields.html.erb",
 					"settings":
 					{
-						"buffer_size": 1308,
+						"buffer_size": 1364,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								696,
-								696
+								1184,
+								1184
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 228.0,
+						"translation.y": 399.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "app/controllers/corretors_controller.rb",
+					"file": "app/views/propostas/_fields3.html.erb",
 					"settings":
 					{
-						"buffer_size": 2333,
+						"buffer_size": 2682,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2333,
-								2333
+								2682,
+								2682
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1824.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gemfile",
+					"settings":
+					{
+						"buffer_size": 507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								169,
+								169
 							]
 						],
 						"settings":
@@ -267,52 +335,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "app/models/corretor.rb",
-					"settings":
-					{
-						"buffer_size": 1374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								696,
-								696
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 399.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 4,
-					"file": "app/models/cparametro.rb",
+					"file": "public/javascripts/application.js",
 					"settings":
 					{
-						"buffer_size": 819,
+						"buffer_size": 227,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								441,
-								441
+								227,
+								227
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -322,152 +362,46 @@
 				},
 				{
 					"buffer": 5,
-					"file": "app/models/operadora.rb",
+					"file": "app/controllers/propostas_controller.rb",
 					"settings":
 					{
-						"buffer_size": 1078,
+						"buffer_size": 5334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								506,
-								506
+								4526,
+								4526
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 5.0,
+						"translation.y": 969.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 6,
-					"file": "app/models/tipoproposta.rb",
+					"file": "app/views/propostas/_show_change_status.html.erb",
 					"settings":
 					{
-						"buffer_size": 1003,
+						"buffer_size": 468,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								249,
-								249
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/views/corretors/_corretor.html.erb",
-					"settings":
-					{
-						"buffer_size": 444,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								443,
-								443
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "app/models/proposta.rb",
-					"settings":
-					{
-						"buffer_size": 1402,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1402,
-								1402
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 399.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "app/views/propostas/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 89,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								89,
-								89
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "app/views/propostas/_proposta.html.erb",
-					"settings":
-					{
-						"buffer_size": 581,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								581,
-								581
+								468,
+								468
 							]
 						],
 						"settings":
@@ -490,7 +424,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 35.0
 	},
 	"layout":
 	{
@@ -517,7 +451,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

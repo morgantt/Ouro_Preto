@@ -25,11 +25,9 @@ class TipopropostasController < ApplicationController
     @novo = "SIM"
    end
   
-    
-    
-    
+       
    @operadora = Operadora.find(:all, :conditions => { :id => [@operadora_id] } )
-    p @operadora
+  #  p @operadora
      	
   	@title = "Novo Tipo de Proposta"
    	@tipoproposta = Tipoproposta.new
@@ -54,7 +52,7 @@ class TipopropostasController < ApplicationController
   end
   
    def edit
-   p '#### edit ########################################################'
+ #  p '#### edit ########################################################'
    @novo = "NAO"
    
   		@tipoproposta = Tipoproposta.find(params[:id])
@@ -65,7 +63,7 @@ class TipopropostasController < ApplicationController
 
   
   def update
-  p '#### update ########################################################'
+#  p '#### update ########################################################'
     @operadora = Operadora.find(:all, :order => "nome")
     @tipoproposta = Tipoproposta.find(params[:id])
  #   @tipoproposta.operadora_id = params[:operadora][operadora_id]

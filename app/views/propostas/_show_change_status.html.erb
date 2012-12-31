@@ -1,0 +1,31 @@
+
+<%= form_for(@proposta) do |f|  %>
+
+
+<div class='field'>
+	
+<%= collection_select(:proposta, :status, @stat, :id, :nomestat ) %>
+
+
+
+<div >
+<table class="datepicker" >
+	<tr>
+	</tr>
+	<tr>
+		
+			<td WIDTH="50%"> <%= f.label :data_status %><br /> </td> 
+		<td WIDTH="30%"> <%= f.text_field :data_status , :class => "datepicker", :value => Date.today.to_s %></td>
+	</tr>	
+</table>	
+</div>
+
+ 
+
+</div>
+
+<div class='actions'>
+	  <%= f.submit "Update" %>
+		</div>
+
+		<% end %>

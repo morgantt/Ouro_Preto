@@ -4,7 +4,11 @@ gem 'rails', '3.0.9'
 gem 'mysql2', '<0.3'
 gem 'gravatar_image_tag'
 gem 'will_paginate'
+gem 'jquery-rails', '~> 2.1'
 gem 'jquery_datepicker'
+
+# ransack para implementar search
+gem "ransack"
 
 group :development, :test do
   gem "rspec-rails"
