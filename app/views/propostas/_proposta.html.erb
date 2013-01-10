@@ -12,9 +12,9 @@
 		<td WIDTH="15%"> <%= proposta.nome_status %></td>
 		
 			<td WIDTH="10%"> <% if current_user.admin? %>	
-			<%= link_to "Deleta", proposta, :method => :delete, 
-																		 :confirm => "voce esta certo?",
-														  	     :title => "Delete => #{proposta.numero}" %>
+			<%= link_to "Delete", proposta, :confirm => "voce esta certo?",
+											:title => "Delete => #{proposta.numero}",
+											:method => :delete %>
 			<% end %>	
 		</td>
 	

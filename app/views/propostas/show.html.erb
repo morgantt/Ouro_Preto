@@ -15,7 +15,7 @@
     </td>
     <td class="sidebar round">
    
-   <%= @corretor.nome %><br />  			
+   <%=  link_to @corretor.nome, @corretor %><br />  			
  
     </td>
   </tr>
@@ -29,7 +29,7 @@
 			<th>status</th>
 			<th>Data Status</th>
 			<th>Data Entrada</th>
-			<th>Corretor nome</th>
+			<th>Nome Corretor</th>
 		</tr>
 			<td><%= @proposta.numero %></td>
 			<td><%= @proposta.operadora %></td>

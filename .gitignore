@@ -11,4 +11,5 @@ doc/app
 *~
 .DS_Store
 log/test
-
+ouropreto.sublime*
+javascripts/tempora*

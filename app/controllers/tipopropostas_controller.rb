@@ -1,5 +1,9 @@
 class TipopropostasController < ApplicationController
+   before_filter :authenticate, :only => [:index, :edit, :update, :destroy] 
 
+
+
+  before_filter :admin_user,   :only => :destroy
  
 	def index
 	
@@ -75,6 +79,7 @@ class TipopropostasController < ApplicationController
  	 end	
   end
  def destroy
+  p params
  	 Tipoproposta.find(params[:id]).destroy
  	 redirect_to operadoras_path, :flash => { :success => "Tipo de Proposta deletado" }
  end
@@ -95,5 +100,22 @@ class TipopropostasController < ApplicationController
 		user = User.find(params[:id])
 		redirect_to(root_path) if !current_user.admin?	|| current_user?(user)
 		end
+
+
+  private
+  
+    def authenticate
+      deny_access unless signed_in?
+    end
+    
+    def correct_user 
+      @user =User.find(params[:id])
+      redirect_to(root_path) unless current_user?(@user)
+    end
+    
+    def admin_user
+    user = User.find(params[:id])
+    redirect_to(root_path) if !current_user.admin?  || current_user?(user)
+    end
 
 end

@@ -1,5 +1,11 @@
 class PropostasController < ApplicationController
- 
+  
+   #before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
+   # before_filter :correct_user, :only => [:edit, :update]
+   #before_filter :admin_user,   :only => :destroy
+
+
+
   def index
 		@title = "Todas as Propostas"
       #  @some = Proposta.all
@@ -201,6 +207,7 @@ def edit
   
   
  def destroy
+  p params
  	 Proposta.find(params[:id]).destroy
  	 redirect_to propostas_path, :flash => { :success => "Proposta deletada" }
  end
