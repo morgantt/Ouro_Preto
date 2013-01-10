@@ -60,7 +60,7 @@ class OperadorasController < ApplicationController
  end
  
  def destroy
- p params
+
  	 Operadora.find(params[:id]).destroy
  	 redirect_to operadoras_path, :flash => { :success => "Operadora deletada" }
  end

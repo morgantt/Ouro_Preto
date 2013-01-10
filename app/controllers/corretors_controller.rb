@@ -7,7 +7,7 @@ class CorretorsController < ApplicationController
  
 	def index
 	
-		@corretor = Corretor.paginate(:page => params[:page])
+		@corretor = Corretor.todos.paginate(:page => params[:page])
 		@title = "Todos os Corretores"
 	end
  
@@ -32,14 +32,7 @@ class CorretorsController < ApplicationController
     @propostashow = @proposta.paginate(:page => params[:page], :per_page =>8,
                                        :order => "numero")
 
-   
-
-  	# @propostacount = Proposta.find(:all, :conditions => 
- 		# 															{:corretor_id => [@corretor] }).count															 
- 																 
- 	#	@operadora = Operadora.find(:all, :conditions => { :operadora_id => [@cparametro] } )
- 		
-
+ 
   end
  
   def new

@@ -25,7 +25,7 @@ class Proposta < ActiveRecord::Base
 									:nome_status, :data_status, :corretor_id, :observacao,
 									:tipoproposta_id, :operadora
 									
-	 validates :numero, :presence   => true,
+	validates :numero, :presence   => true,
                       :uniqueness => { :case_sensitive => false,
                                        :message => "Numero de Proposta Repetido" }									
 	validates_presence_of :data_entrada, :nome_status, :status, :data_status, :operadora,
@@ -44,7 +44,7 @@ class Proposta < ActiveRecord::Base
     		where("corretor_id = ?", cor_id)  
   	end  
 	def self.status7  
-    		where("status = 7")  
+    		where("status >= 7")  
   	end  
 
 

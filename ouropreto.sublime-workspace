@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"pro",
+				"proposta"
+			],
+			[
 				"p",
 				"proposta"
 			],
@@ -19,22 +23,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "app/controllers/operadoras_controller.rb",
-			"settings":
-			{
-				"buffer_size": 1924,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/propostas_controller.rb",
-			"settings":
-			{
-				"buffer_size": 6573,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -64,17 +52,38 @@
 	},
 	"file_history":
 	[
+		"/home/taithson/projects/mg/ouro_preto/app/models/corretor.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/corretors_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/proposta.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/propostas_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/operadoras_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/tipopropostas_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/users_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/cparametros_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/cparametros/new.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/cparametros/_fields.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/cparametros/update_tipo_div.js.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/config/routes.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields3.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_proposta.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/.gitignore",
+		"/home/taithson/projects/mg/ouro_preto/public/500.html",
+		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/application.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/jquery.rails.js",
+		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/_corretor.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/application_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/user.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/_operadora.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_show_change_status.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/_header.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/sessions/new.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/helpers/propostas_helper.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/propostas_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/application.js",
 		"/home/taithson/projects/mg/ouro_preto/Gemfile",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields3.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/_corretor.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/application.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20121216012941_create_histpropostas.rb",
 		"/home/taithson/projects/mg/ouro_preto/config/environments/development.rb",
 		"/home/taithson/projects/mg/ouro_preto/config/environments/production.rb",
@@ -91,12 +100,6 @@
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/datepicker.js",
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/jquery-ui.js",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/index_old.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/operadoras_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_proposta.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/corretors_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/show.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/show.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/tipopropostas_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/controls.js",
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/dragdrop.js",
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/xxjquery-ui.js",
@@ -104,9 +107,7 @@
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/rails.js",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/index.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/index.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/models/corretor.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/models/cparametro.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/models/proposta.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/models/tipoproposta.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/models/operadora.rb",
 		"/home/taithson/hf/hf/www_new_bhsaude/clientes/class.ticket.php",
@@ -115,7 +116,6 @@
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_tipoproposta_select_list.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_number_select_list.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_associa_update_button.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/application_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/Rakefile",
 		"/home/taithson/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
 	],
@@ -135,6 +135,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"order",
+			"tudo",
+			"( ",
 			"authenticate",
 			"hoover",
 			"datePicker",
@@ -197,62 +200,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/controllers/operadoras_controller.rb",
-					"settings":
-					{
-						"buffer_size": 1924,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/propostas_controller.rb",
-					"settings":
-					{
-						"buffer_size": 6573,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

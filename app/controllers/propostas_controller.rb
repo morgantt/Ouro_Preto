@@ -8,9 +8,7 @@ class PropostasController < ApplicationController
 
   def index
 		@title = "Todas as Propostas"
-      #  @some = Proposta.all
-      #  @corretor = Corretor.all
-	    # old	@proposta = Proposta.paginate(:page => params[:page], :order => "numero")
+    
 	    @q = Proposta.search(params[:q])
 
       @proposta = @q.result(:distinct => true)
@@ -72,8 +70,7 @@ class PropostasController < ApplicationController
   end
   
 	def associa
-  	p params
-		
+  		
   	@operadora = Operadora.find(:all, :order => "nome")
   	
   	@tipoproposta = Tipoproposta.find(:all)
@@ -88,8 +85,7 @@ class PropostasController < ApplicationController
   end	 
   
   def update_tipo_div
-     p params
- 		 @tipoproposta = Tipoproposta.find(:all, :conditions => ["operadora_id = ?", params[:id]])
+   		 @tipoproposta = Tipoproposta.find(:all, :conditions => ["operadora_id = ?", params[:id]])
      	 	#	raise params.inspect
      @operador = Operadora.find(params[:id])
 
@@ -102,14 +98,12 @@ class PropostasController < ApplicationController
 	end 
 	
 	def associa_update_button_div
-	   p params
-	
+	   	
 	   @title = "Associa Corretor"
 	  end
 	  
  	def associa_update_no_button_div
-	    p params
-	
+	    
 	   @title = "Associa Corretor"
 	  end
  
@@ -179,11 +173,8 @@ def edit
         if @status < 8 then 
         # nao volta para o estoque. continua com o mesmo corretor
  
-    # @proposta.inspect
-
-
-   	
-    	if @proposta.update_attributes(:status => @status, :nome_status => @nomestat, :data_status => @stat_date)
+    	if @proposta.update_attributes(:status => @status, :nome_status => @nomestat,
+                                     :data_status => @stat_date)
          @hist.save
   		redirect_to @proposta, :flash => { :success => "Proposta atualizada" }
   	else
@@ -192,9 +183,12 @@ def edit
   	render 'edit'
  	 end	
   else 
-    # Volta para o estoque-  nome do corretor ESTOQUE - CORRETOR_ID = 5
+    @estoque_id = Corretor.find_by_nome('ESTOQUE')
+
+    # Volta para o estoque-  nome do corretor ESTOQUE 
       if @proposta.update_attributes(:status => @status, :nome_status => @nomestat,
-                                     :data_status => @stat_date, :corretor_id => '5')
+                                     :data_status => @stat_date, 
+                                     :corretor_id => @estoque_id.id )
        @hist.save
       redirect_to @proposta, :flash => { :success => "Proposta atualizada" }
     else
@@ -207,7 +201,7 @@ def edit
   
   
  def destroy
-  p params
+ 
  	 Proposta.find(params[:id]).destroy
  	 redirect_to propostas_path, :flash => { :success => "Proposta deletada" }
  end

@@ -45,7 +45,7 @@ class Corretor < ActiveRecord::Base
 	 validates_numericality_of  :cpf, 
 	 														:message => "So pode conter caracteres numericos "
 	
-	
+	scope :todos, :order => "nome"
 	
 	protected
 	
