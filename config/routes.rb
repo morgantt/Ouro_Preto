@@ -1,5 +1,11 @@
 OuroPreto::Application.routes.draw do
 
+  get "histpropostas/index"
+
+  get "histpropostas/show"
+
+  get "histpropostas/destroy"
+
   get "propostas/new"
 
   get "tipopropostas/new"
@@ -10,6 +16,7 @@ OuroPreto::Application.routes.draw do
 
   get "sessions/new"
   
+  resources :histpropostas
   resources :propostas
   resources :corretors
   resources :cparametros

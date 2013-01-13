@@ -1,0 +1,17 @@
+<h1>Historico</h1>
+
+
+<%= search_form_for @q do |f| %>
+  <%= f.label :numero_cont %>
+  <%= f.text_field :numero_cont %>
+  
+  <%= f.submit %>
+
+
+
+
+ <%= render  @histproposta %>
+
+
+
+<% end %>

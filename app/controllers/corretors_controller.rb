@@ -29,7 +29,7 @@ class CorretorsController < ApplicationController
 # lista propostas do corretor 
     @proposta = Proposta.um_corretor(@corretor).status7
    
-    @propostashow = @proposta.paginate(:page => params[:page], :per_page =>8,
+    @propostashow = @proposta.paginate(:page => params[:page], :per_page =>20,
                                        :order => "numero")
 
  

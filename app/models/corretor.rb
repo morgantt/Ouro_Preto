@@ -21,13 +21,15 @@ class Corretor < ActiveRecord::Base
 
 # identifica quais atributos deste modelo sao modificaveis atraves
 # do web interface
-
+	
 	has_many :cparametros, :dependent => :destroy
 	has_many :tipopropostas, :through => :cparametros  
 	has_many :operadoras,    :through => :cparametros 
 	has_many :propostas
- 	 
-	attr_accessible :nome, :endereco, :cep, :cpf, :telefone1, :telefone2, 
+#	belongs_to :histproposta
+	has_many :histpropostas
+
+ 	attr_accessible :nome, :endereco, :cep, :cpf, :telefone1, :telefone2, 
 									:banco, :agencia, :conta, :comentario 
 	
  
@@ -39,11 +41,10 @@ class Corretor < ActiveRecord::Base
 	
 	before_validation :converte_uppercase
 	
-	validates_format_of  :nome, :with => /^([A-Za-z\- ]+)$/, 
-											 :message => "So pode conter caracteres de A ate Z "
+	validates_format_of  :nome, :with => /^([A-Za-z0-9\-& ]+)$/, 
+											 :message => "So pode conter caracteres de A ate Z 0-9 -& "
 	
-	 validates_numericality_of  :cpf, 
-	 														:message => "So pode conter caracteres numericos "
+	 validates_numericality_of  :cpf, 		:message => "So pode conter caracteres numericos "
 	
 	scope :todos, :order => "nome"
 	

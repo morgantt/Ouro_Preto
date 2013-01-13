@@ -16,4 +16,16 @@
 #
 
 class Histproposta < ActiveRecord::Base
+
+#	has_many :corrertors
+	belongs_to :corretor
+
+	attr_accessible :proposta_id, :numero, :status, :nome_status, :data_status, 
+									:corretor_id, :data_status, :corretor_id, :observacao,
+									:operadora
+
+
+
+
+
 end

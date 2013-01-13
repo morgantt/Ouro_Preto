@@ -19,6 +19,7 @@ class Operadora < ActiveRecord::Base
 
 	 has_many :tipopropostas, :dependent => :destroy
 	 has_many :cparametros
+	 
 	# has_many :
 	attr_accessible :nome, :logo_url, :corretora, :banco, :marca
 	
@@ -31,8 +32,8 @@ class Operadora < ActiveRecord::Base
 	
 	before_validation :converte_uppercase
 	
-	validates_format_of  :nome, :banco, :corretora, :with => /^([A-Za-z\- ]+)$/, 
-											 :message => "So pode conter caracteres de A ate Z "
+	validates_format_of  :nome, :banco, :corretora, :with => /^([A-Za-z0-9\-& ]+)$/, 
+											 :message => "So pode conter caracteres de A ate Z 0-9 -&"
 	
 	
 	

@@ -14,7 +14,12 @@
 <%= form_for(@tipoproposta) do |f|  %>
 		<%= render 'fields2', :f => f %> 
 		<div class='actions'>
-	  <%= f.submit "Update" %>
+	  <%= f.submit "Atualiza" %>
 		
 		<% end %>	
 	<% end %>
+</div>
+<div>		
+
+<%= button_to "Cancela", operadoras_path, :method => "get" %>
+</div>	

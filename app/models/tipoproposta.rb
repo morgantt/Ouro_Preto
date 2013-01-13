@@ -29,8 +29,8 @@ class Tipoproposta < ActiveRecord::Base
 	 validates_numericality_of  :lmi, :lms,
 	 														:message => "So pode conter caracteres numericos "
 											 
-	 validates_format_of  :tipo, :with => /^([A-Za-z\- ]+)$/, 
-											 :message => "So pode conter caracteres de A ate Z "
+	 validates_format_of  :tipo, :with => /^([A-Za-z0-9\- ]+)$/, 
+											 :message => "So pode conter caracteres de A ate Z 0-9 "
 											 
 	 											
 	
