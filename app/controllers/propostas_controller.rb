@@ -34,7 +34,7 @@ class PropostasController < ApplicationController
     @novo = "SIM"
         
     @proposta = Proposta.new
-    @operadora = Operadora.all   
+    @operadora = Operadora.find(:all, :order => 'nome') 
     @tipoproposta = []
  
   end
@@ -85,7 +85,8 @@ class PropostasController < ApplicationController
   end	 
   
   def update_tipo_div
-   		 @tipoproposta = Tipoproposta.find(:all, :conditions => ["operadora_id = ?", params[:id]])
+   		 @tipoproposta = Tipoproposta.find(:all, :order => 'tipo', 
+                                         :conditions => ["operadora_id = ?", params[:id]])
      	 	#	raise params.inspect
      @operador = Operadora.find(params[:id])
 
@@ -157,10 +158,10 @@ def edit
     @stat_id     = @stats[:status] 
     @stat_date   = @stats[:data_status]
    
-  @situacao = Situacao.find(@stat_id) 
+    @situacao = Situacao.find(@stat_id) 
     @status = @situacao.status
     @nomestat = @situacao.nomestat
-  @hist = Histproposta.new 
+    @hist = Histproposta.new 
       @hist.proposta_id = @proposta.id
       @hist.numero = @proposta.numero
       @hist.status = @proposta.status
@@ -177,12 +178,12 @@ def edit
                                      :data_status => @stat_date)
          @hist.save
   		redirect_to @proposta, :flash => { :success => "Proposta atualizada" }
-  	else
+  	 else
 
   	@title = "Edita Proposta"
   	render 'edit'
  	 end	
-  else 
+    else 
     @estoque_id = Corretor.find_by_nome('ESTOQUE')
 
     # Volta para o estoque-  nome do corretor ESTOQUE 

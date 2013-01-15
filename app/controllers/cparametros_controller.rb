@@ -22,7 +22,7 @@ class CparametrosController < ApplicationController
     @novo = "SIM"
         
     @cparametro = Cparametro.new
-    @operadora = Operadora.all   
+    @operadora = Operadora.find(:all, :order => 'nome')
   
     @tipoproposta = []
    # raise params.inspect
