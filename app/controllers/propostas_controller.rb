@@ -13,8 +13,9 @@ class PropostasController < ApplicationController
 
       @proposta = @q.result(:distinct => true)
 
-      @propostashow = @proposta.paginate(:page => params[:page], :order => "numero")
-	end
+      @propostashow = @proposta.paginate(:page => params[:page], :per_page =>40,
+                                       :order => "numero",:order => "tipo",:order => "operadora")
+   end   
 	
 	def show
 

@@ -15,7 +15,7 @@ class CorretorsController < ApplicationController
    
   	
     @corretor = Corretor.find(params[:id])
-    @operadora = Operadora.find(:all)
+    @operadora = Operadora.find(:all, :order => "nome")
     @title = @corretor.nome
     session[:corr] = @corretor.id
     # cor_id vai ser usado na scope um_corretor
@@ -27,10 +27,15 @@ class CorretorsController < ApplicationController
  	  @propostacount = Proposta.um_corretor(@corretor).status7.count
     @propostas_status7_do_corretor = Proposta.um_corretor(@corretor).status7
 # lista propostas do corretor 
-    @proposta = Proposta.um_corretor(@corretor).status7
+ #   @proposta = Proposta.um_corretor(@corretor).status7
+    @proposta = @propostas_status7_do_corretor
+
+    @q = @proposta.search(params[:q])
+    @xxxx = @corretor.nome
+      @proposta = @q.result(:distinct => true)
    
-    @propostashow = @proposta.paginate(:page => params[:page], :per_page =>20,
-                                       :order => "numero")
+    @propostashow = @proposta.paginate(:page => params[:page], :per_page =>40,
+                                       :order => "operadora",:order => "tipo",:order => "numero")
 
  
   end

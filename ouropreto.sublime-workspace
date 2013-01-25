@@ -30,6 +30,62 @@
 				"buffer_size": 628,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "app/controllers/cparametros_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2223,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/corretors/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1560,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/corretors_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2382,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/_header.html.erb",
+			"settings":
+			{
+				"buffer_size": 2100,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/propostas/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 834,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/propostas/_proposta.html.erb",
+			"settings":
+			{
+				"buffer_size": 567,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/etc/default/automysqlbackup",
+			"settings":
+			{
+				"buffer_size": 3391,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -60,11 +116,12 @@
 	},
 	"file_history":
 	[
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/propostas_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/histpropostas_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/histpropostas/_histproposta.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/histpropostas/index.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/config/routes.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/propostas_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_show_change_status.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/_header.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/tipopropostas/edit.html.erb",
@@ -94,7 +151,6 @@
 		"/home/taithson/projects/mg/ouro_preto/public/javascripts/jquery.rails.js",
 		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/_corretor.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/application_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/models/user.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/_operadora.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/sessions/new.html.erb",
@@ -212,7 +268,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -237,6 +293,194 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/cparametros_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								582,
+								582
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/corretors/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 1560,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								605,
+								605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/controllers/corretors_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2382,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1210,
+								1210
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/views/layouts/_header.html.erb",
+					"settings":
+					{
+						"buffer_size": 2100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1355,
+								1355
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/propostas/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								504,
+								504
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/views/propostas/_proposta.html.erb",
+					"settings":
+					{
+						"buffer_size": 567,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								204,
+								204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/etc/default/automysqlbackup",
+					"settings":
+					{
+						"buffer_size": 3391,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1901,
+								1901
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1045.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

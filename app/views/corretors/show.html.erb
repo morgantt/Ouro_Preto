@@ -17,7 +17,7 @@
   </tr>
 </table>
 	
-	<table>
+	<table class="profile" summary="Profile information">
 		<tr>
 			<th>Operadora </th>
 			<th> Tipo </th>
@@ -48,20 +48,26 @@
 		
 	<% end %>
 </table>
+
+<%= search_form_for @q do |f| %>
+  <%= f.label :numero %>
+  <%= f.text_field :numero_cont %>
+
+  <%= f.submit %>
+<% end %>	
 <table class="profile" summary="Profile information">
-<tr>
+	<tr>
 		
-		<th WIDTH="30%">Numero </th>
+		<th WIDTH="20%">Numero </th>
 		
-		<th WIDTH="10%"> Tipo </th>
-		<th WIDTH="15%"> Operadora </th>
-		<th WIDTH="50%"> Status </th>
+		<th WIDTH="25%"> Tipo </th>
+		<th WIDTH="25%"> Operadora </th>
+		<th WIDTH="30%"> Status </th>
 		
 
 	</tr>
-	</table>
+</table>
 
-	
 <%= render @propostashow %>
 <%= will_paginate @propostashow %>
 
