@@ -38,6 +38,14 @@
 				"buffer_size": 4342,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "app/views/propostas/_fields3.html.erb",
+			"settings":
+			{
+				"buffer_size": 2795,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -207,7 +215,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 93.0,
+		"height": 0.0,
 		"where_history":
 		[
 			""
@@ -361,7 +369,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -388,6 +396,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/propostas/_fields3.html.erb",
+					"settings":
+					{
+						"buffer_size": 2795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2748,
+								2748
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1824.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
