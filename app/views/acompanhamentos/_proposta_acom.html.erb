@@ -1,0 +1,28 @@
+<table class="profile" summary="Profile information">
+	<tr>
+
+
+
+	</tr>
+	<tr>
+		<td WIDTH="15%"> <%= link_to proposta.numero, proposta %></td>
+		<td WIDTH="15"> <%= proposta.operadora %></td>
+		<td WIDTH="15%"> <%= proposta.tipo %></td>
+		
+		<td WIDTH="15%"> <%= proposta.nome_status %></td>
+		<td WIDTH="15%"> <%= proposta.data_status %></td>
+		<td WIDTH="25%"> <%= proposta.corretor.nome %></td>
+		
+
+
+			<td WIDTH="10%"> <% if current_user.admin? %>	
+			<%= link_to "Delete p", proposta, :confirm => "voce esta certo?",
+											:title => "Delete => #{proposta.numero}",
+											:method => :delete %>
+			<% end %>	
+		</td>
+	
+	<td>  </td>
+	<td>  </td>
+	</tr>	
+	</table>		

@@ -1,0 +1,128 @@
+<h3>Comissoes  <br />
+
+<%= @operadora.nome %> <%= @tipoproposta.tipo %> - ID = <%= @comissao.id %>
+
+</h3>
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+ 
+      </h1>
+
+    </td>
+    <td class="sidebar round">
+ 
+    </td>
+  </tr>
+
+
+
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+
+	<div class='field01'>
+    
+  P01 = <%= @comissao.p01 %> - 
+  
+  P02 = <%= @comissao.p02 %> - 
+
+  P03 = <%= @comissao.p03 %> - 
+
+  P04 = <%= @comissao.p04 %> - 
+	
+    </div>
+	<div class='field01'>
+	
+  P05 = <%= @comissao.p05 %> - 
+
+  P06 = <%= @comissao.p06 %> - 
+
+  P07 = <%= @comissao.p07 %> -
+
+  P08 = <%= @comissao.p08 %> - 
+  	
+	</div>
+	<div class='field01'>
+	
+  P09 = <%= @comissao.p09 %> - 
+
+  P10 = <%= @comissao.p10 %> - 
+
+  P11 = <%= @comissao.p11 %> -
+
+  P12 = <%= @comissao.p12 %> - 
+  	
+	</div>
+	<div class='field01'>
+	
+  PVitalicio = <%= @comissao.pvita %> - 
+
+	</div>
+
+  </div>
+  <div class='field01'>
+
+   Ultima alteracao <%= @comissao.updated_at.to_date %> <br />
+   Ativo  <%= @comissao.ativo %>
+  </div>
+
+
+
+   </td>
+    <td class="sidebar40 round">
+  	
+	<div class='field01'>
+ 
+ 
+
+	<%= form_for(@comissao) do |f| %>
+         <%= f.check_box(:p01valid, :readonly => true )%>
+         <%= f.check_box(:p02valid, :readonly => true )%>
+         <%= f.check_box(:p03valid, :readonly => true )%>
+         <%= f.check_box(:p04valid, :readonly => true )%>
+  
+         
+       <% end %>
+     </div>
+
+ 	<div class='field01'>
+     <%= form_for(@comissao) do |f| %>
+         <%= f.check_box(:p05valid, :readonly => true )%>
+         <%= f.check_box(:p06valid, :readonly => true )%>
+         <%= f.check_box(:p07valid, :readonly => true )%>
+         <%= f.check_box(:p08valid, :readonly => true )%>
+  
+       <% end %>
+        </div>
+
+ 	<div class='field01'>
+
+     <%= form_for(@comissao) do |f| %>
+         <%= f.check_box(:p09valid, :readonly => true )%>
+         <%= f.check_box(:p10valid, :readonly => true )%>
+         <%= f.check_box(:p11valid, :readonly => true )%>
+         <%= f.check_box(:p12valid, :readonly => true )%>
+   
+       <% end %>  
+
+        </div>
+
+ 	<div class='field01'> 
+    <%= form_for(@comissao) do |f| %>
+         <%= f.check_box(:pvitavalid, :readonly => true )%>
+
+
+
+       <% end %>   
+
+  
+ 
+	</div>
+
+  </tr>
+
+</table>

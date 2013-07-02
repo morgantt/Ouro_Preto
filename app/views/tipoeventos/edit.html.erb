@@ -1,0 +1,8 @@
+<h1>Editar Evento</h1>
+<%= form_for(@tipoevento) do |f|  %>
+<%= render 'fields', :f => f %> 
+<div class='actions'>
+  <%= f.submit "Update" %>
+</div>
+
+<% end %>

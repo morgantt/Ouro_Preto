@@ -1,0 +1,17 @@
+<h1>Tipos de Eventos</h1>
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+      <%= @tipoevento.nome %>
+      </h1>
+      <h5>
+      <%= @tipoevento.numero %>
+      </h5>
+    </td>
+    <td class="sidebar round">
+   
+    <strong>Editar</strong>  <%= link_to (@tipoevento.numero), edit_tipoevento_path(@tipoevento)%>
+    </td>
+  </tr>
+</table>

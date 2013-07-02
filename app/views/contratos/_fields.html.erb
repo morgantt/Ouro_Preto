@@ -1,0 +1,45 @@
+<%= render 'shared/error_messages', :object => f.object %>
+
+<h2> Proposta <%= @proposta.numero %> </h2>
+</tr>
+</table>
+
+  <div class='field'>
+  <%= f.label :Nome %>
+  <%= f.text_field :nome, :size=> "20" %>
+
+  <%= f.label :Nascimento  %>
+  <%= f.date_select(:data_nascimento,:order => [:day, :month, :year]) %>
+
+  <%= f.label :CPF %>
+  <%= f.text_field :cpf, :size=> "5"  %>
+</div>
+<div class='field'>
+  <%= f.label :Endereço %>
+  <%= f.text_field :endereco %>
+
+  <%= f.label :CEP %>
+  <%= f.text_field :cep, :size=> "6"    %>
+</div>
+
+<div class='field'>
+  <%= f.label :Telefone_1 %>
+  <%= f.text_field :telefone1, :size=> "10" %>
+
+  <%= f.label :Telefone_2 %>
+  <%= f.text_field :telefone2, :size=> "10"  %>
+</div>
+<div class='field'>
+  <%= f.label :Vigencia %>
+  <%= f.date_select(:data_vigencia,:order => [:day, :month, :year]) %>
+
+  <%= f.label :Fatura %>
+  <%= f.text_field :valor_fatura, :size=> "10"   %>
+
+  <%= f.label :Vidas %>
+  <%= f.text_field :vidas, :size=> "5"   %>
+</div>
+<div class='field'>
+  <%= f.label :Comentario %><br />
+  <%= f.text_area :comentario, :id => "comentario_area"  %>
+</div>

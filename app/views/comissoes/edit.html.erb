@@ -1,0 +1,8 @@
+<h1>Edit Comissao</h1>
+<%= form_for(@comissao) do |f|  %>
+<%= render 'fields_desativa', :f => f %> 
+<div class='actions'>
+  <%= f.submit "Atualiza" %>
+</div>
+
+<% end %>

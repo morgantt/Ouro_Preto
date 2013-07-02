@@ -1,0 +1,110 @@
+<%= render 'shared/error_messages', :object => f.object %>
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main2">
+
+<div class='field01'>
+  <h3> <%= @operadora.nome %> <%= @tipoproposta.tipo %> </h3>
+  <%= f.label :r01 %>
+  <%= f.text_field :r01, :size=> "5" %>
+
+  <%= f.label :r02 %>
+  <%= f.text_field :r02, :size=> "5" %>
+
+  <%= f.label :r03 %>
+  <%= f.text_field :r03, :size=> "5" %>
+
+  <%= f.label :r04 %>
+  <%= f.text_field :r04, :size=> "5" %>
+  </div>
+<div class='field01'>
+
+  <%= f.label :r05 %>
+  <%= f.text_field :r05, :size=> "5" %>
+
+  <%= f.label :r06 %>
+  <%= f.text_field :r06, :size=> "5" %>
+
+  <%= f.label :r07 %>
+  <%= f.text_field :r07, :size=> "5" %>
+
+  <%= f.label :r08 %>
+  <%= f.text_field :r08, :size=> "5" %>
+</div>
+<div class='field01'>
+  <%= f.label :r09 %>
+  <%= f.text_field :r09, :size=> "5" %>
+
+  <%= f.label :r10 %>
+  <%= f.text_field :r10, :size=> "5" %>
+
+  <%= f.label :r11 %>
+  <%= f.text_field :r11, :size=> "5" %>
+
+  <%= f.label :r12 %>
+  <%= f.text_field :r12, :size=> "5" %>
+</div>
+<div class='field01'>
+  <%= f.label :Vitalicio %>
+  <%= f.text_field :rvita, :size=> "5" %>
+  
+
+</div>
+   </td>
+    <td class="sidebar40 round">
+<div class='field01'>
+  <h3> Valido ________Imposto  </h3><br />
+ 
+ <%= f.check_box :r01valid %>
+ <%= f.check_box :r02valid %>
+ <%= f.check_box :r03valid %>
+ <%= f.check_box :r04valid %>
+ |
+ <%= f.check_box :imp01 %>
+ <%= f.check_box :imp02 %>
+ <%= f.check_box :imp03 %>
+ <%= f.check_box :imp04 %>
+ 
+</div>
+<div class='field01'><br />
+
+ <%= f.check_box :r05valid %>
+ <%= f.check_box :r06valid %>
+ <%= f.check_box :r07valid %>
+ <%= f.check_box :r08valid %>
+ |
+ <%= f.check_box :imp05 %>
+ <%= f.check_box :imp06 %>
+ <%= f.check_box :imp07 %>
+ <%= f.check_box :imp08 %>
+
+</div>
+
+<div class='field01'><br />
+  
+ <%= f.check_box :r09valid %>
+ <%= f.check_box :r10valid %>
+ <%= f.check_box :r11valid %>
+ <%= f.check_box :r12valid %>
+ |
+ <%= f.check_box :imp09 %>
+ <%= f.check_box :imp10 %>
+ <%= f.check_box :imp11 %>
+ <%= f.check_box :imp12 %>
+
+</div>
+<div class='field01'><br />
+  
+ <%= f.check_box :rvitavalid %>
+<b>  ___________| </b>
+
+ <%= f.check_box :impvita %>
+ <div class='field01'>
+  <%= f.label :tipoproposta_id  %>
+  <%= f.text_field :tipoproposta_id, :size=> "5", :readonly => true %>
+</div>
+  
+</td>
+  </tr>
+</table>

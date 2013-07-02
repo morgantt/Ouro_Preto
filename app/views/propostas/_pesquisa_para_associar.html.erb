@@ -1,0 +1,47 @@
+
+<%= search_form_for @q1 , :url => {:action => "associa"} do |f| %>
+
+<table class="profile" summary="Profile information">
+	<tr>
+	<td WIDTH="15%"> <%= f.label :numero_cont, "Numero Contem:" %></td>
+	<td WIDTH="45%"> <%= f.text_field :numero_cont %></td>
+	<td WIDTH="25%"> <div><%= f.submit "Pesquisar" %></div></td>
+<% end %>
+</tr>
+</table>
+    
+
+<table class="profile" summary="Profile information">
+	<tr>
+		<th> Numero </th>
+		<th> Operadora </th>
+		<th> Tipo </th>
+		<th> Status </th>
+		<th> Data </th>
+	</tr>
+	
+   
+ <%     @proposta_search2.each do |proposta| %>
+ 	<tr>
+ 	  
+ 	  <td WIDTH="15%"> <%= link_to proposta.numero %></td>
+		
+		<td WIDTH="15%"> <%= proposta.operadora %></td>
+		<td WIDTH="15%"> <%= proposta.tipo %></td>
+		<td WIDTH="15%"> <%= proposta.nome_status %></td>
+		<td WIDTH="15%"> <%= proposta.data_status %></td>
+
+		<td WIDTH="10%"> <% if current_user.admin? %>	
+			<%= link_to "Associa",  
+									:confirm => "voce esta certo? Associa => #{proposta.numero}",
+									:controller => "propostas", 
+									:action => "associa_from_pesquisa", 
+									:title => "#{proposta.id}",
+									 %>
+			<% end %>	
+		</td>
+
+ 	</tr>
+ <% end %>	  
+
+</table>

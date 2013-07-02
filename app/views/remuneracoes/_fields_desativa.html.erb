@@ -1,0 +1,114 @@
+<%= render 'shared/error_messages', :object => f.object %>
+
+
+<h3> <%= f.label :Valido %><%= f.check_box :ativo %></h3> 
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main2">
+ 
+
+<div class='field01'>
+ 
+  <%= f.label :r01 %>
+  <%= f.text_field :r01, :size=> "5", :readonly => true %>
+
+  <%= f.label :r02 %>
+  <%= f.text_field :r02, :size=> "5", :readonly => true %>
+
+  <%= f.label :r03 %>
+  <%= f.text_field :r03, :size=> "5", :readonly => true %>
+
+  <%= f.label :r04 %>
+  <%= f.text_field :r04, :size=> "5", :readonly => true %>
+  </div>
+<div class='field01'>
+
+  <%= f.label :r05 %>
+  <%= f.text_field :r05, :size=> "5", :readonly => true %>
+
+  <%= f.label :r06 %>
+  <%= f.text_field :r06, :size=> "5", :readonly => true %>
+
+  <%= f.label :r07 %>
+  <%= f.text_field :r07, :size=> "5", :readonly => true %>
+
+  <%= f.label :r08 %>
+  <%= f.text_field :r08, :size=> "5", :readonly => true %>
+</div>
+<div class='field01'>
+  <%= f.label :r09 %>
+  <%= f.text_field :r09, :size=> "5", :readonly => true %>
+
+  <%= f.label :r10 %>
+  <%= f.text_field :r10, :size=> "5", :readonly => true %>
+
+  <%= f.label :r11 %>
+  <%= f.text_field :r11, :size=> "5", :readonly => true %>
+
+  <%= f.label :r12 %>
+  <%= f.text_field :r12, :size=> "5", :readonly => true %>
+</div>
+<div class='field01'>
+  <%= f.label :Vitalicio %>
+  <%= f.text_field :rvita, :size=> "5", :readonly => true %>
+  
+
+</div>
+   </td>
+    <td class="sidebar40 round">
+
+<div class='field01'>
+  <h3> Valido ________Imposto  </h3><br />
+ 
+ <%= f.check_box :r01valid, :readonly => true %>
+ <%= f.check_box :r02valid, :readonly => true %>
+ <%= f.check_box :r03valid, :readonly => true %>
+ <%= f.check_box :r04valid, :readonly => true %>
+ |
+ <%= f.check_box :imp01, :readonly => true %>
+ <%= f.check_box :imp02, :readonly => true %>
+ <%= f.check_box :imp03, :readonly => true %>
+ <%= f.check_box :imp04, :readonly => true %>
+ 
+</div>
+<div class='field01'><br />
+
+ <%= f.check_box :r05valid, :readonly => true %>
+ <%= f.check_box :r06valid, :readonly => true %>
+ <%= f.check_box :r07valid, :readonly => true %>
+ <%= f.check_box :r08valid, :readonly => true %>
+ |
+ <%= f.check_box :imp05, :readonly => true %>
+ <%= f.check_box :imp06, :readonly => true %>
+ <%= f.check_box :imp07, :readonly => true %>
+ <%= f.check_box :imp08, :readonly => true %>
+
+</div>
+
+<div class='field01'><br />
+  
+ <%= f.check_box :r09valid, :readonly => true %>
+ <%= f.check_box :r10valid, :readonly => true %>
+ <%= f.check_box :r11valid, :readonly => true %>
+ <%= f.check_box :r12valid, :readonly => true %>
+ |
+ <%= f.check_box :imp09, :readonly => true %>
+ <%= f.check_box :imp10, :readonly => true %>
+ <%= f.check_box :imp11, :readonly => true %>
+ <%= f.check_box :imp12, :readonly => true %>
+
+</div>
+<div class='field01'><br />
+  
+ <%= f.check_box :rvitavalid, :readonly => true %>
+<b>  ___________| </b>
+
+ <%= f.check_box :impvita, :readonly => true %>
+ <div class='field01'>
+  <%= f.label :tipoproposta_id, :readonly => true  %>
+  <%= f.text_field :tipoproposta_id, :size=> "5", :readonly => true %>
+</div>
+  
+</td>
+  </tr>
+</table>

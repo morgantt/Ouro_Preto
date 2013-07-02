@@ -1,0 +1,137 @@
+<h3>Remuneracoes  <br />
+
+<%= @operadora.nome %> <%= @tipoproposta.tipo %> - ID = <%= @remuneracao.id %>
+
+</h3>
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+ 
+      </h1>
+
+    </td>
+    <td class="sidebar round">
+ 
+    </td>
+  </tr>
+
+
+
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+
+	<div class='field01'>
+    
+  R01 = <%= @remuneracao.r01 %> - 
+  
+  R02 = <%= @remuneracao.r02 %> - 
+
+  R03 = <%= @remuneracao.r03 %> - 
+
+  R04 = <%= @remuneracao.r04 %> - 
+	
+    </div>
+	<div class='field01'>
+	
+  R05 = <%= @remuneracao.r05 %> - 
+
+  R06 = <%= @remuneracao.r06 %> - 
+
+  R07 = <%= @remuneracao.r07 %> -
+
+  R08 = <%= @remuneracao.r08 %> - 
+  	
+	</div>
+	<div class='field01'>
+	
+  R09 = <%= @remuneracao.r09 %> - 
+
+  R10 = <%= @remuneracao.r10 %> - 
+
+  R11 = <%= @remuneracao.r11 %> -
+
+  R12 = <%= @remuneracao.r12 %> - 
+  	
+	</div>
+	<div class='field01'>
+	
+  RVitalicio = <%= @remuneracao.rvita %> - 
+
+	</div>
+
+  </div>
+  <div class='field01'>
+
+   Ultima alteracao <%= @remuneracao.updated_at.to_date %> <br />
+   Ativo  <%= @remuneracao.ativo %>
+  </div>
+
+
+
+   </td>
+    <td class="sidebar40 round">
+  	
+	<div class='field01'>
+ 
+ 
+
+	<%= form_for(@remuneracao) do |f| %>
+         <%= f.check_box(:r01valid, :readonly => true )%>
+         <%= f.check_box(:r02valid, :readonly => true )%>
+         <%= f.check_box(:r03valid, :readonly => true )%>
+         <%= f.check_box(:r04valid, :readonly => true )%>
+         <%= f.check_box(:imp01, :readonly => true )%>
+         <%= f.check_box(:imp02, :readonly => true )%>
+         <%= f.check_box(:imp03, :readonly => true )%>
+         <%= f.check_box(:imp04, :readonly => true )%>
+         
+       <% end %>
+     </div>
+
+ 	<div class='field01'>
+     <%= form_for(@remuneracao) do |f| %>
+         <%= f.check_box(:r05valid, :readonly => true )%>
+         <%= f.check_box(:r06valid, :readonly => true )%>
+         <%= f.check_box(:r07valid, :readonly => true )%>
+         <%= f.check_box(:r08valid, :readonly => true )%>
+         <%= f.check_box(:imp05, :readonly => true )%>
+         <%= f.check_box(:imp06, :readonly => true )%>
+         <%= f.check_box(:imp07, :readonly => true )%>
+         <%= f.check_box(:imp08, :readonly => true )%>
+       <% end %>
+        </div>
+
+ 	<div class='field01'>
+
+     <%= form_for(@remuneracao) do |f| %>
+         <%= f.check_box(:r09valid, :readonly => true )%>
+         <%= f.check_box(:r10valid, :readonly => true )%>
+         <%= f.check_box(:r11valid, :readonly => true )%>
+         <%= f.check_box(:r12valid, :readonly => true )%>
+         <%= f.check_box(:imp09, :readonly => true )%>
+         <%= f.check_box(:imp10, :readonly => true )%>
+         <%= f.check_box(:imp11, :readonly => true )%>
+         <%= f.check_box(:imp12, :readonly => true )%>
+       <% end %>  
+
+        </div>
+
+ 	<div class='field01'> 
+    <%= form_for(@remuneracao) do |f| %>
+         <%= f.check_box(:rvitavalid, :readonly => true )%>
+
+
+         <%= f.check_box(:impvita, :readonly => true )%>
+       <% end %>   
+
+  
+ 
+	</div>
+
+  </tr>
+
+</table>

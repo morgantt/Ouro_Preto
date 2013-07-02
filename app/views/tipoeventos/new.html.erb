@@ -1,0 +1,9 @@
+<h1>Novo Tipo de Evento</h1>
+
+<%= form_for(@tipoevento) do |f|  %>
+<%= render 'fields', :f => f %> 
+<div class='actions'>
+  <%= f.submit "Criar" %>
+</div>
+
+<% end %>

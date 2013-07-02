@@ -1,0 +1,50 @@
+
+<%= form_for(@evento) do |f|  %>
+
+<div class='field'>
+	<table>
+		<tr>
+			<td WIDTH="30%">
+	
+	<h1>  <%= @proposta.numero  %>	</h1>
+
+</td>
+<td WIDTH="30%">
+<h1>	<%= @proposta.corretor.nome %>	</h1>
+</td>
+</h1>
+</tr>
+</table>
+	
+<div >
+<table class="datepicker" >
+	<tr>
+	</tr>
+	<tr>
+	
+	<td WIDTH="10%"> <%= f.label :data %><br/> </td> 
+	<td WIDTH="30%"> <%= f.text_field :data , :class => "datepicker", :value => Date.today.to_s %></td>
+<td WIDTH="30%"> <%= collection_select(:evento, :tipo_evento, @tipoevento, :nome, :nome ) %></td>
+	</tr>
+	<tr>
+		<td WIDTH="10%"> <%= f.label :Observacao %> </td>
+		<td WIDTH="80%"> <%= f.text_field :observacao  %></td>
+		<%= hidden_field_tag :proposta_id , @proposta.id   %>
+		
+	</tr>	
+</table>	
+</div>
+
+ 
+
+</div>
+
+<div class='actions'>
+	  <%= f.submit "Atualiza" %>
+
+</div>
+<% end %>		
+<div>		
+
+<%= button_to "Cancela", eventos_path, :method => "get" %>
+</div>		

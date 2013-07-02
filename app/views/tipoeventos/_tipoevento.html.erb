@@ -1,0 +1,24 @@
+
+
+<table class="profile" summary="Profile information">
+	<tr>
+	
+	</tr>
+	
+	<tr>
+	
+		<td WIDTH="50%"> <%= tipoevento.nome %></td>
+		
+		<td WIDTH="10%"> <%= link_to tipoevento.numero, tipoevento %></td>
+		
+			<td WIDTH="10%"> <% if current_user.admin? %>	
+			<%= link_to "Deleta", tipoevento, :method => :delete, 
+											  :confirm => "voce esta certo?",
+											  :title => "Delete => #{tipoevento.nome}" %>
+			<% end %>	
+		</td>
+	
+	<td>  </td>
+	<td>  </td>
+	</tr>	
+	</table>						

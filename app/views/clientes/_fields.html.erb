@@ -1,0 +1,37 @@
+<%= render 'shared/error_messages', :object => f.object %>
+
+<div class='field'>
+  <%= f.label :Nome %>
+  <%= f.text_field :nome %>
+
+     <%= f.label :Nascimento%>
+  <%= f.date_select :data_nascimento, :size => 10, :order => [:day, :month, :year],
+                    :start_year => 1920,:use_short_month => true %><br />
+
+  <%= f.label :CPF %>
+  <%= f.text_field :cpf, :size=> "10" %>
+</div>
+<div class='field'>
+  <%= f.label :Endereço %>
+  <%= f.text_field :endereco %>
+
+  <%= f.label :Municipio %>
+  <%= f.text_field :municipio, :size=> "10"  %>
+
+  <%= f.label :CEP %>
+  <%= f.text_field :cep, :size=> "5"  %>
+</div>
+
+<div class='field'>
+  <%= f.label :Telefone_1 %>
+  <%= f.text_field :telefone1, :size=> "10" %>
+
+  <%= f.label :Telefone_2 %>
+  <%= f.text_field :telefone2, :size=> "10" %>
+</div>
+
+<div class='field'>
+  <%= f.label :Comentario %><br />
+  <%= f.text_area(:comentario, :id => "comentario_area" ) %>
+</div>
+

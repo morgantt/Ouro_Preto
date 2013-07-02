@@ -1,0 +1,8 @@
+<h1>Novo Cliente</h1>
+<%= form_for(@cliente) do |f|  %>
+<%= render 'fields', :f => f %> 
+<div class='actions'>
+  <%= f.submit "Criar" %>
+</div>
+
+<% end %>

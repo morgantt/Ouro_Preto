@@ -1,0 +1,28 @@
+<h1>Eventos - <%= @proposta.numero %> - <%= @proposta.operadora %>    </h1>
+
+
+<div class='field'>
+ <h2>  
+  
+  <%= @proposta.corretor.nome %><br />
+</h2>
+  
+</div>
+
+ <table class="profile" summary="Profile information">
+    <tr>
+ 
+    <th WIDTH="20%">tipo_evento </th>
+    <th WIDTH="10%">Data</th>
+    <th WIDTH="30%">Observacao</th>
+    <th WIDTH="10%">Usuario</th>
+    <th WIDTH="17%">Criado em</th>
+      
+    </tr>
+  </table> 
+
+  <%= render  @eventoshow %>
+
+<%= will_paginate @eventoshow %>
+ 
+
