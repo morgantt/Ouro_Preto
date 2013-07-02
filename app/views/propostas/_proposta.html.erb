@@ -5,17 +5,29 @@
 
 	</tr>
 	<tr>
-		<td WIDTH="20%"> <%= link_to proposta.numero, proposta %></td>
+		<td WIDTH="10%"> <%= link_to proposta.numero, proposta %></td>
+		<td WIDTH="17%"> <%= proposta.operadora %></td>
+		<td WIDTH="10%"> <%= proposta.tipo %></td>
 		
-		<td WIDTH="25%"> <%= proposta.tipo %></td>
-		<td WIDTH="25%"> <%= proposta.operadora %></td>
 		<td WIDTH="15%"> <%= proposta.nome_status %></td>
+		<td WIDTH="10%"> <%= proposta.data_status %></td>
+		<td WIDTH="20%"> <%= proposta.corretor.nome %></td>
 		
-			<td WIDTH="10%"> <% if current_user.admin? %>	
+
+
+			<td WIDTH="6%"> <% if current_user.admin? %>	
 			<%= link_to "Delete", proposta, :confirm => "voce esta certo?",
 											:title => "Delete => #{proposta.numero}",
 											:method => :delete %>
-			<% end %>	
+			<% end %> </td>
+
+			<td WIDTH="8%"><%= link_to "Cria Evento", new_evento_path(proposta),
+											:confirm => "voce esta certo? #{proposta.numero}",
+											:title => "new => #{proposta.numero}"%>	
+			<td WIDTH="8%"><%= link_to "Mostra Evento", eventos_show_path(proposta)%>										
+
+											
+				
 		</td>
 	
 	<td>  </td>

@@ -9,6 +9,7 @@
 #  lms          :integer(4)
 #  created_at   :datetime
 #  updated_at   :datetime
+#  ativo        :boolean(1)      default(TRUE)
 #
 
 require 'spec_helper'

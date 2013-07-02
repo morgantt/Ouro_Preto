@@ -1,11 +1,10 @@
 <%= render 'shared/error_messages', :object => f.object %>
-
+<h3> Limites Totais de Propostas </h3>
 
 <div class='field'>
-  <%= f.label :LMI %><br />
-  <%= f.text_field :lmi %>
-</div>
-<div class='field'>
-  <%= f.label :LMS %><br />
-  <%= f.text_field :lms %>
+  <%= f.label :Minimo %>
+  <%= f.text_field :lmi, :size=> "5"  %>
+
+  <%= f.label :Maximo %>
+  <%= f.text_field :lms, :size=> "5"  %>
 </div>

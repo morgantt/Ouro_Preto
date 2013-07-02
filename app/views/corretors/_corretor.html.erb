@@ -3,12 +3,14 @@
 	<tr>
 	</tr>
 	<tr>
-		<td WIDTH="80%"> <%= link_to corretor.nome, corretor %></td>
+		<td WIDTH="40%"> <%= link_to corretor.nome, corretor %></td>
+		<td WIDTH="20%"> <%= link_to corretor.telefone1, corretor %></td>
+		<td WIDTH="20%"> <%= link_to corretor.banco, corretor %></td>
 		
 			<td WIDTH="10%"> <% if current_user.admin? %>	
 			<%= link_to "Deleta", corretor, :method => :delete, 
-																		 :confirm => "voce esta certo?",
-														  	     :title => "Delete => #{corretor.nome}" %>
+											:confirm => "voce esta certo?",
+											:title => "Delete => #{corretor.nome}" %>
 			<% end %>	
 		</td>
 	

@@ -2,13 +2,15 @@
 	<tr>
 	</tr>
 	<tr>
-		<td WIDTH="60%"> <%= link_to operadora.nome, operadora %> </td>
+		<td WIDTH="40%"> <%= link_to operadora.nome, operadora %> </td>
+		<td WIDTH="15%"> <%= link_to operadora.corretora, operadora %> </td>
+		<td WIDTH="15%"> <%= link_to operadora.banco, operadora %> </td>
 	
 		<td WIDTH="10%"> <% if current_user.admin? %>
 	
 					<%= link_to "Deleta", operadora, :method => :delete, 
-																					 :confirm => "voce esta certo?",
-																		       :title => "Delete => #{operadora.nome}" %>
+													 :confirm => "voce esta certo?",
+											         :title => "Delete => #{operadora.nome}" %>
 					<% end %>	
 		</td>											  
 			  										  

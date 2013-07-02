@@ -15,17 +15,17 @@ class Situacao < ActiveRecord::Base
 		
 #	belongs_to :Proposta
 		
-	validates_presence_of :status, :nomestat,
-	 											:message => "Nao pode ser em Branco"
+	validates_presence_of 	:status, :nomestat,
+							:message => "Nao pode ser em Branco"
 	 											
 	 before_validation :converte_uppercase
 	
 	 validates_numericality_of  :status,
-	 														:message => "So pode conter caracteres numericos "
+								:message => "So pode conter caracteres numericos "
 											 
 #	 validates_format_of  :nomestat, :with => /^([A-Za-z\- ]+)$/, 
 #											 :message => "So pode conter caracteres de A ate Z "
-											 
+	scope :stat_campo, where(:status => "7")										 
 	 											
 	
 	protected

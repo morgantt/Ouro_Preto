@@ -19,8 +19,12 @@
 #
 
 class Proposta < ActiveRecord::Base
-	#scope :xcxc1, :order(corretor_id) 
-	
+	#scope :xcxc1, :order(corretor_id)
+
+	belongs_to :corretor
+	has_one    :contrato
+	has_many   :eventos
+
 	attr_accessible :operadora_id, :tipo, :numero, :data_entrada, :status, 
 									:nome_status, :data_status, :corretor_id, :observacao,
 									:tipoproposta_id, :operadora
@@ -31,8 +35,11 @@ class Proposta < ActiveRecord::Base
 	validates_presence_of :data_entrada, :nome_status, :status, :data_status, :operadora,
 	 											:message => "Nao pode ser em Branco"	
 	
-	scope :xcxc, order(:status)
-	scope :xcxc1, where(:status => "8")
+	
+	scope :stat_estoque, where(:status => "8")
+	scope :stat_campo, where(:status => "7")
+	scope :stat_vendido, where(:status => "6")
+	scope :stat_evento_678, where(:status => [6, 7, 8] )
 	scope :tudo, :order => "operadora_id, numero"
  
  	def self.xcxc2

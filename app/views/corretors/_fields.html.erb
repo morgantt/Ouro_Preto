@@ -1,42 +1,38 @@
 <%= render 'shared/error_messages', :object => f.object %>
 
 <div class='field'>
-  <%= f.label :Nome %><br />
+  <%= f.label :Nome %>
   <%= f.text_field :nome %>
+
+  <%= f.label :CPF %>
+  <%= f.text_field :cpf, :size=> "10"  %>
 </div>
 <div class='field'>
-  <%= f.label :Endereço %><br />
+  <%= f.label :Endereço %>
   <%= f.text_field :endereco %>
+
+  <%= f.label :CEP %>
+  <%= f.text_field :cep, :size=> "6"    %>
+</div>
+
+<div class='field'>
+  <%= f.label :Telefone_1 %>
+  <%= f.text_field :telefone1, :size=> "10" %>
+
+  <%= f.label :Telefone_2 %>
+  <%= f.text_field :telefone2, :size=> "10"  %>
 </div>
 <div class='field'>
-  <%= f.label :CEP %><br />
-  <%= f.text_field :cep %>
-</div>
-<div class='field'>
-  <%= f.label :CPF %><br />
-  <%= f.text_field :cpf %>
-</div>
-<div class='field'>
-  <%= f.label :Telefone_1 %><br />
-  <%= f.text_field :telefone1 %>
-</div>
-<div class='field'>
-  <%= f.label :Telefone_2 %><br />
-  <%= f.text_field :telefone2 %>
-</div>
-<div class='field'>
-  <%= f.label :Banco %><br />
-  <%= f.text_field :banco %>
-</div>
-<div class='field'>
-  <%= f.label :Agencia %><br />
-  <%= f.text_field :agencia %>
-</div>
-<div class='field'>
-  <%= f.label :Conta %><br />
-  <%= f.text_field :conta %>
+  <%= f.label :Banco %>
+  <%= f.text_field :banco, :size=> "10"   %>
+
+  <%= f.label :Agencia %>
+  <%= f.text_field :agencia, :size=> "6"   %>
+
+  <%= f.label :Conta %>
+  <%= f.text_field :conta, :size=> "10"   %>
 </div>
 <div class='field'>
   <%= f.label :Comentario %><br />
-  <%= f.text_area :comentario %>
+  <%= f.text_area :comentario, :id => "comentario_area"  %>
 </div>

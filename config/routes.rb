@@ -1,5 +1,56 @@
 OuroPreto::Application.routes.draw do
 
+
+  get "eventos/index"
+
+  get "eventos/show"
+
+  get "eventos/new"
+
+  get "eventos/index"
+
+  get "tipoeventos/index"
+
+  get "tipoeventos/show"
+
+  get "tipoeventos/new"
+
+  get "tipoeventos/edit"
+
+  get "tipoeventos/create"
+
+  get "acompanhamentos/index"
+
+  get "acompanhamentos/show"
+
+  get "acompanhamentos/new"
+
+  get "acompanhamentos/edit"
+
+  get "acompanhamentos/create"
+
+  get "clientes/index"
+
+  get "clientes/show"
+
+  get "clientes/new"
+
+  get "contratos/index"
+
+  get "contratos/show"
+
+  get "contratos/new"
+
+  get "comissoes/index"
+
+  get "comissoes/show"
+
+  get "comissoes/edit"
+
+  get "remuneracoes/index"
+
+  get "remuneracoes/show"
+
   get "histpropostas/index"
 
   get "histpropostas/show"
@@ -16,6 +67,9 @@ OuroPreto::Application.routes.draw do
 
   get "sessions/new"
   
+  resources :eventos
+  resources :tipoeventos
+  resources :contratos
   resources :histpropostas
   resources :propostas
   resources :corretors
@@ -25,11 +79,21 @@ OuroPreto::Application.routes.draw do
 	resources :operadoras
   resources :users
   resources :sessions, :only => [ :new, :create, :destroy ]
+  resources :remuneracoes
+  resources :comissoes
+  resources :clientes
+  
 
   root :to => "pages#home"
-	
+
+  match '/eventos_show/:id', :to => 'eventos#show', 
+                                              :as => :show
+  match '/contratos/prepara/:id', :to => 'contratos#prepara', 
+                                              :as => :prepara
 	match '/propostas/associa/:id', :to => 'propostas#associa', :as => :associa
 	match '/propostas/associa_2/:id', :to => 'propostas#associa_2', :as => :associa_2
+  match '/propostas/associa_from_pesquisa/:id', :to => 'propostas#associa_from_pesquisa',
+                                                :as => :associa_from_pesquisa   
 	match '/propostas/associa_update_button_div/:idw' => 'propostas#associa_update_button_div',
 																					 :as  => :associa_update_button_div
 	match '/propostas/update_number_div/:id' => 'propostas#update_number_div', :as => :update_number_div
@@ -41,6 +105,10 @@ OuroPreto::Application.routes.draw do
   match '/signup', :to => 'users#new'
   match '/signin', :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
+
+
+  
+ 
 
 
 #   The priority is based upon order of creation:
@@ -101,62 +169,4 @@ OuroPreto::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
 end
 
-#== Route Map
-# Generated on 24 Mar 2012 22:25
-#
-#   cparametros_new GET    /cparametros/new(.:format)        {:controller=>"cparametros", :action=>"new"}
-#    operadoras_new GET    /operadoras/new(.:format)         {:controller=>"operadoras", :action=>"new"}
-#      sessions_new GET    /sessions/new(.:format)           {:controller=>"sessions", :action=>"new"}
-#         corretors GET    /corretors(.:format)              {:action=>"index", :controller=>"corretors"}
-#                   POST   /corretors(.:format)              {:action=>"create", :controller=>"corretors"}
-#      new_corretor GET    /corretors/new(.:format)          {:action=>"new", :controller=>"corretors"}
-#     edit_corretor GET    /corretors/:id/edit(.:format)     {:action=>"edit", :controller=>"corretors"}
-#          corretor GET    /corretors/:id(.:format)          {:action=>"show", :controller=>"corretors"}
-#                   PUT    /corretors/:id(.:format)          {:action=>"update", :controller=>"corretors"}
-#                   DELETE /corretors/:id(.:format)          {:action=>"destroy", :controller=>"corretors"}
-#       cparametros GET    /cparametros(.:format)            {:action=>"index", :controller=>"cparametros"}
-#                   POST   /cparametros(.:format)            {:action=>"create", :controller=>"cparametros"}
-#    new_cparametro GET    /cparametros/new(.:format)        {:action=>"new", :controller=>"cparametros"}
-#   edit_cparametro GET    /cparametros/:id/edit(.:format)   {:action=>"edit", :controller=>"cparametros"}
-#        cparametro GET    /cparametros/:id(.:format)        {:action=>"show", :controller=>"cparametros"}
-#                   PUT    /cparametros/:id(.:format)        {:action=>"update", :controller=>"cparametros"}
-#                   DELETE /cparametros/:id(.:format)        {:action=>"destroy", :controller=>"cparametros"}
-#         situacaos GET    /situacaos(.:format)              {:action=>"index", :controller=>"situacaos"}
-#                   POST   /situacaos(.:format)              {:action=>"create", :controller=>"situacaos"}
-#      new_situacao GET    /situacaos/new(.:format)          {:action=>"new", :controller=>"situacaos"}
-#     edit_situacao GET    /situacaos/:id/edit(.:format)     {:action=>"edit", :controller=>"situacaos"}
-#          situacao GET    /situacaos/:id(.:format)          {:action=>"show", :controller=>"situacaos"}
-#                   PUT    /situacaos/:id(.:format)          {:action=>"update", :controller=>"situacaos"}
-#                   DELETE /situacaos/:id(.:format)          {:action=>"destroy", :controller=>"situacaos"}
-#     tipopropostas GET    /tipopropostas(.:format)          {:action=>"index", :controller=>"tipopropostas"}
-#                   POST   /tipopropostas(.:format)          {:action=>"create", :controller=>"tipopropostas"}
-#  new_tipoproposta GET    /tipopropostas/new(.:format)      {:action=>"new", :controller=>"tipopropostas"}
-# edit_tipoproposta GET    /tipopropostas/:id/edit(.:format) {:action=>"edit", :controller=>"tipopropostas"}
-#      tipoproposta GET    /tipopropostas/:id(.:format)      {:action=>"show", :controller=>"tipopropostas"}
-#                   PUT    /tipopropostas/:id(.:format)      {:action=>"update", :controller=>"tipopropostas"}
-#                   DELETE /tipopropostas/:id(.:format)      {:action=>"destroy", :controller=>"tipopropostas"}
-#        operadoras GET    /operadoras(.:format)             {:action=>"index", :controller=>"operadoras"}
-#                   POST   /operadoras(.:format)             {:action=>"create", :controller=>"operadoras"}
-#     new_operadora GET    /operadoras/new(.:format)         {:action=>"new", :controller=>"operadoras"}
-#    edit_operadora GET    /operadoras/:id/edit(.:format)    {:action=>"edit", :controller=>"operadoras"}
-#         operadora GET    /operadoras/:id(.:format)         {:action=>"show", :controller=>"operadoras"}
-#                   PUT    /operadoras/:id(.:format)         {:action=>"update", :controller=>"operadoras"}
-#                   DELETE /operadoras/:id(.:format)         {:action=>"destroy", :controller=>"operadoras"}
-#             users GET    /users(.:format)                  {:action=>"index", :controller=>"users"}
-#                   POST   /users(.:format)                  {:action=>"create", :controller=>"users"}
-#          new_user GET    /users/new(.:format)              {:action=>"new", :controller=>"users"}
-#         edit_user GET    /users/:id/edit(.:format)         {:action=>"edit", :controller=>"users"}
-#              user GET    /users/:id(.:format)              {:action=>"show", :controller=>"users"}
-#                   PUT    /users/:id(.:format)              {:action=>"update", :controller=>"users"}
-#                   DELETE /users/:id(.:format)              {:action=>"destroy", :controller=>"users"}
-#          sessions POST   /sessions(.:format)               {:action=>"create", :controller=>"sessions"}
-#       new_session GET    /sessions/new(.:format)           {:action=>"new", :controller=>"sessions"}
-#           session DELETE /sessions/:id(.:format)           {:action=>"destroy", :controller=>"sessions"}
-#              root        /(.:format)                       {:controller=>"pages", :action=>"home"}
-#   update_tipo_dev        /update_tipo_dev(.:format)        {:controller=>"cparametros", :action=>"update_tipo_dev "}
-#           contact        /contact(.:format)                {:controller=>"pages", :action=>"contact"}
-#             about        /about(.:format)                  {:controller=>"pages", :action=>"about"}
-#              help        /help(.:format)                   {:controller=>"pages", :action=>"help"}
-#            signup        /signup(.:format)                 {:controller=>"users", :action=>"new"}
-#            signin        /signin(.:format)                 {:controller=>"sessions", :action=>"new"}
-#           signout        /signout(.:format)                {:controller=>"sessions", :action=>"destroy"}
+

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121216012941) do
+ActiveRecord::Schema.define(:version => 20130629235115) do
 
   create_table "auth_group", :force => true do |t|
     t.string "name", :limit => 80, :null => false
@@ -76,6 +76,81 @@ ActiveRecord::Schema.define(:version => 20121216012941) do
   add_index "auth_user_user_permissions", ["user_id", "permission_id"], :name => "user_id", :unique => true
   add_index "auth_user_user_permissions", ["user_id"], :name => "auth_user_user_permissions_403f60f"
 
+  create_table "clientes", :force => true do |t|
+    t.boolean "ativo",           :default => true
+    t.string  "nome"
+    t.date    "data_nascimento"
+    t.string  "endereco"
+    t.string  "cep"
+    t.string  "municipio"
+    t.string  "cpf"
+    t.string  "telefone1"
+    t.string  "telefone2"
+    t.text    "comentario"
+  end
+
+  create_table "comissoes", :force => true do |t|
+    t.boolean  "ativo",                                         :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "p01",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p02",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p03",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p04",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p05",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p06",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p07",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p08",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p09",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p10",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p11",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "p12",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "pvita",           :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.boolean  "p01valid",                                      :default => false
+    t.boolean  "p02valid",                                      :default => false
+    t.boolean  "p03valid",                                      :default => false
+    t.boolean  "p04valid",                                      :default => false
+    t.boolean  "p05valid",                                      :default => false
+    t.boolean  "p06valid",                                      :default => false
+    t.boolean  "p07valid",                                      :default => false
+    t.boolean  "p08valid",                                      :default => false
+    t.boolean  "p09valid",                                      :default => false
+    t.boolean  "p10valid",                                      :default => false
+    t.boolean  "p11valid",                                      :default => false
+    t.boolean  "p12valid",                                      :default => false
+    t.boolean  "pvitavalid",                                    :default => false
+    t.integer  "tipoproposta_id"
+  end
+
+  add_index "comissoes", ["tipoproposta_id"], :name => "index_comissoes_on_tipoproposta_id"
+
+  create_table "contratos", :force => true do |t|
+    t.boolean  "ativo",                                         :default => true
+    t.integer  "cliente_id"
+    t.integer  "corretor_id"
+    t.integer  "operadora_id"
+    t.integer  "tipoproposta_id"
+    t.integer  "proposta_id"
+    t.date     "data_venda"
+    t.date     "data_vigencia"
+    t.decimal  "valor_fatura",    :precision => 9, :scale => 2, :default => 0.0,  :null => false
+    t.integer  "vidas"
+    t.string   "numero_contrato"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "remuneracao_id"
+    t.integer  "comissao_id"
+    t.string   "nome"
+    t.date     "data_nascimento"
+    t.string   "endereco"
+    t.string   "cep"
+    t.string   "municipio"
+    t.string   "cpf"
+    t.string   "telefone1"
+    t.string   "telefone2"
+    t.text     "comentario"
+  end
+
   create_table "corretors", :force => true do |t|
     t.string   "nome"
     t.string   "endereco"
@@ -106,23 +181,17 @@ ActiveRecord::Schema.define(:version => 20121216012941) do
   add_index "cparametros", ["corretor_id"], :name => "index_cparametros_on_corretor_id"
   add_index "cparametros", ["operadora_id"], :name => "index_cparametros_on_operadora_id"
 
-  create_table "django_content_type", :force => true do |t|
-    t.string "name",      :limit => 100, :null => false
-    t.string "app_label", :limit => 100, :null => false
-    t.string "model",     :limit => 100, :null => false
+  create_table "eventos", :force => true do |t|
+    t.date     "data"
+    t.string   "tipo_evento"
+    t.string   "observacao"
+    t.integer  "proposta_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "user"
   end
 
-  add_index "django_content_type", ["app_label", "model"], :name => "app_label", :unique => true
-
-  create_table "django_session", :primary_key => "session_key", :force => true do |t|
-    t.text     "session_data", :limit => 2147483647, :null => false
-    t.datetime "expire_date",                        :null => false
-  end
-
-  create_table "django_site", :force => true do |t|
-    t.string "domain", :limit => 100, :null => false
-    t.string "name",   :limit => 50,  :null => false
-  end
+  add_index "eventos", ["proposta_id"], :name => "index_eventos_on_proposta_id"
 
   create_table "histpropostas", :force => true do |t|
     t.integer  "proposta_id"
@@ -178,9 +247,78 @@ ActiveRecord::Schema.define(:version => 20121216012941) do
     t.string   "operadora"
   end
 
+  create_table "recebiveis", :force => true do |t|
+    t.boolean  "ativo",                                        :default => true
+    t.date     "data_previsao"
+    t.decimal  "valor_previsao", :precision => 9, :scale => 2, :default => 0.0,  :null => false
+    t.integer  "parcela"
+    t.date     "data_recebido"
+    t.decimal  "valor_recebido", :precision => 9, :scale => 2, :default => 0.0,  :null => false
+    t.integer  "contrato_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "remuneracoes", :force => true do |t|
+    t.boolean  "ativo",                                         :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.decimal  "r01",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r02",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r03",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r04",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r05",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r06",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r07",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r08",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r09",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r10",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r11",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "r12",             :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.decimal  "rvita",           :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.boolean  "imp01",                                         :default => false
+    t.boolean  "imp02",                                         :default => false
+    t.boolean  "imp03",                                         :default => false
+    t.boolean  "imp04",                                         :default => false
+    t.boolean  "imp05",                                         :default => false
+    t.boolean  "imp06",                                         :default => false
+    t.boolean  "imp07",                                         :default => false
+    t.boolean  "imp08",                                         :default => false
+    t.boolean  "imp09",                                         :default => false
+    t.boolean  "imp10",                                         :default => false
+    t.boolean  "imp11",                                         :default => false
+    t.boolean  "imp12",                                         :default => false
+    t.boolean  "impvita",                                       :default => false
+    t.decimal  "imposto",         :precision => 5, :scale => 2, :default => 0.0,   :null => false
+    t.boolean  "r01valid",                                      :default => false
+    t.boolean  "r02valid",                                      :default => false
+    t.boolean  "r03valid",                                      :default => false
+    t.boolean  "r04valid",                                      :default => false
+    t.boolean  "r05valid",                                      :default => false
+    t.boolean  "r06valid",                                      :default => false
+    t.boolean  "r07valid",                                      :default => false
+    t.boolean  "r08valid",                                      :default => false
+    t.boolean  "r09valid",                                      :default => false
+    t.boolean  "r10valid",                                      :default => false
+    t.boolean  "r11valid",                                      :default => false
+    t.boolean  "r12valid",                                      :default => false
+    t.boolean  "rvitavalid",                                    :default => false
+    t.integer  "tipoproposta_id"
+    t.boolean  "ato_da_venda",                                  :default => true
+  end
+
+  add_index "remuneracoes", ["tipoproposta_id"], :name => "index_remuneracoes_on_tipoproposta_id"
+
   create_table "situacaos", :force => true do |t|
     t.integer  "status"
     t.string   "nomestat"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipoeventos", :force => true do |t|
+    t.string   "nome"
+    t.integer  "numero"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -192,6 +330,7 @@ ActiveRecord::Schema.define(:version => 20121216012941) do
     t.integer  "lms"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "ativo",        :default => true
   end
 
   add_index "tipopropostas", ["operadora_id"], :name => "index_tipopropostas_on_operadora_id"

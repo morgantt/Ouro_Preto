@@ -6,6 +6,8 @@ gem 'gravatar_image_tag'
 gem 'will_paginate'
 gem 'jquery-rails', '~> 2.1'
 gem 'jquery_datepicker'
+gem 'formtastic'
+gem 'validation_reflection'
 
 # ransack para implementar search
 gem "ransack"
@@ -15,6 +17,9 @@ group :development, :test do
   gem "autotest"
   gem "annotate", " ~> 2.4.1.beta1"
   gem 'faker'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  
  end
 
 

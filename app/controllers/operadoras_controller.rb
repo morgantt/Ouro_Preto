@@ -7,40 +7,40 @@ class OperadorasController < ApplicationController
  
 	def index
 	
-		@operadora = Operadora.paginate(:page => params[:page], :order => 'nome')
-		@title = "Todas as Operadoras"
+		  @operadora = Operadora.paginate(:page => params[:page], :order => 'nome')
+		  @title = "Todas as Operadoras"
 	end
  
   def show
     
-    @operadora = Operadora.find(params[:id])
-    @tipo  = @operadora.tipopropostas
- #   @tip = @operadora.tipopropostas.paginate( :page => params[:page])
-    @title = @operadora.nome
-    session[:oper] = @operadora.id
+      @operadora = Operadora.find(params[:id])
+      @tipo  = @operadora.tipopropostas
+      #   @tip = @operadora.tipopropostas.paginate( :page => params[:page])
+      @title = @operadora.nome
+      session[:oper] = @operadora.id
   
-    @tipopid = @operadora.id
-    @tipoproposta = Tipoproposta.find( :all, :conditions => { :operadora_id => [@tipopid] } )
+      @tipopid = @operadora.id
+      @tipoproposta = Tipoproposta.find( :all, :conditions => { :operadora_id => [@tipopid] } )
   
   end
  
   def new
   	
-  	@title = "Nova Operadora"
-   	@operadora = Operadora.new
+  	  @title = "Nova Operadora"
+      @operadora = Operadora.new
   	
   end
   
   def create
 
-   @operadora = Operadora.new(params[:operadora])
-    if @operadora.save
+      @operadora = Operadora.new(params[:operadora])
+      if @operadora.save
       
-      redirect_to @operadora, :flash => { :success => "Nova Operadora criada com sucesso!" }
-    else
-     @title = "Nova Operadora"
-     render "new"
-    end
+        redirect_to @operadora, :flash => { :success => "Nova Operadora criada com sucesso!" }
+      else
+        @title = "Nova Operadora"
+        render "new"
+      end
   end
   
   def edit
@@ -50,35 +50,35 @@ class OperadorasController < ApplicationController
 
   
   def update
-    @operadora = Operadora.find(params[:id])
+      @operadora = Operadora.find(params[:id])
     	if @operadora.update_attributes(params[:operadora])
-  		redirect_to @operadora, :flash => { :success => "Operadora Atualizada" }
-  	else
-  	@title = "Edita Operadora"
-  	render 'edit'
-  end		
- end
+  		    redirect_to @operadora, :flash => { :success => "Operadora Atualizada" }
+  	  else
+  	     @title = "Edita Operadora"
+  	     render 'edit'
+      end		
+  end
  
  def destroy
 
- 	 Operadora.find(params[:id]).destroy
- 	 redirect_to operadoras_path, :flash => { :success => "Operadora deletada" }
+ 	    Operadora.find(params[:id]).destroy
+ 	    redirect_to operadoras_path, :flash => { :success => "Operadora deletada" }
  end
  	
  	private
  	
  		def authenticate
- 			deny_access unless signed_in?
+ 			  deny_access unless signed_in?
 		end
 		
 		def correct_user 
-			@user =User.find(params[:id])
-			redirect_to(root_path) unless current_user?(@user)
+			   @user =User.find(params[:id])
+			   redirect_to(root_path) unless current_user?(@user)
 		end
 		
 		def admin_user
-		user = User.find(params[:id])
-		redirect_to(root_path) if !current_user.admin?	|| current_user?(user)
+		    user = User.find(params[:id])
+		    redirect_to(root_path) if !current_user.admin?	|| current_user?(user)
 		end
  	
  end  

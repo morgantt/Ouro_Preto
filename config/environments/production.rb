@@ -51,11 +51,18 @@ OuroPreto::Application.configure do
   inflect.irregular "tipoproposta", "tipopropostas"
   inflect.irregular "proposta", "propostas"
   inflect.irregular "histproposta", "histpropostas"
+  inflect.irregular "remuneracao", "remuneracoes"
+  inflect.irregular "comissao", "comissoes"
+  inflect.irregular "contrato", "contratos"
+  inflect.irregular "recebivel", "recebiveis"
+  inflect.irregular "pagavel", "pagaveis"
+  inflect.irregular "cliente", "clientes"
+  inflect.irregular "contrato", "contratos"
+  inflect.irregular "tipoevento", "tipoeventos"
+  inflect.irregular "evento", "eventos"
+  inflect.irregular "acompanhamento", "acompanhamentos"
+  
    end 
   
-  
-  
-  
-  
-  
+    
 end

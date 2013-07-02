@@ -1,11 +1,105 @@
-<h1>Edit Tipo de Proposta</h1>
+<h1>Edita Limites <%= @operadora.nome %></h1>
+
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+     
+    </td>
+    <td class="sidebar round">
+   
+ <!--   <%= link_to "Edita Remuneracao", edit_remuneracao_path(@tipoproposta)%><br /> -->
+    
+    <%= link_to "Adicionar Nova Remuneracao", new_remuneracao_path(@tipoproposta)%> <br />
+
+    <%= link_to "Adicionar Nova Comissao", new_comissao_path(@tipoproposta)%> <br />
+
+ <!--    <%= link_to "Mostrar Remuneracao", remuneracao_path(@tipoproposta)%> <br /> -->
+    <td>
+   
+    </td>
+  </tr>
+</table>
+
+<h3> Remuneracao <%= @operadora.nome %> -  <%= @tipoproposta.tipo %></h3>
+
+	<table>
+		<tr>
+			<th>id</th>
+			<th>ativo</th>
+			<th>R01</th>
+			<th>R02</th>
+			<th>R03 </th>
+			<th>R04 </th>
+			<th>Rvita </th>
+			<th>Data </th>
+
+		</tr>
+	<% @remuneracao.each do |tp| %>
+
+		<tr>
+			<td><%= link_to tp.id, remuneracao_path( tp ) %></td>
+			<td><%= tp.ativo %></td>
+			<td><%= tp.r01 %></td>
+			<td><%= tp.r02 %></td>
+			<td><%= tp.r03 %></td>
+			<td><%= tp.r04 %></td>
+			<td><%= tp.rvita %></td>
+			<td><%= tp.updated_at.to_date.strftime("%d-%m-%Y") %></td>
+			
+			<% if current_user.admin? %>
+			<td>  <%= link_to "Desativa", edit_remuneracao_path( tp )%>
+			 																
+			<% end %>
+
+			<% end %>
+
+		</tr>
+		</table>
+		<table>
+			<tr>
+			<th>id</th>
+			<th>ativo</th>
+			<th>P01</th>
+			<th>P02</th>
+			<th>P03 </th>
+			<th>P04 </th>
+			<th>Pvita </th>
+			<th>Data </th>
+
+		</tr>
+
+
+<h3> Comissionamento <%= @operadora.nome %> -  <%= @tipoproposta.tipo %></h3>		
+	<% @comissao.each do |tp| %>
+
+		<tr>
+			<td><%= link_to tp.id, comissao_path( tp ) %></td>
+			<td><%= tp.ativo %></td>
+			<td><%= tp.p01 %></td>
+			<td><%= tp.p02 %></td>
+			<td><%= tp.p03 %></td>
+			<td><%= tp.p04 %></td>
+			<td><%= tp.pvita %></td>
+			<td><%= tp.updated_at.to_date.strftime("%d-%m-%Y") %></td>
+			
+			<% if current_user.admin? %>
+			<td>  <%= link_to "Desativa", edit_comissao_path( tp )%>
+			 																
+			<% end %>
+		</tr>
+
+
+	<% end %>
+	
+	</table>
+
 	
  <% if @novo == "SIM" %>
 
 		<%= form_for(@tipoproposta) do |f|  %>
 		<%= render 'fields', :f => f %> 
 		<div class='actions'>
- 		 <%= f.submit "Update" %>
+ 		 <%= f.submit "Atualiza" %>
 		
 	<% end %>
 			
@@ -23,3 +117,4 @@
 
 <%= button_to "Cancela", operadoras_path, :method => "get" %>
 </div>	
+

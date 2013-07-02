@@ -1,13 +1,9 @@
-<h1>Todos as Propostas</h1>
+<h1>Todas as Propostas</h1>
 
+<%= render "pesquisa_proposta"  %> 
 
-<%= search_form_for @q do |f| %>
-  <%= f.label :numero_cont %>
-  <%= f.text_field :numero_cont %>
-  
-  <%= f.submit %>
 
   <%= render  @propostashow %>
 
 <%= will_paginate @propostashow %>
-<% end %>
+

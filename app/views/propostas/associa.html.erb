@@ -1,5 +1,9 @@
 <h2>Liga Proposta a Corretor </h2>
 
+		<%= render "pesquisa_para_associar"  %> 
+		
+
+
 		<%= form_for @proposta, :url => { :action => 'associa_2', :remote => true} do |f|  %>
 		
 		<%= render 'fields3', :f => f %> 

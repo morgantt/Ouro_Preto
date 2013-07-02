@@ -23,8 +23,9 @@
 		<div id="m3" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 		<a href=<%= new_operadora_path %>>Nova Operadora</a>
 		<a href=<%= operadoras_path %>>Todas as Operadoras</a>
-	
+			<% if current_user.admin? %>
 		<a href=<%= new_situacao_path %>>Novo Tipo de Situação</a>
+			<% end %>
 		<a href=<%= situacaos_path %>>Todos os tipos de Situações</a>
 			</div>	
 		</li>
@@ -33,6 +34,7 @@
 		<div id="m4" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
 		<a href=<%= new_corretor_path %>>Novo Corretor</a>
 		<a href=<%= corretors_path %>>Todos os Corretores</a>
+		
 		</div>
 	</li>	
 
@@ -41,10 +43,22 @@
 		<a href=<%= new_proposta_path %>>Nova Proposta</a>
 		<a href=<%= propostas_path %>>Todas as Propostas</a>
 		<a href=<%= histpropostas_path %>>Historico de Propostas</a>
+			<% if current_user.admin? %>
+		<a href=<%= new_tipoevento_path %>>Novo Tipo de Eventos</a>
+			<% end %>
+		<a href=<%= tipoeventos_path %>>Todos os tipos de Eventos</a>
+		</div>
+	</li>
+
+	<!-- <li><a href="#" onmouseover="mopen('m6')" onmouseout="mclosetime()">Contratos</a>
+		<div id="m6" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+		<a href=<%= new_contrato_path %>>Novo Contrato</a>
+		<a href=<%= propostas_path %>>Todos os Contratos</a>
+		<a href=<%= histpropostas_path %>>Historico de Propostas</a>
 		<a href="#">Submit Request Form</a>
 		<a href="#">Teste 2</a>
 		</div>
-	</li>
+	</li> -->
 
 	
 		<% else %>

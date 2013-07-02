@@ -6,8 +6,8 @@
 	<% if current_user.admin? %>
 
 	<%= link_to "delete", tipoproposta, :method => :delete, 
-																	 :confirm => "voce esta certo?",
-														       :title => "Delete => #{tipoproposta.tipo}" %>
+							 :confirm => "voce esta certo?",
+						     :title => "Delete => #{tipoproposta.tipo}" %>
 	<% end %>	
 													  
 	<%= link_to "Mostrar", tipoproposta	%>			  										  

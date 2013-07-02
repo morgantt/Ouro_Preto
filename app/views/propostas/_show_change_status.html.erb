@@ -1,12 +1,9 @@
 
 <%= form_for(@proposta) do |f|  %>
 
-
 <div class='field'>
 	
 <%= collection_select(:proposta, :status, @stat, :id, :nomestat ) %>
-
-
 
 <div >
 <table class="datepicker" >
@@ -23,13 +20,13 @@
  
 
 </div>
+	<table >
+		<tr>
+		<td WIDTH="10%"><%= f.submit "Atualiza", :confirm => "voce esta certo?" %></td>
+		</tr>
+	</table>
+<% end %>
 
-<div class='actions'>
-	  <%= f.submit "Atualiza" %>
-
-</div>
-<% end %>		
 <div>		
-
 <%= button_to "Cancela", propostas_path, :method => "get" %>
 </div>		
