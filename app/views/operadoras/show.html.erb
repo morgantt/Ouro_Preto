@@ -22,18 +22,20 @@
 	<table>
 		<tr>
 			<th>Tipo</th>
-			<th>LMI</th>
-			<th>LMS</th>
-			<th> </th>
-			<th> </th>
+			<th>Minimo</th>
+			<th>Maximo</th>
+			<th>Estoque </th>
+			<th>Campo </th>
 			<th> </th>
 		</tr>
 	<% @tipoproposta.each do |tp| %>
-
+			
 		<tr>
 			<td><%= link_to tp.tipo, edit_tipoproposta_path( tp ) %></td>
 			<td><%= tp.lmi %></td>
 			<td><%= tp.lms %></td>
+			<td><%= @estoque.where(:tipoproposta_id =>[tp.id]).count %></td>
+			<td><%= @campo.where(:tipoproposta_id =>[tp.id]).count %></td>
 			<% if current_user.admin? %>
 			<td> <%= link_to 'Deleta', tp, :method => :delete, 
 								:confirm => "voce esta certo que quer deletar?" %></td>

@@ -20,18 +20,18 @@ jQuery(function($j) {
 <%= render 'shared/error_messages', :object => f.object %>
 
 <div class='field'>
-  <%= f.label :Numero %><br />
+  <%= f.label :Numero %>
   <%= f.text_field :numero %>
 </div>
  
 <div class='field'>
-  <%= f.label :Operadora %><br />
+  <%= f.label :Operadora %>
   <%= f.collection_select( "operadora_id", @operadora, :id, :nome,
   										 {:prompt => 'Por Favor selecione a operadora'}) %>
 </div>
 
 <div id='tipo'>
-<%= f.label :tipoproposta %><br />
+<%= f.label :tipoproposta %>
 <%= f.collection_select("tipoproposta_id", @tipoproposta, :id, :tipo,
   										 {:prompt => 'selecione o Tipo de Proposta.'}) %>
 </div>  										 
@@ -43,7 +43,7 @@ jQuery(function($j) {
 	</tr>
 	<tr>
 
-		<td WIDTH="40%"> <%= f.label :Data_Entrada %><br /> </td>
+		<td WIDTH="50%"> <%= f.label :Data_Entrada %><br /> </td>
 			<td WIDTH="30%"> <%= f.text_field :data_entrada , :class => "datepicker", :value => Date.today.to_s %></td>
       
 	</tr>	

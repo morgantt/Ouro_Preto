@@ -1,7 +1,7 @@
 <h1>Novo Contrato</h1>
+novo contrato
 
-
- <%= form_for @contrato do |f|  %>
+ <%= form_for @contrato, :url => url_for(:controller => 'contratos', :action => 'prepara') do |f|  %>
 <%= render 'fields', :f => f %> 
 <div class='actions'>
   <%= f.submit "Criar" %>

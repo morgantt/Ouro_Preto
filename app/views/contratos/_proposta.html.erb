@@ -1,7 +1,7 @@
 <table class="profile" summary="Profile information">
 	<tr>
 
-
+view _proposta.html.erb de Contratos
 	</tr>
 	<tr>
 		<td WIDTH="10%"> <%= link_to proposta.numero, proposta %></td>
@@ -23,13 +23,11 @@
 			<td WIDTH="10%"><%= link_to "Cria Evento", new_evento_path(proposta),
 											:confirm => "voce esta certo? #{proposta.numero}",
 											:title => "new => #{proposta.numero}"%>	
-			<td WIDTH="10%"><% if proposta.status <= 6 %>
-				<%= link_to "Mostra Evento", eventos_show_path(proposta)%>										
+			<td WIDTH="10%"><%= link_to "Mostra Evento", eventos_show_path(proposta)%>										
 
-			<% end %> </td>			
 											
 				
-		
+		</td>
 	
 	<td>  </td>
 	<td>  </td>

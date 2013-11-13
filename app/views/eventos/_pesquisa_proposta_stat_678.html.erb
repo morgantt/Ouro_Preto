@@ -30,7 +30,7 @@
 		<td WIDTH="10%"> <%= proposta.operadora %></td>
 		<td WIDTH="10%"> <%= proposta.tipo %></td>
 		<td WIDTH="10%"> <%= proposta.nome_status %></td>
-		<td WIDTH="15%"> <%= proposta.data_status %></td>
+		<td WIDTH="15%"> <%= proposta.data_status.strftime("%d %b %Y") %></td>
 		<td WIDTH="20%"> <%= proposta.corretor.nome %></td>
 		<td WIDTH="15%"> <% if current_user.admin? %>	
 

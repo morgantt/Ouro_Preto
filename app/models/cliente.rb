@@ -23,8 +23,11 @@ class Cliente < ActiveRecord::Base
 
 			
 
-	validates_presence_of :nome, :endereco, :cep, :cpf, :telefone1, :data_nascimento,
-	 											:message => "Nao pode ser em Branco"								
+	validates_presence_of :nome, :telefone1, :data_nascimento,
+	 											:message => "Nao pode ser em Branco"
+# temporariamente so valido a presenca do nome , telefone e data_nascimento
+#  :nome, :endereco, :cep, :cpf, :telefone1, :data_nascimento  
+
 	before_validation :converte_uppercase
 
 	validates_format_of  :nome, :endereco, :municipio, :with => /^([A-Za-z0-9\-& ]+)$/, 
@@ -33,13 +36,13 @@ class Cliente < ActiveRecord::Base
 	validates_format_of  :cpf, :cep, :telefone1, :telefone2, :with => /^([0-9\- ]+)$/, 
 						 :message => "So pode conter caracteres de 0 a 9 e '-' "	
 
-	validates :cpf, 	:presence => true,
-                   		:length   => { :within => 11..11 ,
-                   		:message    => "cpf Sao 11 digitos" }
+#	validates :cpf, 	:presence => true,
+#                   		:length   => { :within => 11..11 ,
+#                   		:message    => "cpf Sao 11 digitos" }
 
-    validates :cep, 	:presence => true,
-                   		:length   => { :within => 9..9 ,
-                   		:message    => "cpe Sao 9 digitos" }           		
+#    validates :cep, 	:presence => true,
+#                   		:length   => { :within => 9..9 ,
+#                   		:message    => "cpe Sao 9 digitos" }           		
 
 protected
 	

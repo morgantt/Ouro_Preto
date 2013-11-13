@@ -1,9 +1,9 @@
 .datepicker {
 	position: relative;
 	border: 2px solid #1C3262;
-	font-size: 12px;
-	width: 104px;
-	padding: 3px;
+	font-size: 10px;
+	width: 154px;
+	padding: 2px;
 	height: 20px;
 	background: #fff;
 	line-height: normal;
@@ -21,7 +21,7 @@
 
 .datepicker .header .title {
 	text-align: center;
-	padding-top: 1px;
+	padding-top: 5px;
 	margin: 0px 42px 0 20px;
 }
 
@@ -179,7 +179,7 @@
 	padding-top: 11px;
 	width: 46px;
 	overflow: hidden;
-	height: 25px;
+	height: 15px;
 	margin: 0 3px 3px 0;
 }
 
@@ -203,7 +203,7 @@
 /* global
 ********************************************************/
 .datepicker .selected {
-	background: #8C929F !important;
+	background: #8C929F!important;
 	color: #fff !important;
 }
 

@@ -1,6 +1,8 @@
 <%= render 'shared/error_messages', :object => f.object %>
 
-<h2> Proposta <%= @proposta.numero %> </h2>
+<h3> Proposta <%= @proposta.numero %> -----   Corretor   ---   <%= @proposta.corretor.nome %> </h3>
+
+
 </tr>
 </table>
 
@@ -9,7 +11,8 @@
   <%= f.text_field :nome, :size=> "20" %>
 
   <%= f.label :Nascimento  %>
-  <%= f.date_select(:data_nascimento,:order => [:day, :month, :year]) %>
+ 
+  <%= f.text_field :data_nascimento , :class => "datepicker" %>
 
   <%= f.label :CPF %>
   <%= f.text_field :cpf, :size=> "5"  %>
@@ -31,7 +34,8 @@
 </div>
 <div class='field'>
   <%= f.label :Vigencia %>
-  <%= f.date_select(:data_vigencia,:order => [:day, :month, :year]) %>
+  <%= f.text_field :data_vigencia , :class => "datepicker", :value => Date.today.to_s %>
+  
 
   <%= f.label :Fatura %>
   <%= f.text_field :valor_fatura, :size=> "10"   %>

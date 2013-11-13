@@ -1,14 +1,11 @@
 <h2>Liga Proposta a Corretor </h2>
-
+pesquisa
 		<%= render "pesquisa_para_associar"  %> 
-		
-
-
+formulario	
 		<%= form_for @proposta, :url => { :action => 'associa_2', :remote => true} do |f|  %>
-		
+field3		
 		<%= render 'fields3', :f => f %> 
-
 	
 		<% end %>
-
+botao cancela
 <%= button_to "Cancela", corretors_path, :method => "get" %>

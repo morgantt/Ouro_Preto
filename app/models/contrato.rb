@@ -43,12 +43,12 @@ class Contrato < ActiveRecord::Base
 	validates_numericality_of   :valor_fatura, :vidas,   		
 							:message => "So pode conter caracteres numericos "
 
-	validates_format_of  :numero_contrato, :with => /^([A-Za-z0-9\-& ]+)$/, 
-											 :message => "So pode conter caracteres de A ate Z 0-9 -& "
-	validates_presence_of :numero_contrato, :vidas, :valor_fatura,
-	 											:message => "Nao pode ser em Branco"
+#	validates_format_of  :numero_contrato, :with => /^([A-Za-z0-9\-& ]+)$/, 
+#											 :message => "So pode conter caracteres de A ate Z 0-9 -& "
+#	validates_presence_of :numero_contrato, :vidas, :valor_fatura,
+#	 											:message => "Nao pode ser em Branco"
 	
-
+  #	validates_date :data_nascimento									
 
 	has_many :recebiveis, :dependent => :destroy
 

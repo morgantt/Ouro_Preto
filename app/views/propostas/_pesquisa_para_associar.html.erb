@@ -21,7 +21,7 @@
 	</tr>
 	
    
- <%     @proposta_search2.each do |proposta| %>
+ <%     @proposta_pra_associar.each do |proposta| %>
  	<tr>
  	  
  	  <td WIDTH="15%"> <%= link_to proposta.numero %></td>
@@ -31,14 +31,14 @@
 		<td WIDTH="15%"> <%= proposta.nome_status %></td>
 		<td WIDTH="15%"> <%= proposta.data_status %></td>
 
-		<td WIDTH="10%"> <% if current_user.admin? %>	
+		<td WIDTH="10%"> 	
 			<%= link_to "Associa",  
 									:confirm => "voce esta certo? Associa => #{proposta.numero}",
 									:controller => "propostas", 
 									:action => "associa_from_pesquisa", 
 									:title => "#{proposta.id}",
 									 %>
-			<% end %>	
+				
 		</td>
 
  	</tr>

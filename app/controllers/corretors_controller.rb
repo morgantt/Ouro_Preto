@@ -7,7 +7,8 @@ class CorretorsController < ApplicationController
  
 	def index
 	
-		  @corretor = Corretor.todos.paginate(:page => params[:page])
+		  @corretor = Corretor.todos.paginate(:page => params[:page], :per_page =>40,
+                                       :order => "nome")
 		  @title = "Todos os Corretores"
 	end
  
@@ -24,14 +25,23 @@ class CorretorsController < ApplicationController
  																	    :order => "operadora_id" )
 
       #  @propostacount = Proposta.where(:corretor_id=>[@corretor]).count
- 	    @propostacount = Proposta.um_corretor(@corretor).status7.count
-      @propostas_status7_do_corretor = Proposta.um_corretor(@corretor).status7
+
+      @campo = Proposta.stat_campo.where(:corretor_id =>[@corretor]).count
+
+      @campo2 = Proposta.stat_campo.where(:corretor_id =>[@corretor])
+
+
+
+      @tipoproposta = Tipoproposta.find( :all, :order => "operadora_id" )
+
+ 	  #  @propostacount = Proposta.um_corretor(@corretor).status7.count
+    #  @propostas_status7_do_corretor = Proposta.um_corretor(@corretor).status7
       # lista propostas do corretor 
       #   @proposta = Proposta.um_corretor(@corretor).status7
-      @proposta = @propostas_status7_do_corretor
+      @proposta = Proposta.stat_campo.where(:corretor_id =>[@corretor])
 
       @q = @proposta.search(params[:q])
-      @xxxx = @corretor.nome
+  #   @xxxx = @corretor.nome
       @proposta = @q.result(:distinct => true)
    
       @propostashow = @proposta.paginate(:page => params[:page], :per_page =>40,

@@ -15,6 +15,10 @@ class OperadorasController < ApplicationController
     
       @operadora = Operadora.find(params[:id])
       @tipo  = @operadora.tipopropostas
+      @estoque = Proposta.stat_estoque.where(:operadora_id =>[params[:id]])
+      @campo = Proposta.stat_campo.where(:operadora_id =>[params[:id]])
+      p @estoque
+      #  (:corretor_id=>[@corretor]).count
       #   @tip = @operadora.tipopropostas.paginate( :page => params[:page])
       @title = @operadora.nome
       session[:oper] = @operadora.id

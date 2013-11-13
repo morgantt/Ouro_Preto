@@ -19,7 +19,7 @@ jQuery(function($){
 		firstDay: 0,
 		showButtonPanel: true,
 		isRTL: false,
-		showMonthAfterYear: false,
+		showMonthAfterYear: true,
 		yearSuffix: ''};
 	$.datepicker.setDefaults($.datepicker.regional['pt-BR']);
 	$("#datepicker").datepicker();  

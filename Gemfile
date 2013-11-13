@@ -11,6 +11,7 @@ gem 'validation_reflection'
 
 # ransack para implementar search
 gem "ransack"
+gem 'validates_timeliness', '~> 3.0'
 
 group :development, :test do
   gem "rspec-rails"

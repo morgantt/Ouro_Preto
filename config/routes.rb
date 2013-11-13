@@ -35,6 +35,8 @@ OuroPreto::Application.routes.draw do
 
   get "clientes/new"
 
+ # get "contratos/prepara"
+
   get "contratos/index"
 
   get "contratos/show"
@@ -58,6 +60,8 @@ OuroPreto::Application.routes.draw do
   get "histpropostas/destroy"
 
   get "propostas/new"
+
+  get "propostas/index"
 
   get "tipopropostas/new"
   

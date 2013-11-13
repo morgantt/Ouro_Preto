@@ -22,11 +22,13 @@
 </div>
 	<table >
 		<tr>
-		<td WIDTH="10%"><%= f.submit "Atualiza", :confirm => "voce esta certo?" %></td>
+		<td WIDTH="10%"><%= f.submit "Altera Status" %>
+		
 		</tr>
 	</table>
 <% end %>
 
 <div>		
-<%= button_to "Cancela", propostas_path, :method => "get" %>
+<%= button_to "Volta para Todas as Propostas", propostas_path, :method => "get" %>, 
+<%= button_to "Volta para Todos os Corretores", corretors_path, :method => "get" %>
 </div>		

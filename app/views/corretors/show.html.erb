@@ -2,11 +2,10 @@
   <tr>
     <td class="main">
       <h1>
-      <%= @corretor.nome %>
+      <%= @corretor.nome %> -   Total de Proposta:
+      <%= @campo %>
       </h1>
-      <h5>
-      <%= @corretor.banco %>
-      </h5>
+     
     </td>
     <td class="sidebar round">
    
@@ -16,8 +15,30 @@
     </td>
   </tr>
 </table>
+
+<table>
+    <tr>
+      <th>Operadora</th>
+      <th>Tipo</th>
+      <th>Quantidade</th>
+      <th> </th>
+    </tr>
 	
-	
+<% @tipoproposta.each do |tp| %>	
+<tr>
+     
+     <td><%= tp.operadora.nome %></td> 
+     <td><%= tp.tipo %></td> 
+     <td><%= @campo2.where(:tipoproposta_id =>[tp.id]).count %></td>
+      
+    </tr>
+    
+  <% end %>
+
+
+
+
+
 
 <%= search_form_for @q do |f| %>
   <%= f.label :numero %>
@@ -28,12 +49,12 @@
 <table class="profile" summary="Profile information">
 	<tr>
 		
-		<th WIDTH="12%">Numero </th>
-		<th WIDTH="5%"> Operadora </th>
-		<th WIDTH="15%"> Tipo </th>
-		<th WIDTH="15%"> Status </th>
-		<th WIDTH="13%"> Data </th>
-		<th WIDTH="40%"> Corretor </th>
+		<th WIDTH="10%">Numero </th>
+		<th WIDTH="14%"> Operadora </th>
+		<th WIDTH="10%"> Tipo </th>
+		<th WIDTH="10%"> Status </th>
+		<th WIDTH="9%"> Data </th>
+		<th WIDTH="50%"> Corretor </th>
 		
 
 	</tr>

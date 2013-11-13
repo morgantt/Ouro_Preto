@@ -231,7 +231,7 @@ def associa_from_pesquisa
 
     case @status
 
-    when 0 .. 4, 7
+    when 0 .. 4, 6, 7
 
         if @proposta.update_attributes(:status => @status, :nome_status => @nomestat,
                                      :data_status => @stat_date)

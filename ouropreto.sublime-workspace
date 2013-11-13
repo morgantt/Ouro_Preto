@@ -32,18 +32,18 @@
 	"buffers":
 	[
 		{
-			"file": "config/routes.rb",
+			"file": "app/models/cliente.rb",
 			"settings":
 			{
-				"buffer_size": 4342,
+				"buffer_size": 1653,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/propostas/_fields3.html.erb",
+			"file": "app/controllers/operadoras_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2795,
+				"buffer_size": 2210,
 				"line_ending": "Unix"
 			}
 		}
@@ -80,62 +80,82 @@
 	},
 	"file_history":
 	[
-		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/_header.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields3.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_show_change_status.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields2.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/index.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/show.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/eventos_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/models/evento.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_evento.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_proposta.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/propostas_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_add_evento.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/models/proposta.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/show.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/tipoproposta.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/proposta.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/operadora.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/propostas_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_show_change_status.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/config/routes.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/corretors_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/clientes_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/contrato.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/contratos_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/clientes/_fields.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_pesquisa_para_associar.html.erb",
+		"/home/taithson/.local/share/applications/defaults.list",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/index.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/operadoras_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/prepara.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/associa.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_proposta.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields3.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/_header.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_pesquisa_proposta_vendida.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/controllers/eventos_controller.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_pesquisa_proposta.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_proposta.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/new.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_fields.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_dados_contrato_new.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/new.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_add_evento.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/Gemfile",
+		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/datePicker.css",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/application.js",
+		"/home/taithson/projects/mg/ouro_preto/public/javascripts/jquery.ui.datepicker-pt-BR.js",
+		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/custom.css",
+		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/blueprint/screen.css",
+		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/application.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/_stylesheets.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/config/environment.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_evento.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_pesquisa_proposta_stat_678.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/helpers/application_helper.rb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/new.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/_fields.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/config/application.rb",
+		"/home/taithson/projects/mg/ouro_preto/public/422.html",
+		"/home/taithson/projects/mg/ouro_preto/public/images/logo.png",
+		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields2.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/show.html.erb",
+		"/home/taithson/projects/mg/ouro_preto/app/models/evento.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/models/tipoevento.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/edit.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/helpers/eventos_helper.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/helpers/application_helper.rb",
-		"/home/taithson/projects/mg/ouro_preto/config/environment.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/helpers/Posts_helper.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/models/corretor.rb",
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20120312144102_create_cparametros.rb",
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130629235115_add_proposta_id_index_to_evento.rb",
-		"/home/taithson/projects/mg/ouro_preto/Gemfile",
-		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/new.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/_fields.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/config/application.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_pesquisa_evento",
 		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_add_evento",
 		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/show_old.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/_operadora.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/operadoras_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/_corretor.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/show.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_pesquisa_proposta_stat_678.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/new.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/index.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/tipopropostas/_fields2.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_pesquisa_proposta.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/_fields.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/eventos/prepara.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/contratos_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_pesquisa_proposta_vendida.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/acompanhamentos/index.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/acompanhamentos/_proposta_acom.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/acompanhamentos_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/acompanhamentos/_pesquisa_proposta_acomp.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_pesquisa_para_associar.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/models/contrato.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/new.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/prepara.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/config/routes.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_propostas_vendidas.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_fields.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/contratos/_dados_contrato_new.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/tipoeventos/show.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/tipoeventos/new.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/tipoeventos/index.html.erb",
@@ -148,15 +168,11 @@
 		"/home/taithson/projects/mg/ouro_preto/app/views/histpropostas/_histproposta.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/histpropostas/index.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/histpropostas_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/datePicker.css",
 		"/home/taithson/.local/share/vinagre/vinagre-bookmarks.xml",
 		"/tmp/RELATORIO UNIFOCUS ABRIL 2013-2.xls",
 		"/tmp/RELATORIO UNIFOCUS ABRIL 2013-1.xls",
 		"/tmp/RELATORIO UNIFOCUS ABRIL 2013.xls",
-		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/_stylesheets.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/new.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/layouts/application.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/public/stylesheets/custom.css",
 		"/home/taithson/projects/mg/ouro_preto/app/views/corretors/_fields.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_propostah.html.erb",
 		"/home/taithson/.config/sublime-text-2/Packages/User/Package Control.sublime-settings",
@@ -165,9 +181,7 @@
 		"/home/taithson/projects/mg/ouro_preto/app/views/histpropostas/_propostah.html.erb",
 		"/home/taithson/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/taithson/.config/sublime-text-2/Packages/Package Control/Package Control.sublime-settings",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/associa.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/cparametros/_cparametro.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/show.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/edit.html.erb",
 		"/home/taithson/hf/hf/www_bhsaude_after_may2013/empresariais.html",
 		"/home/taithson/projects/mg/ouro_preto/app/models/cliente.rb",
@@ -175,17 +189,12 @@
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130222182935_add_varios_campos_to_cliente.rb",
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130315151520_add_dados_cliente_to_contratatos.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/users_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/clientes_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/comissoes_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/cparametros_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/tipopropostas_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/controllers/situacaos_controller.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/clientes/show.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/models/tipoproposta.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/models/operadora.rb",
 		"/home/taithson/projects/mg/ouro_preto/app/models/user.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/clientes/_fields.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_fields.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/tipopropostas/_tipoproposta.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/propostas/_number_select_list.html.erb",
 		"/home/taithson/projects/mg/ouro_preto/app/views/clientes/new.html.erb",
@@ -198,16 +207,7 @@
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130130003458_create_contratos.rb",
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130218012345_add_ato_da_venda_to_remuneracao.rb",
 		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130217235414_add_remuneracao_id_e_comissao_id_to_contrato.rb",
-		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130218013318_create_recebiveis.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/controllers/remuneracoes_controller.rb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/remuneracoes/edit.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/remuneracoes/_fields.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/remuneracoes/_fields_desativa.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/comissoes/_fields_desativa.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/remuneracoes/show.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/operadoras/edit.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/comissoes/show.html.erb",
-		"/home/taithson/projects/mg/ouro_preto/app/views/comissoes/edit.html.erb"
+		"/home/taithson/projects/mg/ouro_preto/db/migrate/20130218013318_create_recebiveis.rb"
 	],
 	"find":
 	{
@@ -218,6 +218,9 @@
 		"height": 0.0,
 		"where_history":
 		[
+			"/home/taithson/projects/mg/ouro_preto/app",
+			"/home/taithson/projects/mg/ouro_preto/app/controllers",
+			"/home/taithson/projects/mg/ouro_preto/app/views/propostas",
 			""
 		]
 	},
@@ -226,6 +229,16 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"@propostacount",
+			"um_corretor",
+			"i",
+			".where",
+			"button",
+			"px",
+			"logo.png",
+			"lo",
+			"@proposta_search2",
+			"paginate",
 			"um_corretor",
 			"pesquis",
 			"pesquisar",
@@ -374,18 +387,45 @@
 			[
 				{
 					"buffer": 0,
-					"file": "config/routes.rb",
+					"file": "app/models/cliente.rb",
 					"settings":
 					{
-						"buffer_size": 4342,
+						"buffer_size": 1653,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4341,
-								4341
+								1458,
+								1458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 285.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/operadoras_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								619,
+								619
 							]
 						],
 						"settings":
@@ -396,34 +436,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/propostas/_fields3.html.erb",
-					"settings":
-					{
-						"buffer_size": 2795,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2748,
-								2748
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1824.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -462,6 +474,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
 	"output.unsaved_changes":
 	{
 		"height": 124.0
@@ -491,6 +507,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 468.0,
+	"side_bar_width": 316.0,
 	"status_bar_visible": true
 }
